@@ -11,8 +11,6 @@
 #include "db_mysql.h"
 #include "strlib.h"
 
-DBMap* clan_db;
-
 int clandb_add(USER* sd, char* name) {
 	struct clan_data* db = NULL;
 	unsigned int newid = 0;

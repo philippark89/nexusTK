@@ -27,6 +27,7 @@
 fd_set readfds;
 int fd_max;
 int activeFD = -1;
+int server_shutdown;
 size_t rfifo_size = (16 * 1024);
 size_t wfifo_size = (16 * 1024);
 time_t last_tick;

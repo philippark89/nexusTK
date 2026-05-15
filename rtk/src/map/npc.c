@@ -15,6 +15,8 @@
 #include "clif.h"
 #include "mob.h"
 
+unsigned int npc_id;
+
 struct npc_src_list {
 	struct npc_src_list* next;
 	char* file;

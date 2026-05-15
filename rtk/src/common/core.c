@@ -16,13 +16,15 @@
 #include "version.h"
 #define ISDIGIT(c) (isdigit((unsigned char)(c)))
 
+unsigned long Last_Eof;
+
 int (*func_parse_it)(char*) = default_parse_input;
 static void (*term_func)(void) = NULL;
 char dmp_filename[128];
 char log_filename[128];
 char date_format[32] = "%Y-%m-%d %H:%M:%S";
 static char h_svn_version[10] = "";
-struct timeval start;
+static struct timeval start;
 static long long check2 = 0;
 
 pthread_t thread_id_packet;

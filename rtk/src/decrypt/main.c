@@ -91,7 +91,7 @@ char refname[] = "invicta";
   internal function.
 */
 
-void crypt(char* buff)
+void packet_crypt(char* buff)
 {
 	unsigned int Group = 0;
 	unsigned int GroupCount = 0;
@@ -360,7 +360,7 @@ int main(int argc, char** argv)
 	populate_table(&refname[0], &table[0], sizeof(table));
 	generate_key2(&refpacket[0], &table[0], &key[0], 0);
 
-	//crypt(&refpacket[0]);
+	//packet_crypt(&refpacket[0]);
 
 	crypt2(&refpacket[0], &key[0]);
 

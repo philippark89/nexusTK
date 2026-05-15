@@ -6,7 +6,7 @@ static char enckey[] = "Urk#nI7ni";
 // XOR Crypt Code
 //----------------------------
 /*
-void crypt(char *buff, char *eKey="NexonInc.", unsigned char mNum=0) {
+void packet_crypt(char *buff, char *eKey="NexonInc.", unsigned char mNum=0) {
 	unsigned int packet_len;
 	unsigned char packet_inc;
 	int i, j, k, l;
@@ -167,7 +167,7 @@ char* generate_key2(unsigned char* packet, char* table, char* keyout, int fromcl
 	outbuffer[9] = 0;
 	return outbuffer;
 }*/
-void crypt(char* buff)
+void packet_crypt(char* buff)
 {
 	unsigned int Group = 0;
 	unsigned int GroupCount = 0;

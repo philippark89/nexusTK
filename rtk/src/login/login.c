@@ -14,6 +14,11 @@
 #include "db_mysql.h"
 #include "db.h"
 
+char meta_file[META_MAX][256];
+int metamax;
+int nex_version;
+int nex_deep;
+
 int login_port = 2010;
 
 int login_fd;

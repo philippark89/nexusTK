@@ -29,4 +29,5 @@ services:
       - "3306:3306"
     volumes:
       - "./database/scripts:/docker-entrypoint-initdb.d" # Every script in docker-entrypoint-initdb.d is executed in alphabetical order as soon as the container starts
+      - "./database/root:/root"
       # TODO: Add volume to persist data

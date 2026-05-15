@@ -15,6 +15,11 @@
 #include <string.h>// strlen/strnlen/memcpy/memset
 #include <stdlib.h>// strtoul
 
+#ifndef my_bool
+// my_bool was removed in MySQL 8.0
+typedef bool my_bool;
+#endif
+
 /// Sql handle
 struct Sql
 {

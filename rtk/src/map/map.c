@@ -109,6 +109,8 @@ int map_max = 0;
 //unsigned int blcount_t=0;
 int auth_n = 0;
 struct userlist_data userlist;
+unsigned char* objectFlags;
+int old_time, cur_time, cur_year, cur_day, cur_season;
 struct map_data* map;
 struct game_data gamereg;
 int map_n = 0;
@@ -2113,7 +2115,7 @@ int nmail_read(USER* sd, int post) {
 		strcpy(WFIFOP(sd->fd,len+11),sql_get_str(2));
 		len+=strlen(sql_get_str(2))+1;
 		WFIFOW(sd->fd,1)=SWAP16(len+7);
-		crypt(WFIFOP(sd->fd,0));
+		packet_crypt(WFIFOP(sd->fd,0));
 		WFIFOSET(sd->fd,len+10);
 		sql_free_row();
 		sql_request("UPDATE nmail SET new=0 WHERE touser='%s' AND mail_id=%d",sd->status.name,post);
