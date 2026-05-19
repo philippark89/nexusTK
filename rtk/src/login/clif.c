@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <arpa/inet.h>
 
 #include "core.h"
 #include "login.h"
@@ -76,7 +77,7 @@ int clif_accept(int fd) {
 	}*/
 
 	char ip[30];
-	strcpy(ip, (char*)inet_ntoa(session[fd]->client_addr.sin_addr.s_addr));
+	strcpy(ip, (char*)inet_ntoa(session[fd]->client_addr.sin_addr));
 
 	banned = bannedIPCheck(ip);
 
@@ -362,7 +363,7 @@ int clif_parse(int fd) {
 	sprintf(OutStr, "Packet (IP%u.%u.%u.%u L%i): ", CONVIP(session[fd]->client_addr.sin_addr.s_addr), len);
 
 	char ip[30];
-	strcpy(ip, (char*)inet_ntoa(session[fd]->client_addr.sin_addr.s_addr));
+	strcpy(ip, (char*)inet_ntoa(session[fd]->client_addr.sin_addr));
 
 	for (L = 0; L < len; L++)
 	{
@@ -684,7 +685,7 @@ int clif_parse(int fd) {
 		break;
 	default:
 		//packet_crypt(RFIFOP(fd,0)); //reverse the encryption
-		printf("[LOGIN] Unknown Packet ID: %02X Packet from %s:\n", RFIFOB(fd, 3), (char*)inet_ntoa(session[fd]->client_addr.sin_addr.s_addr));
+		printf("[LOGIN] Unknown Packet ID: %02X Packet from %s:\n", RFIFOB(fd, 3), (char*)inet_ntoa(session[fd]->client_addr.sin_addr));
 		clif_debug(RFIFOP(fd, 0), SWAP16(RFIFOW(fd, 1)));
 		break;
 	}

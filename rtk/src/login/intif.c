@@ -11,6 +11,7 @@
 #include "clif.h"
 #include "timer.h"
 #include "db_mysql.h"
+#include "malloc.h"
 
 static int packet_len_table[] = { 69, 5, 5, 27, 5,0 };
 

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/time.h>
 #include <time.h>
 
@@ -302,10 +303,10 @@ int timer_do(unsigned int tick)
 		{
 			//printf("%u\n",(int)timer_data[tid].func);
 			if (diff <= -1000)
-				// 1•bˆÈã‚Ì‘å•‚È’x‰„‚ª”­¶‚µ‚Ä‚¢‚é‚Ì‚ÅA
-				// timerˆ—ƒ^ƒCƒ~ƒ“ƒO‚ðŒ»Ý’l‚Æ‚·‚éŽ–‚Å
-				// ŒÄ‚Ño‚µŽžƒ^ƒCƒ~ƒ“ƒO(ˆø”‚Ìtick)‘Š‘Î‚Åˆ—‚µ‚Ä‚é
-				// timerŠÖ”‚ÌŽŸ‰ñˆ—ƒ^ƒCƒ~ƒ“ƒO‚ð’x‚ç‚¹‚é
+				// 1ï¿½bï¿½Èï¿½Ì‘å•ï¿½È’xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Ì‚ÅA
+				// timerï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½Cï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Ý’lï¿½Æ‚ï¿½ï¿½éŽ–ï¿½ï¿½
+				// ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½Cï¿½~ï¿½ï¿½ï¿½O(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tick)ï¿½ï¿½ï¿½Î‚Åï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½
+				// timerï¿½Öï¿½ï¿½ÌŽï¿½ï¿½ñˆ—ï¿½ï¿½^ï¿½Cï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½xï¿½ç‚¹ï¿½ï¿½
 				toDel = timer_data[tid].func(timer_data[tid].data1, timer_data[tid].data2);
 			else
 				toDel = timer_data[tid].func(timer_data[tid].data1, timer_data[tid].data2);

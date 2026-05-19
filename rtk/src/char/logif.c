@@ -9,6 +9,7 @@
 #include "mmo.h"
 #include "crypt.h"
 #include "char_db.h"
+#include "malloc.h"
 
 static const int packet_len_table[] = { 3, 20, 43, 40, 52,0, 0 };
 

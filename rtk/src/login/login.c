@@ -13,6 +13,9 @@
 #include "zlib.h"
 #include "db_mysql.h"
 #include "db.h"
+#include "malloc.h"
+
+int add_meta(char* file);
 
 char meta_file[META_MAX][256];
 int metamax;

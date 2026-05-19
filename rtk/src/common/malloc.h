@@ -2,6 +2,9 @@
 #define _MALLOC_H_
 #define __func__ __FUNCTION__
 #include <stddef.h>
+#include <stdio.h>
+
+void* _realloc(void* ptr, size_t size, char* file, int line, char* func);
 
 //#define ALC_MARK __FILE__, __LINE__, __func__
 //#include "memwatch.h"

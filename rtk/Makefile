@@ -2,7 +2,7 @@
 # Yuri Makefile
 #################
 
-CC = gcc -pipe -w -g 
+CC = gcc -pipe -w -g
 MAKE = make -s
 
 CFLAGS = -DDEBUG -g3 -fno-stack-protector -ffast-math -Wall -Wno-sign-compare -DFD_SETSIZE=1024 -DNO_MEMMGR -DLOGGING_ENABLED -DUSE_MYSQL -I../common -I/usr/include/mysql -I/usr/include/lua5.1 -I/usr/local/zlib/include

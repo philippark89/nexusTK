@@ -38,6 +38,9 @@ int main(int argc, char** argv)
 {
 	Last_Eof = 0;
 
+	setvbuf(stdout, NULL, _IOLBF, 0);
+	setvbuf(stderr, NULL, _IOLBF, 0);
+
 	gettimeofday(&start, NULL);
 
 	int next;

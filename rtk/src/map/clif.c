@@ -4,6 +4,7 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
+#include <arpa/inet.h>
 #include "core.h"
 #include "map.h"
 #include "intif.h"
@@ -2653,7 +2654,6 @@ int clif_send_sub(struct block_list* bl, va_list ap) {
 	USER* tsd = NULL;
 
 	//nullpo_ret(0, bl);
-	nullpo_ret(0, ap);
 	nullpo_ret(0, sd = (USER*)bl);
 
 	buf = va_arg(ap, unsigned char*);

@@ -23,6 +23,7 @@
 #include "intif.h"
 #include "mmo.h"
 #include "malloc.h"
+#include "showmsg.h"
 #include "db.h"
 #include "class_db.h"
 #include "itemdb.h"

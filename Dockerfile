@@ -1,15 +1,30 @@
-FROM i386/ubuntu:latest
+FROM ubuntu:22.04
 
-RUN echo tzdata tzdata/Zones/Europe select London | debconf-set-selections && \
-    echo tzdata tzdata/Zones/Etc select UTC | debconf-set-selections && \
-    export DEBIAN_FRONTEND=noninteractive && \
-    apt-get update && apt-get install -y \
+ENV DEBIAN_FRONTEND=noninteractive \
+    TZ=UTC
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    # build toolchain
     build-essential \
     make \
-    libmysqlclient20 \
+    # MySQL client library + headers (-lmysqlclient, -I/usr/include/mysql)
     libmysqlclient-dev \
+    mysql-client \
+    # Lua 5.1 runtime + headers (-llua5.1, -I/usr/include/lua5.1)
     lua5.1 \
-    liblua5.1 \
-	mysql-client-5.7
+    liblua5.1-dev \
+    # zlib (-lz)
+    zlib1g-dev \
+    # crypt (-lcrypt)
+    libcrypt-dev \
+    # process supervisor for running all three servers in one container
+    supervisor \
+    && rm -rf /var/lib/apt/lists/*
 
-# TODO: Implement cron job for automated database backups
+WORKDIR /home/RTK
+
+COPY docker/supervisord.conf /etc/supervisor/conf.d/rtk.conf
+COPY docker/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]

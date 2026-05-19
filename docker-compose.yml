@@ -1,12 +1,13 @@
-version: '3.8'
 services:
   server:
     image: rtk-server:latest
     build:
       context: .
       dockerfile: Dockerfile
-    command: tail -F /dev/null # TODO: Add commands to build/run servers
     restart: always
+    depends_on:
+      database:
+        condition: service_healthy
     ports:
       - "2000:2000"
       - "2001:2001"
@@ -15,11 +16,12 @@ services:
       - "./rtk:/home/RTK/rtk"
       - "./rtklua:/home/RTK/rtklua"
       - "./rtkmaps:/home/RTK/rtkmaps"
-    # TODO: Add volume for automated database backups
+      - "./database/scripts:/database/scripts"
 
   database:
-    image: mysql/mysql-server:latest
+    image: mysql:8.0
     restart: always
+    command: --default-authentication-plugin=mysql_native_password --skip-ssl --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     environment:
       MYSQL_ROOT_PASSWORD: 'definitelyChangeMe'
       MYSQL_USER: 'rtk'
@@ -28,6 +30,13 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - "./database/scripts:/docker-entrypoint-initdb.d" # Every script in docker-entrypoint-initdb.d is executed in alphabetical order as soon as the container starts
-      - "./database/root:/root"
-      # TODO: Add volume to persist data
+      - "db-data:/var/lib/mysql"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "rtk", "-pchangeMe"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+volumes:
+  db-data:

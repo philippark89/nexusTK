@@ -14,6 +14,7 @@
 #include "socket.h"
 #include "malloc.h"
 #include "timer.h"
+#include "showmsg.h"
 #include "mmo.h"
 #include "crypt.h"
 #include "cbasetypes.h"

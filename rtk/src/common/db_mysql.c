@@ -65,6 +65,16 @@ Sql* Sql_Malloc(void)
 
 	CALLOC(self, Sql, 1);
 	mysql_init(&self->handle);
+	// Disable SSL on the client side to match server configuration
+	{
+		unsigned int ssl_mode = SSL_MODE_DISABLED;
+		mysql_options(&self->handle, MYSQL_OPT_SSL_MODE, &ssl_mode);
+	}
+	// Enable automatic reconnect so mysql_stmt_close is safe after a lost connection
+	{
+		my_bool reconnect = 1;
+		mysql_options(&self->handle, MYSQL_OPT_RECONNECT, &reconnect);
+	}
 	StringBuf_Init(&self->buf);
 	self->lengths = NULL;
 	self->result = NULL;
@@ -162,14 +172,21 @@ int Sql_Ping(Sql* self)
 	return SQL_ERROR;
 }
 
+// Registry to safely pass Sql* through the int-typed timer data on 64-bit systems.
+#define SQL_KEEPALIVE_MAX 8
+static Sql* sql_keepalive_registry[SQL_KEEPALIVE_MAX];
+static int  sql_keepalive_count = 0;
+
 /// Wrapper function for Sql_Ping.
 ///
 /// @private
-static int Sql_P_KeepaliveTimer(int data, int none)
+static int Sql_P_KeepaliveTimer(int idx, int none)
 {
-	Sql* self = (Sql*)data;
-	ShowInfo("Pinging SQL server to keep connection alive...\n");
-	Sql_Ping(self);
+	Sql* self = (idx >= 0 && idx < SQL_KEEPALIVE_MAX) ? sql_keepalive_registry[idx] : NULL;
+	if (self) {
+		ShowInfo("Pinging SQL server to keep connection alive...\n");
+		Sql_Ping(self);
+	}
 	return 0;
 }
 
@@ -180,6 +197,7 @@ static int Sql_P_KeepaliveTimer(int data, int none)
 static int Sql_P_Keepalive(Sql* self)
 {
 	uint32 timeout, ping_interval;
+	int idx;
 
 	// set a default value first
 	timeout = 28800; // 8 hours
@@ -190,10 +208,15 @@ static int Sql_P_Keepalive(Sql* self)
 	if (timeout < 60)
 		timeout = 60;
 
+	// store pointer in registry so the timer callback can retrieve it safely on 64-bit
+	if (sql_keepalive_count >= SQL_KEEPALIVE_MAX)
+		sql_keepalive_count = 0;
+	idx = sql_keepalive_count++;
+	sql_keepalive_registry[idx] = self;
+
 	// establish keepalive
 	ping_interval = timeout - 30; // 30-second reserve
-	//add_timer_func_list(Sql_P_KeepaliveTimer, "Sql_P_KeepaliveTimer");
-	return timer_insert(ping_interval * 1000, ping_interval * 1000, Sql_P_KeepaliveTimer, (int)self, 0);
+	return timer_insert(ping_interval * 1000, ping_interval * 1000, Sql_P_KeepaliveTimer, idx, 0);
 }
 
 /// Escapes a string.
@@ -365,6 +388,7 @@ void Sql_Free(Sql* self)
 	if (self)
 	{
 		Sql_FreeResult(self);
+		mysql_close(&self->handle);
 		StringBuf_Destroy(&self->buf);
 		if (self->keepalive != INVALID_TIMER) timer_remove(self->keepalive);
 		aFree(self);
@@ -836,8 +860,10 @@ void SqlStmt_FreeResult(SqlStmt* self)
 /// Shows debug information (with statement).
 void SqlStmt_ShowDebug_(SqlStmt* self, const char* debug_file, const unsigned long debug_line)
 {
-	if (self == NULL)
+	if (self == NULL) {
 		ShowDebug("at %s:%lu -  self is NULL\n", debug_file, debug_line);
+		return;
+	}
 	if (StringBuf_Length(&self->buf) > 0)
 		ShowDebug("at %s:%lu - %s\n", debug_file, debug_line, StringBuf_Value(&self->buf));
 	else
