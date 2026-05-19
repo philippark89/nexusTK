@@ -1022,6 +1022,8 @@ int map_lastdeath_mob(MOB* p) {
 }
 
 int map_registrysave(int m, int i) {
+	if (map[m].registry == NULL)
+		CALLOC(map[m].registry, struct global_reg, MAX_MAPREG);
 	struct global_reg* p = &map[m].registry[i];
 	long long save_id = -1;
 	SqlStmt* stmt;
@@ -1204,7 +1206,7 @@ int map_read() {//int id, const char *title, char bgm, int pvp, int spell, unsig
 		CALLOC(map[id].block_mob, struct block_list*, map[id].bxs * map[id].bys);
 		//CALLOC(map[id].item_sweep,FLOORITEM*,10000);
 		//CALLOC(map[id].block_mob_count, int, map[id].bxs*map[id].bys);
-		CALLOC(map[id].registry, struct global_reg, MAX_MAPREG);
+		// registry is allocated lazily by the bulk loader and map_registrysave
 		//map[id].block_mob_count=0;
 		//map[id].item_sweep_count=0;
 		//map[id].max_sweep_count=10000;

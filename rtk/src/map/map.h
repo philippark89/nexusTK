@@ -357,7 +357,7 @@ struct game_data {
 	int registry_num;
 };
 
-#define map_isloaded(m) (map[m].registry)
+#define map_isloaded(m) (map[m].tile)
 #define read_map(m,x,y) (map[m].map[(x)+(y)*map[m].xs])
 #define read_tile(m,x,y) (map[m].tile[(x)+(y)*map[m].xs])
 #define read_obj(m,x,y) (map[m].obj[(x)+(y)*map[m].xs])
