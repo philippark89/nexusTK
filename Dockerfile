@@ -25,6 +25,7 @@ WORKDIR /home/RTK
 
 COPY docker/supervisord.conf /etc/supervisor/conf.d/rtk.conf
 COPY docker/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY docker/backup.sh /home/RTK/backup.sh
+RUN chmod +x /entrypoint.sh /home/RTK/backup.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

@@ -17,6 +17,7 @@ services:
       - "./rtklua:/home/RTK/rtklua"
       - "./rtkmaps:/home/RTK/rtkmaps"
       - "./database/scripts:/database/scripts"
+      - "./database/history:/home/RTK/database/history"
 
   database:
     image: mysql:8.0
