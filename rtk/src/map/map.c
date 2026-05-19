@@ -1093,7 +1093,7 @@ int map_read() {//int id, const char *title, char bgm, int pvp, int spell, unsig
 	unsigned char reqmark, reqpath, summon;
 	unsigned char canUse, canEat, canSmoke, canMount, canGroup, canEquip;
 
-	char title[64], mapfile[1024], mappath[1024];
+	char title[64], mapfile[64], mappath[1024];
 	char maprejectmsg[64];
 
 	SqlStmt* stmt = SqlStmt_Malloc(sql_handle);
@@ -1280,7 +1280,7 @@ int map_reload() {
 	unsigned char pvp, spell, light, weather, cantalk, show_ghosts, region, indoor, warpout, bind;
 	unsigned int reqlvl, reqvita, reqmana, lvlmax, manamax, vitamax;
 	unsigned char reqpath, reqmark, summon;
-	char title[64], mapfile[1024], mappath[1024];
+	char title[64], mapfile[64], mappath[1024];
 	char maprejectmsg[64];
 	unsigned char canUse, canEat, canSmoke, canMount, canGroup, canEquip;
 

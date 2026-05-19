@@ -327,7 +327,7 @@ struct warp_list {
 
 struct map_data {
 	char title[64];
-	char mapfile[1024];
+	char mapfile[64];
 	char maprejectmsg[64];
 	struct block_list** block;
 	struct block_list** block_mob;
