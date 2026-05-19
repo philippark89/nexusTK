@@ -1224,10 +1224,45 @@ int map_read() {//int id, const char *title, char bgm, int pvp, int spell, unsig
 		}
 		pos = 0;
 		fclose(fp);
-		map_loadregistry(id);
 	}
 
 	SqlStmt_Free(stmt);
+
+	// Bulk-load all MapRegistry data in one query after the outer stmt is freed.
+	// Previously this was done per-map inside the loop, which kept two prepared
+	// statements open on the same connection simultaneously and caused dropped
+	// connections (~270 seconds into loading on ARM64 Docker).
+	{
+		SqlStmt* reg_stmt = SqlStmt_Malloc(sql_handle);
+		struct global_reg reg;
+		unsigned int reg_mapid = 0;
+
+		memset(&reg, 0, sizeof(reg));
+
+		if (reg_stmt == NULL ||
+			SQL_ERROR == SqlStmt_Prepare(reg_stmt, "SELECT `MrgMapId`, `MrgIdentifier`, `MrgValue` FROM `MapRegistry` ORDER BY `MrgMapId`, `MrgPosition`") ||
+			SQL_ERROR == SqlStmt_Execute(reg_stmt) ||
+			SQL_ERROR == SqlStmt_BindColumn(reg_stmt, 0, SQLDT_UINT, &reg_mapid, 0, NULL, NULL) ||
+			SQL_ERROR == SqlStmt_BindColumn(reg_stmt, 1, SQLDT_STRING, &reg.str, sizeof(reg.str), NULL, NULL) ||
+			SQL_ERROR == SqlStmt_BindColumn(reg_stmt, 2, SQLDT_INT, &reg.val, 0, NULL, NULL))
+		{
+			SqlStmt_ShowDebug(reg_stmt);
+		} else {
+			while (SQL_SUCCESS == SqlStmt_NextRow(reg_stmt)) {
+				if (reg_mapid < 65535 && map[reg_mapid].tile != NULL &&
+					map[reg_mapid].registry_num < MAX_MAPREG) {
+					// allocate registry on first entry for this map
+					if (map[reg_mapid].registry == NULL)
+						CALLOC(map[reg_mapid].registry, struct global_reg, MAX_MAPREG);
+					memcpy(&map[reg_mapid].registry[map[reg_mapid].registry_num], &reg, sizeof(reg));
+					map[reg_mapid].registry_num++;
+				}
+			}
+		}
+		if (reg_stmt != NULL)
+			SqlStmt_Free(reg_stmt);
+	}
+
 	printf("Map data file reading finished. %d map loaded!\n", map_n);
 	//timer_insert(1800000,1800000,map_saveregistry, id, 0);
 	//map_n++;
