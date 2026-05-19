@@ -731,8 +731,12 @@ int map_foreachinblockva(int (*func)(struct block_list*, va_list), int m, int x0
 		printf("map_foreachinarea: block count too many!\n");
 
 	for (i = 0; i < blockcount; i++)
-		if (bl_list[i]->prev)	// �L?���ǂ����`�F�b�N
-			returnCount += func(bl_list[i], ap);
+		if (bl_list[i]->prev) {
+			va_list ap_copy;
+			va_copy(ap_copy, ap);
+			returnCount += func(bl_list[i], ap_copy);
+			va_end(ap_copy);
+		}
 
 	/*for (i = blockcount; i >= 0; i--)
 		if (bl_list[i]->prev)
@@ -971,8 +975,12 @@ int map_respawnmobs(int (*func)(struct block_list*, va_list), int m, int type, v
 		printf("map_foreachinarea: block count too many!\n");
 
 	for (i = 0; i < blockcount; i++)
-		if (bl_list[i]->prev)	// �L?���ǂ����`�F�b�N
-			returnCount += func(bl_list[i], ap);
+		if (bl_list[i]->prev) {
+			va_list ap_copy;
+			va_copy(ap_copy, ap);
+			returnCount += func(bl_list[i], ap_copy);
+			va_end(ap_copy);
+		}
 
 	return returnCount;
 }
