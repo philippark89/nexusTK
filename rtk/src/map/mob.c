@@ -14,6 +14,7 @@
 #include "db_mysql.h"
 #include "strlib.h"
 #include "rndm.h"
+#include "magic.h"
 
 unsigned int mob_id = MOB_START_NUM;
 unsigned int max_normal_id = MOB_START_NUM;

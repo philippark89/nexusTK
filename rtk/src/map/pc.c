@@ -16,6 +16,7 @@
 #include "script.h"
 #include "clif.h"
 #include "itemdb.h"
+#include "magic.h"
 #include "pc.h"
 #include "timer.h"
 #include "sl.h"

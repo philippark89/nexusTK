@@ -192,9 +192,8 @@ int nmail_sendmessage(USER* sd, char* message, int other, int type) {
 }
 
 struct block_list* map_id2bl(unsigned int id) {
-	struct block_list* bl = NULL;
-	bl = uidb_get(id_db, id);
-	return bl;
+	if (!id_db) return NULL;
+	return uidb_get(id_db, id);
 }
 
 void map_deliddb(struct block_list* bl) {
