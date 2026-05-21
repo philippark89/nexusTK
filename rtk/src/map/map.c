@@ -2509,40 +2509,38 @@ char* map_id2name(unsigned int id) {
 void mmo_setonline(unsigned int id, int val) {
 	int a, b, c, d, regid;
 	char escape[255];
-	USER* sd = map_id2sd(id);
-	SqlStmt* stmt = SqlStmt_Malloc(sql_handle);
+	USER* sd;
+	SqlStmt* stmt;
 
-	if (stmt == NULL) {
-		SqlStmt_ShowDebug(stmt);
-		SqlStmt_Free(stmt);
-		return 0;
-	}
+	sd = map_id2sd(id);
+	stmt = SqlStmt_Malloc(sql_handle);
+
+	escape[0] = '\0';
+
+	if (stmt == NULL)
+		return;
 
 	if (SQL_ERROR == SqlStmt_Prepare(stmt, "SELECT `ChaId` FROM `Character` WHERE `ChaId` = '%u'", id)
 		|| SQL_ERROR == SqlStmt_Execute(stmt)
 		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 0, SQLDT_UINT, &regid, 0, NULL, NULL)) {
 		SqlStmt_ShowDebug(stmt);
 		SqlStmt_Free(stmt);
-		return 0;
+		return;
 	}
 
 	if (SQL_SUCCESS == SqlStmt_NextRow(stmt)) {
-		a = b = c = d = session[sd->fd]->client_addr.sin_addr.s_addr;
-		a &= 0xff;
-		b = (b >> 8) & 0xff;
-		c = (c >> 16) & 0xff;
-		d = (d >> 24) & 0xff;
-		sprintf(escape, "%u.%u.%u.%u\0", a, b, c, d);
-		printf("[MAP LOGIN]: %s connected from %s!\n", sd->status.name, escape);
-
-		//if (strcmpi(escape,"71.78.153.2") == 0 || strcmpi(escape,"71.238.0.230") == 0) { clif_handle_disconnect(sd); clif_closeit(sd);}
-
-		sl_doscript_blargs("login", NULL, 1, &sd->bl);
-
-		/*if (SQL_ERROR == Sql_Query(sql_handle, "INSERT INTO `LoginLogs` (`LgnChaId`, `LgnIp`, `LgnActId`) VALUES ('%u', '%s', '%u')",
-				id, escape, regid)) {
-			Sql_ShowDebug(sql_handle);
-		}*/
+		if (sd && session[sd->fd]) {
+			a = b = c = d = session[sd->fd]->client_addr.sin_addr.s_addr;
+			a &= 0xff;
+			b = (b >> 8) & 0xff;
+			c = (c >> 16) & 0xff;
+			d = (d >> 24) & 0xff;
+			sprintf(escape, "%u.%u.%u.%u", a, b, c, d);
+		}
+		if (sd) {
+			printf("[MAP LOGIN]: %s connected from %s!\n", sd->status.name, escape);
+			sl_doscript_blargs("login", NULL, 1, &sd->bl);
+		}
 	}
 
 	if (SQL_ERROR == Sql_Query(sql_handle, "UPDATE `Character` SET `ChaOnline` = '%d', `ChaLastIP` = '%s' WHERE `ChaId` = '%u'", val, escape, id))

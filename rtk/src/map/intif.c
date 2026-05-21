@@ -202,25 +202,25 @@ int intif_mmo_tosd(int fd, struct mmo_charstatus* p) {
 		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 2, SQLDT_USHORT, &sd->status.last_pos.y, 0, NULL, NULL)) {
 		SqlStmt_ShowDebug(stmt);
 		SqlStmt_Free(stmt);
-	}
-
-	if (SQL_SUCCESS != SqlStmt_NextRow(stmt)) {
-		//SqlStmt_ShowDebug(stmt);
+		sd->status.last_pos.m = 0; sd->status.last_pos.x = 8; sd->status.last_pos.y = 7;
+	} else {
+		if (SQL_SUCCESS != SqlStmt_NextRow(stmt)) {
+			sd->status.last_pos.m = 0; sd->status.last_pos.x = 8; sd->status.last_pos.y = 7;
+		}
 		SqlStmt_Free(stmt);
 	}
 
-	//if (sd->status.last_pos.m == NULL) { sd->status.last_pos.m = 1000; sd->status.last_pos.x = 8; sd->status.last_pos.y = 7; } // commented on 05-28-18
-
-	if (sd->status.gm_level) sd->optFlags = optFlag_walkthrough; //.
-	if (!map_isloaded(sd->status.last_pos.m)) {
-		//sd->status.last_pos.m=0; sd->status.last_pos.x=8; sd->status.last_pos.y=7;
+	if (sd->status.gm_level) sd->optFlags = optFlag_walkthrough;
+	if (!map_isloaded(sd->status.last_pos.m) ||
+	    sd->status.last_pos.x >= map[sd->status.last_pos.m].xs ||
+	    sd->status.last_pos.y >= map[sd->status.last_pos.m].ys) {
+		sd->status.last_pos.m = 0; sd->status.last_pos.x = 8; sd->status.last_pos.y = 7;
 	}
 
 	pc_setpos(sd, sd->status.last_pos.m, sd->status.last_pos.x, sd->status.last_pos.y);
 	pc_loadmagic(sd);
 	pc_starttimer(sd);
 	pc_requestmp(sd);
-
 	clif_sendack(sd);
 	clif_sendtime(sd);
 	clif_sendid(sd);
@@ -231,27 +231,13 @@ int intif_mmo_tosd(int fd, struct mmo_charstatus* p) {
 	clif_refresh(sd);
 	clif_sendxy(sd);
 	clif_getchararea(sd);
-
 	clif_mob_look_start(sd);
 	map_foreachinarea(clif_object_look_sub, sd->bl.m, sd->bl.x, sd->bl.y, SAMEAREA, BL_ALL, LOOK_GET, sd);
 	clif_mob_look_close(sd);
-
 	pc_loaditem(sd);
 	pc_loadequip(sd);
-
 	pc_magic_startup(sd);
 	map_addiddb(&sd->bl);
-
-	///test stuff
-	/*
-	WFIFOB(sd->fd,0)=0xAA;
-	WFIFOB(sd->fd,1)=0x00;
-	WFIFOB(sd->fd,2)=0x03;
-	WFIFOB(sd->fd,3)=0x49;
-	WFIFOB(sd->fd,4)=0x23;
-	WFIFOB(sd->fd,5)=0x6D;
-	WFIFOSET(sd->fd,6);
-	*/
 	mmo_setonline(sd->status.id, 1);
 
 	if (sd->status.gm_level) {
@@ -417,6 +403,10 @@ int intif_parse_charload(int fd) {
 	clen = ulen;
 	CALLOC(cbuf, char, ulen);
 	retval = uncompress(cbuf, &clen, RFIFOP(fd, 8), RFIFOL(fd, 2) - 8);
+	if (retval) {
+		FREE(cbuf);
+		return 0;
+	}
 	/*if(!retval) {
 		a=(struct mmo_charstatus*)cbuf;
 
