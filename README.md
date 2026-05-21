@@ -1,5 +1,84 @@
-# Local RTK Server Setup
-This document describes how to set up a local RTK server on a PC running `Windows 10` and using `VirtualBox 6.1.8`. Any deviations from that setup may result in procedural discrepancies.
+# nexusTK Server
+
+A fork of [RTK-Server](https://github.com/unkmc/RTK-Server) — three cooperating C servers (login, char, map) backed by MySQL, with Lua scripts driving game logic. Targets the **NexusTK 750** Windows client.
+
+## Quick Start (Docker)
+
+> The canonical development environment is Docker on Ubuntu 22.04. The VirtualBox guide below is kept for historical reference.
+
+```bash
+# Start game server + MySQL
+docker compose up -d
+
+# Run database migrations (first time or after adding scripts)
+./database/migrate.sh
+
+# Rebuild after C source changes
+docker compose build rtk-server && docker compose up -d
+```
+
+Ports: login `2000`, map `2001`, char `2005`, MySQL `3306` (user `rtk`, password `changeMe`, database `RTK`).
+
+---
+
+## Changelog
+
+### 2026-05-20 — Client connectivity: full login, map load, and movement
+
+**Fix client version mismatch and char server stability**
+- `login.conf`: set `version: 750` to match NexusTK750 client (was 752)
+- `char_db.c`: eliminate 3 MB stack-allocated `mmo_charstatus`; bind SQL results directly to the heap struct — prevents stack overflow on character login
+- `char_db.c`: add `Sql_Ping` before DB operations to recover stale connections
+- `mapif.c`: fix `RFIFOL` offset (2 not 1) for the char-save packet length field
+- `strlib.c`: fix `vsnprintf` to use `va_copy` so the `va_list` is not consumed twice
+
+**Fix map server crashes during character login**
+- `magic.c`: guard `magicdb_yname` against `id <= 0` — prevents null dereference when spell slot contains an uninitialized zero
+- `pc.c`: skip zero-valued entries in skill and `dura_aether` loops inside `pc_warp` so passive warp scripts are only called for real spells
+
+**Fix SIGSEGV crash on first player movement step**
+- `clif.c` (`clif_parsewalk`): remove inverted null check that dereferenced `session[sd->fd]` immediately after confirming it was null
+- `onScriptedTilesArena.lua`: add early return when the player is not on an arena map; the function was calling `NPC("Tower")` and accessing `npc.look` unconditionally — the `typel_mtindex` C metamethod crashed inside the async coroutine on non-arena maps; also guard against `NPC("Tower")` returning nil
+
+**Harden map server login flow and position validation**
+- `intif.c`: fall back to spawn point (map 0, x=8, y=7) on SQL error, missing `last_pos` row, unloaded map, or out-of-bounds coordinates
+- `intif.c`: check `uncompress()` return value before using decompressed char data
+- `map.c`: clean up `mmo_setonline` — remove dead code and duplicate logic
+
+### 2026-05-19 — Stability fixes
+
+**Fix SIGSEGV in `map_foreachinblockva` and `map_respawnmobs`**
+- Use `va_copy` to avoid double-consuming `va_list` in variadic block iteration
+
+**Add backup cron and fix SIGTERM handling on map-server shutdown**
+- 5-minute automated DB backups wired into the container via cron
+- Map server now flushes properly on SIGTERM instead of hard-killing
+
+**Fix supervisorctl: add `unix_http_server` to `supervisord.conf`**
+
+**Fix peak memory: shrink `map_data.mapfile` field from 1024 to 64 bytes**
+
+**Fix build skipping edits due to Docker volume timestamp skew**
+- Ensure object files are always newer than source after Docker build
+
+**Fix OOM crash at startup: allocate map registry arrays lazily**
+
+**Fix MySQL connection drop during map loading (~270 seconds)**
+- Add keepalive pings during the long map-file loading phase
+
+### 2026-05-18 — Initial containerization
+
+**Fix ARM64/Ubuntu 22.04 compilation errors and containerize**
+- Port from `i386/ubuntu:latest` + Ubuntu 16.04 to `ubuntu:22.04`
+- Replace `mysql-client-5.7` with Ubuntu 22-compatible packages
+- Wire `make all` + supervisord server startup into `docker-compose.yml`
+- Add MySQL persistent volume and database migration workflow
+
+---
+
+## Legacy Setup (VirtualBox / Ubuntu 16.04)
+
+> The following guide is outdated — use Docker instead. Kept for reference.
 
 ***
 
