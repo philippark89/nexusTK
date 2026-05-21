@@ -23,6 +23,20 @@ Ports: login `2000`, map `2001`, char `2005`, MySQL `3306` (user `rtk`, password
 
 ## Changelog
 
+### 2026-05-21 — NPC click crash investigation
+
+**Fix 102 null-dereference crashes in clif.c send functions**
+- `clif.c`: all occurrences of `if (!session[sd->fd]) { session[sd->fd]->eof = 8; return 0; }` fixed to `if (!session[sd->fd]) return 0;`
+
+**Add SIGSEGV diagnostic infrastructure for NPC dialog crash**
+- `sl.c`: SIGSEGV signal handler prints a full C backtrace to stderr when the map server crashes — pinpoints the exact crash location
+- `sl.c`: link map-server with `-rdynamic` so backtrace symbols resolve to real function names
+- `sl.c`: uncomment `sl_err_print` so Lua errors from NPC scripts are logged rather than silently discarded
+- `sl.c`: add null guards to `typel_mtindex`/`typel_mtnewindex` for NULL `inst` and NULL `attrname` (defensive hardening)
+- `sl.c`: fix two more null-dereference bugs (`sl_throw`, `pcl_testpacket`) — same `!session[fd]` then `->eof` pattern as clif.c
+- `sl.c`: rename local `getpass` → `sl_getpass` to avoid POSIX conflict with `unistd.h`
+- Debug traces: `[click]`, `[sl_async]`, `[pcl_menu]` prints remain active; per-packet `[pkt]` trace removed (too noisy)
+
 ### 2026-05-20 — Client connectivity: full login, map load, and movement
 
 **Fix client version mismatch and char server stability**
