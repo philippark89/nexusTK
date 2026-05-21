@@ -1995,10 +1995,10 @@ int boards_showposts(USER* sd, int board) {
 		if (boarddb_script(board)) {
 			sl_doscript_blargs(boarddb_yname(board), "check", 1, &sd->bl);
 		}
-		else {
+		else if (!boarddb_special(board)) {
 			sd->board_canwrite = 1;
 		}
-		if (sd->status.gm_level == 99) {
+		if (sd->status.gm_level) {
 			sd->board_canwrite = 1;
 			sd->board_candel = 1;
 		}
@@ -2040,10 +2040,10 @@ int boards_readpost(USER* sd, int board, int post) {
 		if (boarddb_script(board)) {
 			sl_doscript_blargs(boarddb_yname(board), "check", 1, &sd->bl);
 		}
-		else {
+		else if (!boarddb_special(board)) {
 			sd->board_canwrite = 1;
 		}
-		if (sd->status.gm_level == 99) {
+		if (sd->status.gm_level) {
 			sd->board_canwrite = 1;
 			sd->board_candel = 1;
 		}
@@ -2077,6 +2077,11 @@ int boards_post(USER* sd, int board) {
 	StringBuf buf;
 
 	if (!sd) return 0;
+
+	if (boarddb_special(board) && !sd->status.gm_level) {
+		nmail_sendmessage(sd, "You do not have permission to post here.", 6, 0);
+		return 0;
+	}
 
 	//memset(topic,0,52);
 	//memset(post,0,4000);

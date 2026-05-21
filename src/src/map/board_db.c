@@ -170,7 +170,7 @@ int boarddb_read() {
 		SqlStmt_ShowDebug(stmt);
 		return 0;
 	}
-	if (SQL_ERROR == SqlStmt_Prepare(stmt, "SELECT `BnmId`, `BnmDescription`, `BnmLevel`, `BnmGMLevel`, `BnmPthId`, `BnmClnId`, `BnmScripted`, `BnmIdentifier`, `BnmSortOrder` FROM `BoardNames`")
+	if (SQL_ERROR == SqlStmt_Prepare(stmt, "SELECT `BnmId`, `BnmDescription`, `BnmLevel`, `BnmGMLevel`, `BnmPthId`, `BnmClnId`, `BnmScripted`, `BnmIdentifier`, `BnmSortOrder`, `BnmSpecial` FROM `BoardNames`")
 		|| SQL_ERROR == SqlStmt_Execute(stmt)
 		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 0, SQLDT_INT, &b.id, 0, NULL, NULL)
 		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 1, SQLDT_STRING, &b.name, sizeof(b.name), NULL, NULL)
@@ -181,6 +181,7 @@ int boarddb_read() {
 		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 6, SQLDT_UCHAR, &b.script, 0, NULL, NULL)
 		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 7, SQLDT_STRING, &b.yname, sizeof(b.yname), NULL, NULL)
 		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 8, SQLDT_INT, &b.sort, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 9, SQLDT_INT, &b.special, 0, NULL, NULL)
 		)
 	{
 		SqlStmt_ShowDebug(stmt);
