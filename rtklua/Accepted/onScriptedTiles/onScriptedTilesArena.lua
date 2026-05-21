@@ -1,5 +1,11 @@
 onScriptedTilesArena = async(function(player)
+	local mapTitle = player.mapTitle
+	if mapTitle ~= "Tower Arena" and mapTitle ~= "Nagnang Arena" and mapTitle ~= "Mountain Arena" then
+		return
+	end
+
 	local npc = NPC("Tower")
+	if npc == nil then return end
 
 	local t = {
 		graphic = convertGraphic(npc.look, "monster"),

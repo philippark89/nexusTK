@@ -1,6 +1,5 @@
 login = function(player)
 	--FIRST LOGIN
-
 	local pc = player:getUsers()
 	local serverResetTimer = core.gameRegistry["server_reset_timer"]
 	local offlineTime = os.time() - player.registry["last_logout"]
@@ -37,7 +36,6 @@ login = function(player)
 
 	if (not player:hasLegend("born")) then
 		player:addLegend("Born in " .. curT(), "born", 0, 80)
-
 		welcomeNmail.send(player)
 	end
 
@@ -89,7 +87,6 @@ login = function(player)
 	if player.registry["basic_tutorial_complete"] == 0 then
 		-- has not done welcome tutorial
 		player:warp(4711, 3, 3)
-
 		-- Welcome Map
 	else
 		if offlineTime >= 10800 then

@@ -5039,7 +5039,6 @@ int clif_parsewalk(USER* sd) {
 		map_foreachincell(clif_canmove_sub, sd->bl.m, dx, dy, BL_NPC, sd);
 		if (read_pass(sd->bl.m, dx, dy)) sd->canmove = 1;
 	}
-
 	//map_foreachincell(clif_canmove_sub,sd->bl.m,dx,dy,BL_NPC,sd);
 	if ((sd->canmove || sd->paralyzed || sd->sleep != 1.0f || sd->snare) && !sd->status.gm_level) {
 		clif_blockmovement(sd, 0);
@@ -5061,7 +5060,6 @@ int clif_parsewalk(USER* sd) {
 	if (!(sd->status.settingFlags & FLAG_FASTMOVE)) {
 		if (!session[sd->fd])
 		{
-			session[sd->fd]->eof = 8;
 			return 0;
 		}
 
@@ -5132,7 +5130,6 @@ int clif_parsewalk(USER* sd) {
 		//this is where all the "finding" code goes
 
 		clif_mob_look_start(sd);
-
 		map_foreachinblock(clif_object_look_sub, sd->bl.m, x0, y0, x0 + (x1 - 1), y0 + (y1 - 1), BL_ALL, LOOK_GET, sd);
 		//map_foreachinarea(clif_mob_look_sub,sd->bl.m,x0,y0,x0+(x1-1),y0+(y1-1),SAMEAREA, BL_MOB,LOOK_GET,sd);
 		//map_foreachinblock(clif_itemlook_sub2,sd->bl.m,x0,y0,x0+(x1-1),y0+(y1-1),BL_ALL,LOOK_GET,def,sd);
@@ -5143,7 +5140,7 @@ int clif_parsewalk(USER* sd) {
 		map_foreachinblock(clif_charlook_sub, sd->bl.m, x0, y0, x0 + (x1 - 1), y0 + (y1 - 1), BL_PC, LOOK_SEND, sd);
 	}
 
-	if (session[sd->fd]->eof)printf("%s eof set on.  19", sd->status.name);
+	if (session[sd->fd] && session[sd->fd]->eof) printf("%s eof set on.  19", sd->status.name);
 
 	for (i = 0; i < 14; i++) {
 		if (sd->status.equip[i].id > 0) {
