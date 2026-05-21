@@ -210,6 +210,7 @@ Useful GM commands (spoken in-game chat):
 - [x] NPC click SIGSEGV — missing `pc_readglobalregstring` declaration causing pointer truncation on x86-64
 - [x] 102 null-dereference crashes in `clif.c` send functions
 - [x] `mob_handle_sub` crash — `bll_pushinst` passed NULL `USER*` to Lua as non-nil userdata → SIGSEGV on field access
+- [x] Shift+F1 SIGSEGV — `map_name2npc` missing declaration in `map.h`; compiler assumed `int` return, truncating 64-bit pointer to 32 bits
 - [x] "Broken map name" — not reproducible; map name displays correctly
 - [x] Black screen on first map load — resolved with new char spawn flow
 
@@ -222,7 +223,7 @@ Useful GM commands (spoken in-game chat):
 - [ ] Item system end-to-end (pickup, equip, use)
 - [ ] Quest system testing
 - [ ] Crafting system testing
-- [ ] More NPC dialogue content
+- [x] More NPC dialogue content (Shift+F1 GM/system menu working)
 
 ### Developer Experience
 - [x] SIGSEGV handler with C backtrace to stderr

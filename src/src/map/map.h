@@ -418,6 +418,7 @@ struct map_sessiondata* map_name2sd(char*);
 struct mobspawn_data* map_id2mob(unsigned int);
 struct flooritem_data* map_id2fl(unsigned int);
 struct npc_data* map_id2npc(unsigned int);
+struct npc_data* map_name2npc(char*);
 struct npc_chardata* map_id2cnpc(unsigned int);
 
 void map_clritem();
