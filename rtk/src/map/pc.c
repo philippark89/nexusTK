@@ -2390,7 +2390,7 @@ char* pc_readglobalregstring(USER* sd, char* reg) {
 	int i, exist;
 
 	exist = -1;
-	nullpo_ret(0, sd);
+	if (!sd) return "";
 
 	for (i = 0; i < MAX_GLOBALPLAYERREG; i++) {
 		if (strcmpi(sd->status.global_regstring[i].str, reg) == 0) {
@@ -2426,19 +2426,23 @@ int pc_setglobalregstring(USER* sd, char* reg, char* val) {
 	if (exist != -1) {
 		if (strcmpi(val, "") == 0) {
 			strcpy(sd->status.global_regstring[exist].str, ""); //empty registry
-			strcpy(sd->status.global_regstring[exist].val, val);
+			strncpy(sd->status.global_regstring[exist].val, val, sizeof(sd->status.global_regstring[exist].val) - 1);
+			sd->status.global_regstring[exist].val[sizeof(sd->status.global_regstring[exist].val) - 1] = '\0';
 			return 0;
 		}
 		else {
-			strcpy(sd->status.global_regstring[exist].val, val);
+			strncpy(sd->status.global_regstring[exist].val, val, sizeof(sd->status.global_regstring[exist].val) - 1);
+			sd->status.global_regstring[exist].val[sizeof(sd->status.global_regstring[exist].val) - 1] = '\0';
 			return 0;
 		}
 	}
 	else {
 		for (i = 0; i < MAX_GLOBALPLAYERREG; i++) {
 			if (strcmpi(sd->status.global_regstring[i].str, "") == 0) {
-				strcpy(sd->status.global_regstring[i].str, reg);
-				strcpy(sd->status.global_regstring[i].val, val);
+				strncpy(sd->status.global_regstring[i].str, reg, sizeof(sd->status.global_regstring[i].str) - 1);
+				sd->status.global_regstring[i].str[sizeof(sd->status.global_regstring[i].str) - 1] = '\0';
+				strncpy(sd->status.global_regstring[i].val, val, sizeof(sd->status.global_regstring[i].val) - 1);
+				sd->status.global_regstring[i].val[sizeof(sd->status.global_regstring[i].val) - 1] = '\0';
 				return 0;
 			}
 		}

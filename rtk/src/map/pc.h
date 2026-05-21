@@ -56,6 +56,8 @@ char* pc_readregstr(USER*, int);
 int pc_setregstr(USER*, int, char*);
 int pc_readglobalreg(USER*, char*);
 int pc_setglobalreg(USER*, char*, unsigned long);
+char* pc_readglobalregstring(USER*, char*);
+int pc_setglobalregstring(USER*, char*, char*);
 int pc_readparam(USER*, int);
 int pc_setparam(USER*, int, int);
 int pc_starttimer(USER*);
