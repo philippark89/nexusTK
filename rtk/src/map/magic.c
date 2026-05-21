@@ -73,6 +73,7 @@ char* magicdb_name(int id) {
 
 char* magicdb_yname(int id) {
 	struct magic_data* db;
+	if (id <= 0) return "";
 	db = magicdb_search(id);
 	return db->yname;
 }

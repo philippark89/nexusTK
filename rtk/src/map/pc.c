@@ -1049,7 +1049,6 @@ int pc_warp(USER* sd, int m, int x, int y) {
 
 		if (!session[sd->fd])
 		{
-			session[sd->fd]->eof = 20;
 			return 0;
 		}
 
@@ -1070,13 +1069,13 @@ int pc_warp(USER* sd, int m, int x, int y) {
 		{
 			SqlStmt_ShowDebug(stmt);
 			SqlStmt_Free(stmt);
+			return 0;
 		}
 
 		if (SQL_SUCCESS != SqlStmt_NextRow(stmt)) {
 			SqlStmt_Free(stmt);
+			return 0;
 		}
-
-		if (SqlStmt_NumRows(stmt) == 0) return 0;
 
 		SqlStmt_Free(stmt);
 
@@ -1107,55 +1106,35 @@ int pc_warp(USER* sd, int m, int x, int y) {
 
 	if (m != oldmap) {
 		sl_doscript_blargs("mapLeave", NULL, 1, &sd->bl);
-
 		if (!map[m].canMount) sl_doscript_blargs("onDismount", NULL, 1, &sd->bl);
-
-		/*if(SQL_ERROR == Sql_Query(sql_handle,"INSERT INTO `WarpLogs` (`WrpChaId`, `WrpMapId`, `WrpX`, `WrpY`, `WrpMapIdDestination`, `WrpXDestination`, `WrpYDestination`) VALUES ('%u', '%u', '%u', '%u', '%u', '%u', '%u')",
-				sd->status.id, oldmap, oldx, oldy, m, x, y)) {
-				SqlStmt_ShowDebug(sql_handle);
-				Sql_FreeResult(sql_handle);
-		}*/
 	}
 
 	for (i = 0; i < MAX_SPELLS; i++) {
+		if (sd->status.skill[i] == 0) continue;
 		sl_doscript_blargs(magicdb_yname(sd->status.skill[i]), "passive_before_warp", 1, &sd->bl);
 	}
 
 	for (i = 0; i < MAX_MAGIC_TIMERS; i++) {
+		if (sd->status.dura_aether[i].id == 0) continue;
 		sl_doscript_blargs(magicdb_yname(sd->status.dura_aether[i].id), "before_warp_while_cast", 1, &sd->bl);
 	}
 
-	//sendaction
-	//sendside
-	//sendid
-	//0x67 14LwE (11)L
-	//mapinfo
-	//updatestatus
-	//sendxy
-	//sendweather
-	//music
-	//destroy
-	//get char info
 	clif_quit(sd);
 	pc_setpos(sd, m, x, y);
 	clif_sendtime(sd);
-	//clif_sendmapinfo(sd);
 	clif_spawn(sd);
 	clif_refresh(sd);
-	//clif_sendxy(sd);
-	//clif_mob_look_start(sd);
-	//map_foreachinarea(clif_object_look_sub,sd->bl.m,sd->bl.x,sd->bl.y,SAMEAREA,BL_ALL,LOOK_GET,sd);
-	//clif_mob_look_close(sd);
-	//clif_getchararea(sd);
 	if (m != oldmap) {
 		sl_doscript_blargs("mapEnter", NULL, 1, &sd->bl);
 	}
 
 	for (i = 0; i < MAX_SPELLS; i++) {
+		if (sd->status.skill[i] == 0) continue;
 		sl_doscript_blargs(magicdb_yname(sd->status.skill[i]), "passive_on_warp", 1, &sd->bl);
 	}
 
 	for (i = 0; i < MAX_MAGIC_TIMERS; i++) {
+		if (sd->status.dura_aether[i].id == 0) continue;
 		sl_doscript_blargs(magicdb_yname(sd->status.dura_aether[i].id), "on_warp_while_cast", 1, &sd->bl);
 	}
 
