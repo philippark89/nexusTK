@@ -237,6 +237,9 @@ int bl_duratimer(int id, int none) {
 	}
 
 	for (x = 0; x < MAX_MAGIC_TIMERS; x++) {
+		tbl = NULL;
+		tmob = NULL;
+		health = 0;
 		mid = sd->status.dura_aether[x].id;
 		if (sd->status.dura_aether[x].id > 0) {
 			if (sd->status.dura_aether[x].caster_id > 0) {
@@ -322,6 +325,9 @@ int bl_secondduratimer(int id, int none) {
 	}
 
 	for (x = 0; x < MAX_MAGIC_TIMERS; x++) {
+		tbl = NULL;
+		tmob = NULL;
+		health = 0;
 		mid = sd->status.dura_aether[x].id;
 		if (sd->status.dura_aether[x].id > 0) {
 			if (sd->status.dura_aether[x].caster_id > 0) {
@@ -371,6 +377,9 @@ int bl_thirdduratimer(int id, int none) {
 	}
 
 	for (x = 0; x < MAX_MAGIC_TIMERS; x++) {
+		tbl = NULL;
+		tmob = NULL;
+		health = 0;
 		mid = sd->status.dura_aether[x].id;
 		if (sd->status.dura_aether[x].id > 0) {
 			if (sd->status.dura_aether[x].caster_id > 0) {
@@ -420,6 +429,9 @@ int bl_fourthduratimer(int id, int none) {
 	}
 
 	for (x = 0; x < MAX_MAGIC_TIMERS; x++) {
+		tbl = NULL;
+		tmob = NULL;
+		health = 0;
 		mid = sd->status.dura_aether[x].id;
 		if (sd->status.dura_aether[x].id > 0) {
 			if (sd->status.dura_aether[x].caster_id > 0) {
@@ -469,6 +481,9 @@ int bl_fifthduratimer(int id, int none) { // 3000 ms
 	}
 
 	for (x = 0; x < MAX_MAGIC_TIMERS; x++) {
+		tbl = NULL;
+		tmob = NULL;
+		health = 0;
 		mid = sd->status.dura_aether[x].id;
 		if (sd->status.dura_aether[x].id > 0) {
 			if (sd->status.dura_aether[x].caster_id > 0) {
