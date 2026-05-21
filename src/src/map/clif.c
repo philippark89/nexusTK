@@ -10803,9 +10803,9 @@ int clif_handle_clickgetinfo(USER* sd) {
 
 			tsd = map_id2sd(bl->id);
 			struct point cone = { sd->bl.m,sd->bl.x,sd->bl.y };
-			struct point ctwo = { tsd->bl.m,tsd->bl.x,tsd->bl.y };
+			struct point ctwo = { bl->m,bl->x,bl->y };
 
-			if (CheckProximity(cone, ctwo, 21) == 1)
+			if (tsd && CheckProximity(cone, ctwo, 21) == 1)
 				if (sd->status.gm_level || (!(tsd->optFlags & optFlag_noclick) && !(tsd->optFlags & optFlag_stealth))) sl_doscript_blargs("onClick", NULL, 1, &sd->bl);
 
 			clif_clickonplayer(sd, bl);
@@ -13030,6 +13030,8 @@ int clif_clickonplayer(USER* sd, struct block_list* bl) {
 
 	tsd = map_id2sd(bl->id);
 	equip_status[0] = '\0';
+
+	if (!tsd) return 0;
 
 	if (!session[sd->fd])
 		return 0;

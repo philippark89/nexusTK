@@ -25,6 +25,7 @@ lua_State* sl_gstate;
 #include "socket.h"
 #include "db.h"
 #include "clan_db.h"
+#include "class_db.h"
 #include "mmo.h"
 #include "malloc.h"
 #include "db_mysql.h"
@@ -3507,14 +3508,14 @@ int iteml_getattr(lua_State* state, struct item_data* item, char* attrname) {
 	else if (!strcmp(attrname, "vita")) lua_pushnumber(state, item->vita);
 	else if (!strcmp(attrname, "mana")) lua_pushnumber(state, item->mana);
 	else if (!strcmp(attrname, "hit")) lua_pushnumber(state, item->hit);
-	else if (!strcmp(attrname, "rank")) lua_pushstring(state, classdb_name(classdb_path(item->class), item->rank));
+	else if (!strcmp(attrname, "rank")) lua_pushstring(state, classdb_name(classdb_path(item->class), item->rank) ?: "");
 	else if (!strcmp(attrname, "maxAmount")) lua_pushnumber(state, item->max_amount);
 	else if (!strcmp(attrname, "healing")) lua_pushnumber(state, item->healing);
 	else if (!strcmp(attrname, "ethereal")) lua_pushboolean(state, item->ethereal);
 	else if (!strcmp(attrname, "soundHit")) lua_pushnumber(state, item->sound_hit);
 	else if (!strcmp(attrname, "class")) lua_pushnumber(state, item->class);
 	else if (!strcmp(attrname, "baseClass")) lua_pushnumber(state, classdb_path(item->class));
-	else if (!strcmp(attrname, "className")) lua_pushstring(state, classdb_name(item->class, item->rank));
+	else if (!strcmp(attrname, "className")) lua_pushstring(state, classdb_name(item->class, item->rank) ?: "");
 
 	else if (!strcmp(attrname, "protection")) lua_pushnumber(state, item->protection);
 	else if (!strcmp(attrname, "reqMight")) lua_pushnumber(state, item->mightreq);
@@ -7715,9 +7716,9 @@ int pcl_getattr(lua_State* state, USER* sd, char* attrname) {
 	else if (!strcmp(attrname, "afkTime")) lua_pushnumber(state, sd->afktime);
 	else if (!strcmp(attrname, "afkTimeTotal")) lua_pushnumber(state, sd->totalafktime);
 	else if (!strcmp(attrname, "afkMessage")) lua_pushstring(state, sd->status.afkmessage);
-	else if (!strcmp(attrname, "baseClassName")) lua_pushstring(state, classdb_name(classdb_path(sd->status.class), 0));
-	else if (!strcmp(attrname, "className")) lua_pushstring(state, classdb_name(sd->status.class, 0));
-	else if (!strcmp(attrname, "classNameMark")) lua_pushstring(state, classdb_name(sd->status.class, sd->status.mark));
+	else if (!strcmp(attrname, "baseClassName")) lua_pushstring(state, classdb_name(classdb_path(sd->status.class), 0) ?: "");
+	else if (!strcmp(attrname, "className")) lua_pushstring(state, classdb_name(sd->status.class, 0) ?: "");
+	else if (!strcmp(attrname, "classNameMark")) lua_pushstring(state, classdb_name(sd->status.class, sd->status.mark) ?: "");
 
 	else if (!strcmp(attrname, "classRank")) lua_pushnumber(state, sd->status.classRank);
 	else if (!strcmp(attrname, "clanRank")) lua_pushnumber(state, sd->status.clanRank);

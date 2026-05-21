@@ -55,6 +55,8 @@ char* classdb_name(int id, int a) {
 
 	db = uidb_get(class_db, id);
 
+	if (!db) return NULL;
+
 	switch (a) {
 	case 0:
 		return db->rank0;

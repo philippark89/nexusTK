@@ -211,6 +211,7 @@ Useful GM commands (spoken in-game chat):
 - [x] 102 null-dereference crashes in `clif.c` send functions
 - [x] `mob_handle_sub` crash — `bll_pushinst` passed NULL `USER*` to Lua as non-nil userdata → SIGSEGV on field access
 - [x] Shift+F1 SIGSEGV — `map_name2npc` missing declaration in `map.h`; compiler assumed `int` return, truncating 64-bit pointer to 32 bits
+- [x] Player self-targeting SIGSEGV — `recipedb.h` used `_CLASSDB_H_` as its include guard, shadowing `class_db.h` in `sl.c`; `classdb_name` treated as `int` return causing 64-bit pointer truncation
 - [x] "Broken map name" — not reproducible; map name displays correctly
 - [x] Black screen on first map load — resolved with new char spawn flow
 
@@ -219,6 +220,7 @@ Useful GM commands (spoken in-game chat):
 - [x] NexusTK 750 client connecting and authenticated
 - [x] Character creation and login working
 - [x] Player movement working
+- [x] Player self-targeting / character info panel (S key, click self)
 - [ ] Mob spawning and basic combat
 - [ ] Item system end-to-end (pickup, equip, use)
 - [ ] Quest system testing

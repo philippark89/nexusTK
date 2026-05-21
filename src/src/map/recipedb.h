@@ -1,5 +1,5 @@
-#ifndef _CLASSDB_H_
-#define _CLASSDB_H_
+#ifndef _RECIPEDB_H_
+#define _RECIPEDB_H_
 
 struct recipe_data {
 	int id, tokensRequired, materials[10], superiorMaterials[2];
