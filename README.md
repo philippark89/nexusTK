@@ -209,9 +209,9 @@ Useful GM commands (spoken in-game chat):
 - [x] `magic.c` null deref on uninitialized spell slot (id ≤ 0)
 - [x] NPC click SIGSEGV — missing `pc_readglobalregstring` declaration causing pointer truncation on x86-64
 - [x] 102 null-dereference crashes in `clif.c` send functions
-- [ ] `mob_handle_sub` crash — mob timer fires after player disconnect, `bladestorm_trap.lua` indexes nil player (**in progress**)
-- [ ] "Broken map name" cosmetic display issue on client
-- [ ] Investigate black screen on first map load (tile data only sent on walk packet)
+- [x] `mob_handle_sub` crash — `bll_pushinst` passed NULL `USER*` to Lua as non-nil userdata → SIGSEGV on field access
+- [x] "Broken map name" — not reproducible; map name displays correctly
+- [x] Black screen on first map load — resolved with new char spawn flow
 
 ### Gameplay & Content
 - [x] NPC click → Lua dialog menus (deposit/withdraw, option menus)

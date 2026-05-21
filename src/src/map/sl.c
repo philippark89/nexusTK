@@ -4356,6 +4356,7 @@ void bll_pushinst(lua_State* state, struct block_list* bl, void* param) {
 	}
 	if (bl->type == BL_PC) {
 		USER* sd = map_id2sd(bl->id);
+		if (!sd) { lua_pushnil(state); return; }
 		typel_pushinst(state, &pcl_type, sd, param);
 	}
 	else if (bl->type == BL_MOB) {

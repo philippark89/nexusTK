@@ -1557,7 +1557,7 @@ int mmo_char_todb(struct mmo_charstatus* p) {
 	if (SQL_ERROR == Sql_Query(sql_handle, "UPDATE `Character` SET `ChaName` = '%s', `ChaClnId` = '%u', `ChaClanTitle` = '%s', `ChaTitle` = '%s', `ChaLevel` = '%u', `ChaPthId` = '%u', `ChaMark` = '%u', "
 		"`ChaTotem` = '%u', `ChaKarma` = '%f', `ChaCurrentVita` = '%u', `ChaBaseVita` = '%u', `ChaCurrentMana` = '%u', `ChaBaseMana` = '%u', `ChaExperience` = '%u', `ChaGold` = '%u', "
 		"`ChaSex` = '%d', `ChaNation` = '%d', `ChaFace` = '%u', `ChaHairColor` = '%u', `ChaArmorColor` = '%u', `ChaMapId` = '%u', `ChaX` = '%u', `ChaY` = '%u', `ChaSide` = '%d', `ChaState` = '%d', "
-		"`ChaHair` = '%u', `ChaFaceColor` = '%u', `ChaSkinColor` = '%u', `ChaPartner` = '%u', `ChaClanChat` = '%d', `ChaPathChat` = '%d', `ChaNoviceChat` = '%d', `ChaSettings` = '%u', `ChaGMLevel` = '%d', "
+		"`ChaHair` = '%u', `ChaFaceColor` = '%u', `ChaSkinColor` = '%u', `ChaPartner` = '%u', `ChaClanChat` = '%d', `ChaPathChat` = '%d', `ChaNoviceChat` = '%d', `ChaSettings` = '%u', "
 		"`ChaDisguise` = '%u', `ChaDisguiseColor` = '%u', `ChaMaximumBankSlots` = '%u', `ChaBankGold` = '%u', `ChaF1Name` = '%s', `ChaMaximumInventory` = '%u', `ChaPK` = '%u', `ChaKilledBy` = '%u', "
 		"`ChaKillsPK` = '%u', `ChaPKDuration` = '%u', `ChaMuted` = '%u', `ChaHeroes` = '%u', `ChaTier` = '%u', `ChaExperienceSoldMagic` = '%llu', `ChaExperienceSoldHealth` = '%llu', `ChaExperienceSoldStats` = '%llu', `ChaBaseMight` = '%u', `ChaBaseGrace` = '%u', "
 		"`ChaBaseWill` = '%u', `ChaBaseArmor` = '%i', `ChaMiniMapToggle` = '%u', `ChaHunter` = 0, `ChaAFKMessage` = '%s', `ChaTutor` = '%d', `ChaAlignment` = '%d', `ChaProfileVitaStats` = '%d', `ChaProfileEquipList` = '%d', "
@@ -1565,7 +1565,7 @@ int mmo_char_todb(struct mmo_charstatus* p) {
 		escape1, p->clan, escape3, escape2, p->level, p->class, p->mark,
 		p->totem, p->karma, p->hp, p->basehp, p->mp, p->basemp, p->exp, p->money,
 		p->sex, p->country, p->face, p->hair_color, p->armor_color, p->last_pos.m, p->last_pos.x, p->last_pos.y, p->side, p->state,
-		p->hair, p->face_color, p->skin_color, p->partner, p->clan_chat, p->subpath_chat, p->novice_chat, p->settingFlags, p->gm_level,
+		p->hair, p->face_color, p->skin_color, p->partner, p->clan_chat, p->subpath_chat, p->novice_chat, p->settingFlags,
 		p->disguise, p->disguisecolor, p->maxslots, p->bankmoney, escape4, p->maxinv, p->pk, p->killedby,
 		p->killspk, p->pkduration, p->mute, p->heroes, p->tier, p->expsoldmagic, p->expsoldhealth, p->expsoldstats, p->basemight, p->basegrace, p->basewill, p->basearmor,
 		p->miniMapToggle, escape6, p->tutor, p->alignment, p->profile_vitastats, p->profile_equiplist, p->profile_legends, p->profile_spells, p->profile_inventory, p->profile_bankitems,
