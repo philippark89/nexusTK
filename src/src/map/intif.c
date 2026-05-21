@@ -16,6 +16,7 @@
 #include "strlib.h"
 #include "db_mysql.h"
 #include "crypt.h"
+#include "board_db.h"
 
 struct DBMap* auth_db;
 extern unsigned int getTicks(void);
