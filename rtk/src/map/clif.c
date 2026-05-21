@@ -452,10 +452,7 @@ int clif_timeout(int fd) {
 }
 int clif_popup(USER* sd, const char* buf) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, strlen(buf) + 5 + 3);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -470,10 +467,7 @@ int clif_popup(USER* sd, const char* buf) {
 
 int clif_paperpopup(USER* sd, const char* buf, int width, int height) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, strlen(buf) + 11 + 3);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -490,10 +484,7 @@ int clif_paperpopup(USER* sd, const char* buf, int width, int height) {
 
 int clif_paperpopupwrite(USER* sd, const char* buf, int width, int height, int invslot) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, strlen(buf) + 11 + 3);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -510,10 +501,7 @@ int clif_paperpopupwrite(USER* sd, const char* buf, int width, int height, int i
 
 int clif_paperpopupwrite_save(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	char input[300];
 	memset(input, 0, 300);
@@ -538,10 +526,7 @@ int clif_transfer(USER* sd, int serverid, int m, int x, int y) {
 	int len = 0;
 	int dest_port;
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	if (serverid == 0) dest_port = 2001;
 	if (serverid == 1) dest_port = 2002;
@@ -574,10 +559,7 @@ int clif_transfer(USER* sd, int serverid, int m, int x, int y) {
 int clif_transfer_test(USER* sd, int m, int x, int y) {
 	int len = 0;
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	char map_ipaddress_s[] = "51.254.215.72";
 	//char map_ipaddress_s[] = "52.88.44.46";
@@ -609,10 +591,7 @@ int clif_transfer_test(USER* sd, int m, int x, int y) {
 
 int clif_sendBoardQuestionaire(USER* sd, struct board_questionaire* q, int count) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 	//Player(2):sendBoardQuestions("Defendant :","Name of Person who commited the crime.",2,"When :","When was the crime commited?",1)
 
 	WFIFOHEAD(sd->fd, 65535);
@@ -658,10 +637,7 @@ int clif_closeit(USER* sd) {
 	int len = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	/*WFIFOHEAD(sd->fd,255);
 	WFIFOB(sd->fd,0)=0xAA;
@@ -747,10 +723,7 @@ int clif_addtokillreg(USER* sd, int mob) {
 	for(x=0;x<256;x++) {
 		if(sd->status.guide[x]) {
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd,10);
 		WFIFOB(sd->fd,0)=0xAA;
@@ -771,10 +744,8 @@ int clif_sendheartbeat(int id, int none) {
 	USER* sd = map_id2sd((unsigned int)id);
 	nullpo_ret(1, sd);
 
-	if (!session[sd->fd]) {
-		session[sd->fd]->eof = 8;
+	if (!session[sd->fd])
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 7);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -797,10 +768,7 @@ int pc_sendpong(int id, int none) {
 
 	if (sd) {
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd, 10);
 		WFIFOB(sd->fd, 0) = 0xAA;
@@ -819,10 +787,7 @@ int pc_sendpong(int id, int none) {
 
 int clif_sendguidespecific(USER* sd, int guide) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 10);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -849,10 +814,7 @@ int clif_broadcast_sub(struct block_list* bl, va_list ap) {
 	len = strlen(msg);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	int flag = sd->status.settingFlags & FLAG_SHOUT;
 	if (flag == 0)  return 0;
@@ -882,10 +844,7 @@ int clif_gmbroadcast_sub(struct block_list* bl, va_list ap) {
 	len = strlen(msg);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, len + 8);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -915,10 +874,7 @@ int clif_broadcasttogm_sub(struct block_list* bl, va_list ap) {
 		len = strlen(msg);
 
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd, len + 8);
 		WFIFOB(sd->fd, 0) = 0xAA;
@@ -1105,10 +1061,7 @@ int clif_sendtowns(USER* sd) {
 	//x=sprintf(buf,"\xAA\x00\x07\x68\x59\xB5\x07\x3D\x7E\x37\xAA\x00\x29\x59\x5A\x54\x3F\x22\x17\x30\x13\x33\x77\x11\x60\x4A\x51\x55\x59\x13\x32\x73\x1A\x71\x48\x52\x4E\x59\x13\x32\x79\x03\x6E\x5D\x22\x31\x79\x71\x50\x54\x16\x7E\x5C\x26\xAA\x00\x0B\x75\x0B\xE7\x55\x6F\x2C\x66\xB1\xB6\xB1\x25");
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 0x59);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -1134,16 +1087,10 @@ int clif_sendtowns(USER* sd) {
 
 int clif_user_list(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(char_fd, 4);
 	WFIFOW(char_fd, 0) = 0x300B;
@@ -1403,10 +1350,7 @@ void clif_send_selfbar(USER* sd) {
 	if ((int)percentage == 0 && sd->status.hp != 0) percentage = (float)1;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 15);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -1436,10 +1380,7 @@ void clif_send_groupbars(USER* sd, USER* tsd) {
 	if ((int)percentage == 0 && tsd->status.hp != 0) percentage = (float)1;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 15);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -1471,10 +1412,7 @@ void clif_send_mobbars(struct block_list* bl, va_list ap) {
 	if ((int)percentage == 0 && mob->current_vita != 0) percentage = (float)1;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 15);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -1560,10 +1498,7 @@ int clif_mob_look_start_func(struct block_list* bl, va_list ap) {
 	sd->mob_item = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	//WFIFOB(sd->fd,0)=0xAA;
@@ -1743,10 +1678,7 @@ int clif_object_look_sub2(struct block_list* bl, va_list ap) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 6000);
 
@@ -1955,10 +1887,7 @@ int clif_mob_look_start(USER* sd) {
 	sd->mob_item = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	//WFIFOB(sd->fd,0)=0xAA;
@@ -2014,10 +1943,7 @@ int clif_send_duration(USER* sd, int id, int time, USER* tsd) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, len + 10);
 	WFIFOB(sd->fd, 5) = len;
@@ -2050,10 +1976,7 @@ int clif_send_aether(USER* sd, int id, int time) {
 	if (pos < 0) return 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 11); //this is causing crashes
 	WFIFOHEADER(sd->fd, 63, 8);
@@ -2119,10 +2042,7 @@ int clif_mob_move(struct block_list* bl, va_list ap) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 14);
 	WFIFOHEADER(sd->fd, 0x0C, 11);
@@ -2222,10 +2142,7 @@ int clif_send_mob_health_sub(struct block_list* bl, va_list ap) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(tsd->fd, 15);
 	WFIFOHEADER(tsd->fd, 0x13, 12);
@@ -2251,10 +2168,7 @@ int clif_send_mob_health_sub_nosd(struct block_list* bl, va_list ap) {
 	nullpo_ret(0, sd = (USER*)bl);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 15);
 	WFIFOHEADER(sd->fd, 0x13, 12);
@@ -2573,10 +2487,7 @@ int clif_send_destroy(struct block_list* bl, va_list ap) {
 	nullpo_ret(0, mob = va_arg(ap, MOB*));
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	if (mob->data->mobtype == 1) {
 		WFIFOHEAD(sd->fd, 9);
@@ -2601,10 +2512,7 @@ int clif_send_destroy(struct block_list* bl, va_list ap) {
 
 void clif_send_timer(USER* sd, char type, unsigned int length) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 10);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -2686,10 +2594,7 @@ int clif_send_sub(struct block_list* bl, va_list ap) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	if (RBUFB(buf, 3) == 0x0D && RBUFB(buf, 5) >= 10) {
 		if (pc_readglobalreg(sd, "chann_en") >= 1 && RBUFB(buf, 5) == 10) {
@@ -2912,10 +2817,7 @@ int clif_mystaytus(USER* sd) {
 	float percentage = clif_getXPBarPercent(sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	if (sd->armor < -127) sd->armor = -127;
 	if (sd->armor > 127) sd->armor = 127;
@@ -2923,10 +2825,7 @@ int clif_mystaytus(USER* sd) {
 	class_name = classdb_name(sd->status.class, sd->status.mark);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -3153,10 +3052,7 @@ int clif_cnpclook_sub(struct block_list* bl, va_list ap) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 512);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -3417,10 +3313,7 @@ int clif_cmoblook_sub(struct block_list* bl, va_list ap) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 512);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -3711,10 +3604,7 @@ int clif_charlook_sub(struct block_list* bl, va_list ap) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(src_sd->fd, 512);
 	WFIFOB(src_sd->fd, 0) = 0xAA;
@@ -4076,10 +3966,7 @@ int clif_blockmovement(USER* sd, int flag) {
 	nullpo_ret(0, sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 8);
 	WFIFOHEADER(sd->fd, 0x51, 5);
@@ -4140,10 +4027,7 @@ int clif_charspecific(int sender, int id) {
 	//if (!clif_show_ghost(src_sd,sd)) return 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(src_sd->fd, 512);
 	WFIFOB(src_sd->fd, 0) = 0xAA;
@@ -4468,10 +4352,7 @@ int clif_charspecific(int sender, int id) {
 
 int clif_sendack(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 255);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4505,10 +4386,7 @@ int clif_retrieveprofile(USER* sd) {
 
 int clif_screensaver(USER* sd, int screen) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 4 + 3);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4524,10 +4402,7 @@ int clif_screensaver(USER* sd, int screen) {
 
 int clif_sendtime(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 7);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4543,10 +4418,7 @@ int clif_sendtime(USER* sd) {
 
 int clif_sendid(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 17);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4565,10 +4437,7 @@ int clif_sendid(USER* sd) {
 }
 int clif_sendweather(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 6);
 	WFIFOHEADER(sd->fd, 0x1F, 3);
@@ -4584,10 +4453,7 @@ int clif_sendmapinfo(USER* sd) {
 	if (!sd) return 0;
 	//Map Title and Map X-Y
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 100);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4670,10 +4536,7 @@ int clif_sendxy(USER* sd) {
 	subt[0] = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	/*
 
@@ -4741,10 +4604,7 @@ int clif_sendxynoclick(USER* sd) {
 	subt[0] = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 14);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4786,10 +4646,7 @@ int clif_sendxychange(USER* sd, int dx, int dy) {
 	nullpo_ret(0, sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 14);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4833,10 +4690,7 @@ int clif_sendstatus(USER* sd, int flags) {
 		f |= SFLAG_GMON;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 63);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -4906,10 +4760,7 @@ int clif_sendstatus(USER* sd, int flags) {
 
 int clif_sendoptions(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 12);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -5329,10 +5180,7 @@ int clif_noparsewalk(USER* sd, char speed) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 15);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -5442,10 +5290,7 @@ int clif_guitextsd(char* msg, USER* sd) {
 	int len = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 0);
 	WFIFOB(sd->fd, 0) = 0xAA; // Packet Delimiter
@@ -5478,10 +5323,7 @@ int clif_guitext(struct block_list* bl, va_list ap) {
 	len = strlen(msg);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 0);
 	WFIFOB(sd->fd, 0) = 0xAA; // Packet Delimiter
@@ -6316,10 +6158,7 @@ int clif_sendmapdata(USER* sd, int m, int x0, int y0, int x1, int y1, unsigned s
 	unsigned short buf[65536];
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	if (map_readglobalreg(m, "blackout") != 0) { sl_doscript_blargs("sendMapData", NULL, 1, &sd->bl); return 0; }
 
@@ -6500,10 +6339,7 @@ int clif_sendmsg(USER* sd, int type, char* buf) {
 
 	WFIFOHEAD(sd->fd, 8 + len);
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 8 + len);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -7045,10 +6881,7 @@ int clif_senddelitem(USER* sd, int num, int type) {
 	strcpy(sd->status.inventory[num].real_name, "");
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 9);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -7113,10 +6946,7 @@ int clif_sendadditem(USER* sd, int num) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 255);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -7202,10 +7032,7 @@ int clif_equipit(USER* sd, int id) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 255);
 	WFIFOB(sd->fd, 5) = clif_getequiptype(id);
@@ -7904,10 +7731,7 @@ int clif_sendscriptsay(USER* sd, char* msg, int msglen, int type) {
 		namelen += 4;
 
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd, msglen + namelen + 13);
 		CALLOC(buf, char, 16 + namelen + msglen);
@@ -7949,10 +7773,7 @@ int clif_sendscriptsay(USER* sd, char* msg, int msglen, int type) {
 	}
 	else {
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd, msglen + namelen + 13);
 		CALLOC(buf, char, 16 + namelen + msglen);
@@ -8111,10 +7932,7 @@ int clif_speak(struct block_list* bl, va_list ap) {
 	len = strlen(msg);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, strlen(msg) + 11);
 	WFIFOB(sd->fd, 5) = type;
@@ -8197,10 +8015,7 @@ int clif_parsesay(USER* sd) {
 }
 int clif_destroyold(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 6);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8224,10 +8039,7 @@ int clif_refresh(USER* sd) {
 	clif_getchararea(sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 5);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8271,10 +8083,7 @@ int clif_refreshnoclick(USER* sd)
 	clif_getchararea(sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 5);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8308,10 +8117,7 @@ int clif_refreshnoclick(USER* sd)
 
 int clif_sendupdatestatus(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 33);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8338,10 +8144,7 @@ int clif_sendupdatestatus(USER* sd) {
 
 int clif_sendupdatestatus2(USER* sd) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	float percentage = clif_getXPBarPercent(sd);
 
@@ -8371,10 +8174,7 @@ clif_sendupdatestatus_onkill(USER* sd) {
 	float percentage = clif_getXPBarPercent(sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 33);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8456,10 +8256,7 @@ clif_sendupdatestatus_onequip(USER* sd) {
 	float percentage = clif_getXPBarPercent(sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 62);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8520,10 +8317,7 @@ clif_sendupdatestatus_onunequip(USER* sd) {
 	float percentage = clif_getXPBarPercent(sd);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 52);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8573,10 +8367,7 @@ clif_sendupdatestatus_onunequip(USER* sd) {
 
 int clif_sendbluemessage(USER* sd, char* msg) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, strlen(msg) + 8);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8714,10 +8505,7 @@ int clif_sendanimation(struct block_list* bl, va_list ap) {
 
 	if (sd->status.settingFlags & FLAG_MAGIC) {
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd, 13);
 		WFIFOB(sd->fd, 0) = 0xAA;
@@ -8734,10 +8522,7 @@ int clif_sendanimation(struct block_list* bl, va_list ap) {
 
 int clif_animation(USER* src, USER* sd, int animation, int duration) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(src->fd, 0x0A + 3);
 	if (src->status.settingFlags & FLAG_MAGIC) {
@@ -8776,10 +8561,7 @@ int clif_sendmagic(USER* sd, int pos) {
 	type = magicdb_type(id);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 255);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -8986,10 +8768,7 @@ int clif_scriptmes(USER* sd, int id, char* msg, int previous, int next) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 1024);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -9256,10 +9035,7 @@ int clif_scriptmenu(USER* sd, int id, char* dialog, char* menu[], int size) { //
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -9550,10 +9326,7 @@ int clif_scriptmenuseq(USER* sd, int id, char* dialog, char* menu[], int size, i
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -9849,10 +9622,7 @@ int clif_inputseq(USER* sd, int id, char* dialog, char* dialog2, char* dialog3, 
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -9945,10 +9715,7 @@ int clif_parsegetitem(USER* sd) {
 
 int clif_unequipit(USER* sd, int spot) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 7);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -10292,10 +10059,7 @@ int clif_parsechangepos(USER* sd) {
 	int len=0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd,255);
 	WFIFOB(sd->fd,0)=0xAA;
@@ -10536,10 +10300,7 @@ int clif_parsechangespell(USER* sd) {
 
 int clif_removespell(USER* sd, int pos) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 6);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -11895,10 +11656,7 @@ int clif_sendtest(USER* sd) {
 	static int number;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 7);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -11933,10 +11691,7 @@ int clif_updatestate(struct block_list* bl, va_list ap) {
 	//if( (sd->optFlags & optFlag_stealth && !src_sd->status.gm_level) && src_sd->status.id != sd->status.id)return 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(src_sd->fd, 512);
 	WFIFOB(src_sd->fd, 0) = 0xAA;
@@ -12319,10 +12074,7 @@ int clif_showboards(USER* sd) {
 	int b_count;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -12394,10 +12146,7 @@ int clif_buydialog(USER* sd, unsigned int id, char* dialog, struct item* item, i
 	char buff[64];
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -12713,10 +12462,7 @@ int clif_selldialog(USER* sd, unsigned int id, char* dialog, int item[], int cou
 	int i;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -12988,10 +12734,7 @@ int clif_input(USER* sd, int id, char* dialog, char* item) {
 	}
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 1000);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -13288,10 +13031,7 @@ int clif_clickonplayer(USER* sd, struct block_list* bl) {
 	equip_status[0] = '\0';
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 
@@ -13721,10 +13461,7 @@ int clif_groupstatus(USER* sd) {
 	//if(sd->group_count==1) sd->group_count==0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -13943,10 +13680,7 @@ int clif_grouphealth_update(USER* sd) {
 			continue;
 
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd, 512);
 		WFIFOB(sd->fd, 0) = 0xAA;
@@ -14668,10 +14402,7 @@ int clif_parse_exchange(USER* sd) {
 		id = RFIFOB(sd->fd, 10) - 1;
 		if (sd->status.inventory[id].amount > 1) {
 			if (!session[sd->fd])
-			{
-				session[sd->fd]->eof = 8;
 				return 0;
-			}
 
 			WFIFOHEAD(sd->fd, 7);
 			WFIFOB(sd->fd, 0) = 0xAA;
@@ -14777,10 +14508,7 @@ int clif_startexchange(USER* sd, unsigned int target) {
 		}
 
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(sd->fd, 512);
 		WFIFOB(sd->fd, 0) = 0xAA;
@@ -14799,10 +14527,7 @@ int clif_startexchange(USER* sd, unsigned int target) {
 		WFIFOSET(sd->fd, encrypt(sd->fd));
 
 		if (!session[sd->fd])
-		{
-			session[sd->fd]->eof = 8;
 			return 0;
-		}
 
 		WFIFOHEAD(tsd->fd, 512);
 
@@ -14855,10 +14580,7 @@ int clif_exchange_additem_else(USER* sd, USER* tsd, int id) {
 	stringTruncate(nameof, 15);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 2000);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -14882,10 +14604,7 @@ int clif_exchange_additem_else(USER* sd, USER* tsd, int id) {
 	len = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(tsd->fd, 2000);
 	WFIFOB(tsd->fd, 0) = 0xAA;
@@ -14940,10 +14659,7 @@ int clif_exchange_additem(USER* sd, USER* tsd, int id, int amount) {
 	stringTruncate(nameof, 15);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 2000);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -14997,10 +14713,7 @@ int clif_exchange_additem(USER* sd, USER* tsd, int id, int amount) {
 	len = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(tsd->fd, 2000);
 	WFIFOB(tsd->fd, 0) = 0xAA;
@@ -15076,10 +14789,7 @@ int clif_exchange_money(USER* sd, USER* tsd) {
 	}*/
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	if (!session[tsd->fd])
 	{
@@ -15196,10 +14906,7 @@ int clif_exchange_message(USER* sd, char* message, int type, int extra) {
 	len = strlen(message) + 5;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, strlen(message) + 8);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -15322,10 +15029,7 @@ int clif_canmove(USER* sd, int direct) {
 
 /*int clif_clanBankWithdraw(USER *sd,struct item_data *items,int count) {
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	int len = 0;
 
@@ -15402,10 +15106,7 @@ int clif_mapselect(USER* sd, char* wm, int* x0, int* y0, char** mname, unsigned 
 	int x, y;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -15486,10 +15187,7 @@ int clif_sendpowerboard(USER* sd) {
 	len[1] = 0;
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 65535);
 	WFIFOB(sd->fd, 0) = 0xAA;
@@ -15540,10 +15238,7 @@ int clif_huntertoggle(USER* sd) {
 	//if (SQL_SUCCESS == SqlStmt_NextRow(stmt)) SqlStmt_Free(stmt);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, 5);
 	WFIFOB(sd->fd, 0) = 0xAA;
