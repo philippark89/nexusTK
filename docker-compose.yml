@@ -1,6 +1,6 @@
 services:
   server:
-    image: rtk-server:latest
+    image: nexustk-server:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,9 +13,9 @@ services:
       - "2001:2001"
       - "2005:2005"
     volumes:
-      - "./rtk:/home/RTK/rtk"
-      - "./rtklua:/home/RTK/rtklua"
-      - "./rtkmaps:/home/RTK/rtkmaps"
+      - "./src:/home/RTK/src"
+      - "./lua:/home/RTK/lua"
+      - "./maps:/home/RTK/maps"
       - "./database/scripts:/database/scripts"
       - "./database/history:/home/RTK/database/history"
 
@@ -31,7 +31,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - "db-data:/var/lib/mysql"
+      - "nexustk-db:/var/lib/mysql"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "rtk", "-pchangeMe"]
       interval: 5s
@@ -40,4 +40,4 @@ services:
       start_period: 30s
 
 volumes:
-  db-data:
+  nexustk-db:

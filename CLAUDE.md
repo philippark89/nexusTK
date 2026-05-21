@@ -24,7 +24,7 @@ Build runs inside the Docker container. The target platform is Ubuntu 22.04. Req
 
 ```bash
 # Build everything
-cd rtk && make all
+cd src && make all
 
 # Build individual servers
 make login
@@ -76,7 +76,7 @@ Shared infrastructure in `src/common/`: socket I/O, MySQL abstraction, timers, e
 
 ### Configuration
 
-All runtime config lives in `rtk/conf/`:
+All runtime config lives in `src/conf/`:
 - `inter.conf` — inter-server IPs/ports (must match across all three servers)
 - `map.conf` / `char.conf` / `login.conf` — per-server settings
 - `battle.conf` — combat balance tuning
@@ -84,7 +84,7 @@ All runtime config lives in `rtk/conf/`:
 
 ## Lua Game Scripts
 
-Game logic is scripted in Lua 5.1 under `rtklua/`. Only scripts in `rtklua/Accepted/` are loaded by the server; `rtklua/Developers/` is for work-in-progress.
+Game logic is scripted in Lua 5.1 under `lua/`. Only scripts in `lua/Accepted/` are loaded by the server; `lua/Developers/` is for work-in-progress.
 
 Key scripts:
 - `Accepted/player.lua` — player stats, progression, core player mechanics (138KB)
@@ -95,11 +95,11 @@ Key scripts:
 - `Accepted/ntkSystem.lua` — core game systems
 - `Accepted/Quests/` — quest tracker and quest check hooks
 
-The map server's `src/map/script.c` implements the C-side Lua API. See `rtklua/LUA Help File.txt` for the available API.
+The map server's `src/map/script.c` implements the C-side Lua API. See `lua/LUA Help File.txt` for the available API.
 
 ## Map Files
 
-Game world maps are in `rtkmaps/Accepted/` as binary `.map` files. `rtkmaps/warps.txt` documents warp point connections between maps. The `metan` tool (`src/metan/`) generates the metadata files consumed by the map server at startup.
+Game world maps are in `maps/Accepted/` as binary `.map` files. `maps/warps.txt` documents warp point connections between maps. The `metan` tool (`src/metan/`) generates the metadata files consumed by the map server at startup.
 
 ## Outstanding Containerization Work
 

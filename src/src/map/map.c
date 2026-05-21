@@ -1154,7 +1154,7 @@ int map_read() {//int id, const char *title, char bgm, int pvp, int spell, unsig
 	CALLOC(map, struct map_data, 65535);
 
 	for (i = 0; i < map_n && SQL_SUCCESS == SqlStmt_NextRow(stmt); i++) {
-		sprintf(mappath, "../rtkmaps/Accepted/%s", mapfile);
+		sprintf(mappath, "../maps/Accepted/%s", mapfile);
 		fp = fopen(mappath, "rb");
 
 		if (fp == NULL) {
@@ -1341,7 +1341,7 @@ int map_reload() {
 	map_n = SqlStmt_NumRows(stmt);
 
 	for (i = 0; i < map_n && SQL_SUCCESS == SqlStmt_NextRow(stmt); i++) {
-		sprintf(mappath, "../rtkmaps/Accepted/%s", mapfile);
+		sprintf(mappath, "../maps/Accepted/%s", mapfile);
 		fp = fopen(mappath, "rb");
 		blockcount = map[id].bxs * map[id].bys;
 

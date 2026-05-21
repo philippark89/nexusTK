@@ -15,7 +15,7 @@ done
 echo "[entrypoint] Migrations done."
 
 echo "[entrypoint] Building RTK servers..."
-cd /home/RTK/rtk && make clean && make all
+cd /home/RTK/src && make clean && make all
 
 echo "[entrypoint] Starting servers via supervisord..."
-exec /usr/bin/supervisord -n -c /etc/supervisor/conf.d/rtk.conf
+exec /usr/bin/supervisord -n -c /etc/supervisor/conf.d/nexustk.conf

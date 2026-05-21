@@ -106,39 +106,39 @@ luac.out
 
 .vscode/
 
-#######
-# RTK #
-#######
+##########
+# Jumong #
+##########
 
 # C log files
-/rtk/*log.txt
-/rtk/logs/*
-/rtk/logs-archive/*
-!/rtk/logs/.gitignore
-!/rtk/logs-archive/.gitignore
+/src/*log.txt
+/src/logs/*
+/src/logs-archive/*
+!/src/logs/.gitignore
+!/src/logs-archive/.gitignore
 
 # Client files
 !/client/**/*.*
 
 # Lua log files
-/rtklua/History/logs/**/*.txt
+/lua/History/logs/**/*.txt
 
 # Meta data
-/rtk/metan
-/rtk/meta/CharicInfo*
-/rtk/meta/ItemInfo*
+/src/metan
+/src/meta/CharicInfo*
+/src/meta/ItemInfo*
 
 # Server builds
-/rtk/char-server
-/rtk/decrypt
-/rtk/login-server
-/rtk/map-server
+/src/char-server
+/src/decrypt
+/src/login-server
+/src/map-server
 
 # Local scripts
-/rtklua/auto-format-lua-scripts.bat
+/lua/auto-format-lua-scripts.bat
 
 # Maps
-!/rtkmaps/**/*.map
+!/maps/**/*.map
 
 # Database backups
 /database/history/*.sql
