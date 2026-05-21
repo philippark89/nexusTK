@@ -185,8 +185,8 @@ int mapif_parse_requestchar(int fd) {
 	char* cbuf;
 	ulen = sizeof(struct mmo_charstatus);
 	clen = compressBound(ulen);
-	memset(char_dat, 0, sizeof(struct mmo_charstatus));
-	mmo_char_fromdb(RFIFOL(fd, 4), char_dat, RFIFOP(fd, 8));
+	if (mmo_char_fromdb(RFIFOL(fd, 4), char_dat, RFIFOP(fd, 8)) < 0)
+		return 0;
 
 	CALLOC(cbuf, char, clen);
 	retval = compress(cbuf, &clen, (char*)char_dat, ulen);
@@ -211,7 +211,7 @@ int mapif_parse_savechar(int fd) {
 	char* cbuf;
 	unsigned int ulen, clen, retval;
 
-	ulen = RFIFOL(fd, 1) - 6;
+	ulen = RFIFOL(fd, 2) - 6;
 	clen = sizeof(struct mmo_charstatus);
 
 	CALLOC(cbuf, char, clen);
@@ -235,7 +235,7 @@ int mapif_parse_savecharlog(int fd) {
 	struct mmo_charstatus* c = NULL;
 	unsigned int ulen, clen, retval;
 
-	ulen = RFIFOL(fd, 1) - 6;
+	ulen = RFIFOL(fd, 2) - 6;
 	clen = sizeof(struct mmo_charstatus);
 
 	CALLOC(cbuf, char, clen);

@@ -287,7 +287,7 @@ int e_mail_check(char* email)
 
 //--------------------------------------------------
 // Return numerical value of a switch configuration
-// on/off, english, français, deutsch, español
+// on/off, english, franï¿½ais, deutsch, espaï¿½ol
 //--------------------------------------------------
 int config_switch(const char* str)
 {
@@ -973,7 +973,7 @@ int StringBuf_Vprintf(StringBuf* self, const char* fmt, va_list ap)
 		/* Try to print in the allocated space. */
 		size = self->max_ - (self->ptr_ - self->buf_);
 		va_copy(apcopy, ap);
-		n = vsnprintf(self->ptr_, size, fmt, ap);
+		n = vsnprintf(self->ptr_, size, fmt, apcopy);
 		va_end(apcopy);
 		/* If that worked, return the length. */
 		if (n > -1 && n < size)

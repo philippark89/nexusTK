@@ -399,7 +399,6 @@ int mmo_char_fromdb(unsigned int id, struct mmo_charstatus* p, char* login_name)
 	int i = 0;
 	unsigned int pos = 0;
 	unsigned short magic_id = 0;
-	struct mmo_charstatus a;
 	struct item item;
 	struct skill_info skill;
 	struct global_reg reg;
@@ -411,7 +410,8 @@ int mmo_char_fromdb(unsigned int id, struct mmo_charstatus* p, char* login_name)
 
 	nullpo_chk(p);
 
-	memset(&a, 0, sizeof(a));
+	Sql_Ping(sql_handle);
+	memset(p, 0, sizeof(*p));
 	memset(&item, 0, sizeof(item));
 	memset(&skill, 0, sizeof(skill));
 	memset(&reg, 0, sizeof(reg));
@@ -442,73 +442,73 @@ int mmo_char_fromdb(unsigned int id, struct mmo_charstatus* p, char* login_name)
 		"`ChaProfileLegends`, `ChaProfileSpells`, `ChaProfileInventory`, `ChaProfileBankItems`, `ChaPthRank`, `ChaClnRank` FROM `Character` WHERE `ChaId` = '%u' LIMIT 1", id) //47
 
 		|| SQL_ERROR == SqlStmt_Execute(stmt)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 0, SQLDT_STRING, &a.name, sizeof(a.name), NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 1, SQLDT_UINT, &a.clan, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 2, SQLDT_STRING, &a.clan_title, sizeof(a.clan_title), NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 3, SQLDT_STRING, &a.title, sizeof(a.title), NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 4, SQLDT_STRING, &a.f1name, sizeof(a.f1name), NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 5, SQLDT_UCHAR, &a.level, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 6, SQLDT_UCHAR, &a.class, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 7, SQLDT_UCHAR, &a.mark, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 8, SQLDT_UCHAR, &a.totem, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 9, SQLDT_FLOAT, &a.karma, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 10, SQLDT_UINT, &a.hp, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 11, SQLDT_UINT, &a.basehp, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 12, SQLDT_UINT, &a.mp, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 13, SQLDT_UINT, &a.basemp, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 14, SQLDT_UINT, &a.exp, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 15, SQLDT_UINT, &a.money, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 16, SQLDT_UCHAR, &a.sex, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 17, SQLDT_UCHAR, &a.country, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 18, SQLDT_USHORT, &a.face, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 19, SQLDT_USHORT, &a.hair_color, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 20, SQLDT_USHORT, &a.armor_color, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 21, SQLDT_USHORT, &a.last_pos.m, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 22, SQLDT_USHORT, &a.last_pos.x, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 23, SQLDT_USHORT, &a.last_pos.y, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 24, SQLDT_CHAR, &a.side, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 25, SQLDT_CHAR, &a.state, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 26, SQLDT_USHORT, &a.hair, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 27, SQLDT_USHORT, &a.face_color, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 28, SQLDT_USHORT, &a.skin_color, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 29, SQLDT_UINT, &a.partner, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 30, SQLDT_CHAR, &a.clan_chat, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 31, SQLDT_CHAR, &a.subpath_chat, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 32, SQLDT_CHAR, &a.novice_chat, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 33, SQLDT_USHORT, &a.settingFlags, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 34, SQLDT_CHAR, &a.gm_level, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 35, SQLDT_USHORT, &a.disguise, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 36, SQLDT_USHORT, &a.disguisecolor, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 37, SQLDT_UINT, &a.maxslots, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 38, SQLDT_UINT, &a.bankmoney, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 39, SQLDT_UCHAR, &a.maxinv, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 40, SQLDT_UCHAR, &a.pk, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 41, SQLDT_UINT, &a.killedby, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 42, SQLDT_UINT, &a.killspk, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 43, SQLDT_UINT, &a.pkduration, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 44, SQLDT_UCHAR, &a.mute, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 45, SQLDT_UINT, &a.heroes, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 46, SQLDT_UCHAR, &a.tier, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 47, SQLDT_ULONGLONG, &a.expsoldmagic, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 48, SQLDT_ULONGLONG, &a.expsoldhealth, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 49, SQLDT_ULONGLONG, &a.expsoldstats, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 50, SQLDT_UINT, &a.basemight, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 51, SQLDT_UINT, &a.basewill, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 52, SQLDT_UINT, &a.basegrace, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 53, SQLDT_INT, &a.basearmor, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 54, SQLDT_UINT, &a.miniMapToggle, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 55, SQLDT_STRING, &a.ipaddress, sizeof(a.ipaddress), NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 56, SQLDT_STRING, &a.afkmessage, sizeof(a.afkmessage), NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 57, SQLDT_UCHAR, &a.tutor, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 58, SQLDT_CHAR, &a.alignment, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 59, SQLDT_UCHAR, &a.profile_vitastats, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 60, SQLDT_UCHAR, &a.profile_equiplist, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 61, SQLDT_UCHAR, &a.profile_legends, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 62, SQLDT_UCHAR, &a.profile_spells, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 63, SQLDT_UCHAR, &a.profile_inventory, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 64, SQLDT_UCHAR, &a.profile_bankitems, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 65, SQLDT_UCHAR, &a.classRank, 0, NULL, NULL)
-		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 66, SQLDT_UCHAR, &a.clanRank, 0, NULL, NULL))
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 0, SQLDT_STRING, &p->name, sizeof(p->name), NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 1, SQLDT_UINT, &p->clan, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 2, SQLDT_STRING, &p->clan_title, sizeof(p->clan_title), NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 3, SQLDT_STRING, &p->title, sizeof(p->title), NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 4, SQLDT_STRING, &p->f1name, sizeof(p->f1name), NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 5, SQLDT_UCHAR, &p->level, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 6, SQLDT_UCHAR, &p->class, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 7, SQLDT_UCHAR, &p->mark, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 8, SQLDT_UCHAR, &p->totem, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 9, SQLDT_FLOAT, &p->karma, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 10, SQLDT_UINT, &p->hp, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 11, SQLDT_UINT, &p->basehp, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 12, SQLDT_UINT, &p->mp, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 13, SQLDT_UINT, &p->basemp, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 14, SQLDT_UINT, &p->exp, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 15, SQLDT_UINT, &p->money, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 16, SQLDT_UCHAR, &p->sex, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 17, SQLDT_UCHAR, &p->country, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 18, SQLDT_USHORT, &p->face, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 19, SQLDT_USHORT, &p->hair_color, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 20, SQLDT_USHORT, &p->armor_color, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 21, SQLDT_USHORT, &p->last_pos.m, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 22, SQLDT_USHORT, &p->last_pos.x, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 23, SQLDT_USHORT, &p->last_pos.y, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 24, SQLDT_CHAR, &p->side, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 25, SQLDT_CHAR, &p->state, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 26, SQLDT_USHORT, &p->hair, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 27, SQLDT_USHORT, &p->face_color, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 28, SQLDT_USHORT, &p->skin_color, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 29, SQLDT_UINT, &p->partner, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 30, SQLDT_CHAR, &p->clan_chat, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 31, SQLDT_CHAR, &p->subpath_chat, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 32, SQLDT_CHAR, &p->novice_chat, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 33, SQLDT_USHORT, &p->settingFlags, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 34, SQLDT_CHAR, &p->gm_level, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 35, SQLDT_USHORT, &p->disguise, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 36, SQLDT_USHORT, &p->disguisecolor, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 37, SQLDT_UINT, &p->maxslots, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 38, SQLDT_UINT, &p->bankmoney, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 39, SQLDT_UCHAR, &p->maxinv, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 40, SQLDT_UCHAR, &p->pk, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 41, SQLDT_UINT, &p->killedby, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 42, SQLDT_UINT, &p->killspk, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 43, SQLDT_UINT, &p->pkduration, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 44, SQLDT_UCHAR, &p->mute, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 45, SQLDT_UINT, &p->heroes, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 46, SQLDT_UCHAR, &p->tier, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 47, SQLDT_ULONGLONG, &p->expsoldmagic, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 48, SQLDT_ULONGLONG, &p->expsoldhealth, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 49, SQLDT_ULONGLONG, &p->expsoldstats, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 50, SQLDT_UINT, &p->basemight, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 51, SQLDT_UINT, &p->basewill, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 52, SQLDT_UINT, &p->basegrace, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 53, SQLDT_INT, &p->basearmor, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 54, SQLDT_UINT, &p->miniMapToggle, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 55, SQLDT_STRING, &p->ipaddress, sizeof(p->ipaddress), NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 56, SQLDT_STRING, &p->afkmessage, sizeof(p->afkmessage), NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 57, SQLDT_UCHAR, &p->tutor, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 58, SQLDT_CHAR, &p->alignment, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 59, SQLDT_UCHAR, &p->profile_vitastats, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 60, SQLDT_UCHAR, &p->profile_equiplist, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 61, SQLDT_UCHAR, &p->profile_legends, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 62, SQLDT_UCHAR, &p->profile_spells, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 63, SQLDT_UCHAR, &p->profile_inventory, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 64, SQLDT_UCHAR, &p->profile_bankitems, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 65, SQLDT_UCHAR, &p->classRank, 0, NULL, NULL)
+		|| SQL_ERROR == SqlStmt_BindColumn(stmt, 66, SQLDT_UCHAR, &p->clanRank, 0, NULL, NULL))
 
 	{
 		SqlStmt_ShowDebug(stmt);
@@ -519,14 +519,14 @@ int mmo_char_fromdb(unsigned int id, struct mmo_charstatus* p, char* login_name)
 
 	if (SQL_SUCCESS != SqlStmt_NextRow(stmt))
 	{
+		SqlStmt_ShowDebug(stmt);
 		SqlStmt_Free(stmt);
 		p->id = 0;
 		return -1;
 	}
-	memcpy(p, &a, sizeof(a));
 
 	p->id = id;
-	if (strcmpi(a.name, login_name)) {
+	if (strcmpi(p->name, login_name)) {
 		SqlStmt_Free(stmt);
 		p->id = 0;
 		return -1;
