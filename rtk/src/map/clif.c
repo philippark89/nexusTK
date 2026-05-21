@@ -10832,6 +10832,7 @@ int clif_handle_clickgetinfo(USER* sd) {
 					return 0;
 				}*/
 
+				printf("[click] NPC name='%s' id=%u m=%d\n", nd->name, nd->id, nd->bl.m); fflush(stdout);
 				sl_doscript_blargs(nd->name, "click", 2, &sd->bl, &nd->bl);
 			}
 			break;

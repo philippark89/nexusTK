@@ -14,6 +14,9 @@ lua_State* sl_gstate;
 #include <stdarg.h>
 #include <sys/stat.h>
 #include <sys/timeb.h>
+#include <signal.h>
+#include <execinfo.h>
+#include <unistd.h>
 #include "pc.h"
 #include "mob.h"
 #include "itemdb.h"
@@ -682,7 +685,7 @@ int setpass(lua_State* state) {
 	}
 	return 0;
 }
-int getpass(lua_State* state) {
+int sl_getpass(lua_State* state) {
 	sl_checkargs(state, "nn");
 	int m = lua_tonumber(state, 1);
 	int x = lua_tonumber(state, 2);
@@ -985,10 +988,7 @@ int sl_throw(struct block_list* bl, va_list ap) {
 	int len = va_arg(ap, int);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	WFIFOHEAD(sd->fd, len);
 	memcpy(WFIFOP(sd->fd, 0), buf, len);
@@ -2970,7 +2970,18 @@ int sl_getSetItems(lua_State* state) {
 	return 1;
 }
 
+static void sl_sigsegv_handler(int sig) {
+	void *bt[64];
+	int n = backtrace(bt, 64);
+	fprintf(stderr, "\n[SIGSEGV] map-server crashed — backtrace:\n");
+	backtrace_symbols_fd(bt, n, STDERR_FILENO);
+	fflush(stderr);
+	signal(sig, SIG_DFL);
+	raise(sig);
+}
+
 void sl_init() {
+	signal(SIGSEGV, sl_sigsegv_handler);
 	int i, count = 0;
 	sl_gstate = lua_open();
 	luaL_openlibs(sl_gstate);
@@ -3116,7 +3127,7 @@ void sl_init() {
 	lua_register(sl_gstate, "getTile", gettile);
 	lua_register(sl_gstate, "setTile", settile);
 	lua_register(sl_gstate, "setPass", setpass);
-	lua_register(sl_gstate, "getPass", getpass);
+	lua_register(sl_gstate, "getPass", sl_getpass);
 	lua_register(sl_gstate, "setMap", setmap);
 	lua_register(sl_gstate, "getMapAttribute", getMapAttribute);
 	lua_register(sl_gstate, "setMapAttribute", setMapAttribute);
@@ -3257,10 +3268,13 @@ void sl_async_resume(USER* sd, int nargs) {
 }
 int sl_async(lua_State* state) {
 	// first argument should be a player object, second argument should be a function to call
+	printf("[sl_async] enter nargs=%d\n", lua_gettop(state)); fflush(stdout);
 	USER* sd = typel_topointer(state, 1);
+	printf("[sl_async] sd=%p\n", (void*)sd); fflush(stdout);
 	if (!sd) return 0;
 
 	if (sd->coref) { //clif_sendminitext(sd,"You are busy.");
+		printf("[sl_async] busy coref=%d\n", sd->coref); fflush(stdout);
 		return 0;
 	};
 
@@ -3268,7 +3282,12 @@ int sl_async(lua_State* state) {
 	sd->coref = luaL_ref(state, LUA_REGISTRYINDEX);
 	lua_pushvalue(state, 2); // push a copy of the function
 	lua_xmove(state, costate, 1); // move the function into the coroutine state
-	if (lua_resume(costate, 0) == LUA_ERRRUN) {
+	printf("[sl_async] resuming coroutine\n"); fflush(stdout);
+	int rc = lua_resume(costate, 0);
+	printf("[sl_async] resume returned %d\n", rc); fflush(stdout);
+	if (rc == LUA_ERRRUN) {
+		const char* errmsg = lua_tostring(costate, -1);
+		printf("[sl_async] ERRRUN: %s\n", errmsg ? errmsg : "(null)"); fflush(stdout);
 		lua_xmove(costate, state, 1);
 		sl_async_freeco(sd);
 		return lua_error(state);
@@ -3297,7 +3316,7 @@ int sl_doscript_stackargs(char* root, char* method, int nargs) {
 	for (i = 0; i < nargs; i++)
 		lua_pushvalue(sl_gstate, argsindex + i);
 	if (lua_pcall(sl_gstate, nargs, 0, errhandler) != 0) {
-		//sl_err_print(sl_gstate);
+		sl_err_print(sl_gstate);
 		lua_pop(sl_gstate, 1); // pop the error string
 	}
 	lua_pop(sl_gstate, nargs + 1); // pop the original arguments, and _errhandler
@@ -3819,8 +3838,10 @@ int typel_boundfunc(lua_State* state) {
 }
 int typel_mtindex(lua_State* state) {
 	typel_inst* inst = lua_touserdata(state, 1);
+	if (!inst) { lua_pushnil(state); return 1; }
 	typel_class* type = inst->type;
 	char* attrname = lua_tostring(state, 2);
+	if (!attrname) { lua_pushnil(state); return 1; }
 	int result = 0;
 	if (!inst->self) { lua_pushnil(state); return 1; }
 	if (type->getattr)
@@ -3847,8 +3868,10 @@ int typel_mtindex(lua_State* state) {
 }
 int typel_mtnewindex(lua_State* state) {
 	typel_inst* inst = lua_touserdata(state, 1);
+	if (!inst) { return 0; }
 	typel_class* type = inst->type;
 	char* attrname = lua_tostring(state, 2);
+	if (!attrname) { return 0; }
 	if (!inst->self) { return 0; }
 	int result = 0;
 	if (type->setattr)
@@ -6182,9 +6205,11 @@ int pcl_unlock(lua_State* state, USER* sd) {
 }
 
 int pcl_menu(lua_State* state, USER* sd) {
+	printf("[pcl_menu] enter sd=%p last_click=%u\n", (void*)sd, sd->last_click); fflush(stdout);
 	sl_checkargs(state, "st");
 	int previous = 0, next = 0;
 	int size = lua_objlen(state, sl_memberarg(2));
+	printf("[pcl_menu] size=%d\n", size); fflush(stdout);
 	char* menuopts[size + 1];
 	lua_pushnil(state);
 
@@ -6207,7 +6232,9 @@ int pcl_menu(lua_State* state, USER* sd) {
 	}
 
 	char* topic = lua_tostring(state, sl_memberarg(1));
+	printf("[pcl_menu] calling clif_scriptmenuseq topic='%.40s'\n", topic ? topic : "(null)"); fflush(stdout);
 	clif_scriptmenuseq(sd, sd->last_click, topic, menuopts, size, previous, next);
+	printf("[pcl_menu] after clif_scriptmenuseq, yielding\n"); fflush(stdout);
 	//sd->coroutine = state; TEMP
 	return lua_yield(state, 0);
 }
@@ -11123,10 +11150,7 @@ int pcl_testpacket(lua_State* state, USER* sd) {
 	lua_pushnil(state);
 
 	if (!session[sd->fd])
-	{
-		session[sd->fd]->eof = 8;
 		return 0;
-	}
 
 	while (lua_next(state, sl_memberarg(1)) != 0) {
 		int packetlen = 0;
