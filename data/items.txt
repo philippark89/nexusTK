@@ -1,0 +1,2320 @@
+# Items Reference
+# Usage: /item <ID>   or   /item <ID> <quantity>
+
+ID       Name                                         Identifier
+--------------------------------------------------------------------------------
+0        Coins                                        coins_1
+1        Coins                                        coins_2_99
+2        Coins                                        coins_100_999
+3        Coins                                        coins_1000
+4        Fox fur                                      fox_fur
+5        Red fox fur                                  red_fox_fur
+6        Light fox fur                                light_fox_fur
+7        Chung ryong key                              chung_ryong_key
+8        Fox tail                                     fox_tail
+9        Fox blade                                    fox_blade
+10       Key to Fire                                  key_to_fire
+11       Key to Earth                                 key_to_earth
+12       Key to Heaven                                key_to_heaven
+13       Ju jak key                                   ju_jak_key
+14       Key to Pond                                  key_to_pond
+15       Key to Water                                 key_to_water
+16       Magical dust                                 magical_dust
+17       Key to Mountain                              key_to_mountain
+18       Wolf pelt                                    wolf_pelt
+19       Key to Thunder                               key_to_thunder
+20       Hyun moo key                                 hyun_moo_key
+21       Key to Wind                                  key_to_wind
+22       Baekho key                                   baekho_key
+23       Nagnang compass                              nagnang_compass
+24       Lockpick                                     lockpick
+25       Iron key                                     iron_key
+26       Suspicious note                              suspicious_note
+27       Poisoned bracelet                            poisoned_bracelet
+28       Handwritten note                             handwritten_note
+29       Slumberquick                                 slumberquick
+30       Slumbering Hwan                              slumbering_hwan
+99       wooden sword                                 wooden_sword_trap
+100      ==PEASANT GEAR==                             ==PEASANT GEAR==
+101      ====\\\\ PEASANT WEAPONS \\\\ ====           ====\\\\ PEASANT WEAPONS \\\\ ====
+102      Wooden saber                                 wooden_saber
+103      Wisdom of the Ages                           wisdom_of_the_ages
+108      Viper stick                                  viper_stick
+109      Titanium blade                               titanium_blade
+110      Sword of power                               sword_of_power
+111      Peasant garb                                 peasant_garb
+112      Peasant dress                                peasant_dress
+113      Novice sword                                 novice_sword
+114      Military fork                                military_fork
+115      Runed dagger                                 runed_dagger
+116      Iron sword                                   iron_sword
+117      Lantern                                      lantern
+118      Giasomo stick                                giasomo_stick
+119      Frozen spear                                 frozen_spear
+120      Flamefang                                    flamefang
+121      Ice sabre                                    ice_sabre
+122      Long spear                                   long_spear
+123      Might spear                                  might_spear
+124      Faerie light                                 faerie_light
+125      Stone axe                                    stone_axe
+126      Steel blade                                  steel_blade
+219      Tarnished shield                             tarnished_shield
+500      War platemail                                war_platemail
+501      Spring mail dress                            spring_mail_dress
+502      Spring war dress                             spring_war_dress
+503      Scale Mail                                   scale_mail
+504      Spring Armor Dress                           spring_armor_dress
+505      Steel dagger                                 steel_dagger
+506      Steel saber                                  steel_saber
+507      Steel sword                                  steel_sword
+508      Spring dress                                 spring_dress
+509      Spring blouse                                spring_blouse
+510      Spring skirt                                 spring_skirt
+511      Spring gown                                  spring_gown
+512      Wedding dress                                wedding_dress
+513      Peasant clothes                              peasant_clothes
+514      Spring garb                                  spring_garb
+515      Spring robes                                 spring_robes
+516      Merchant waistcoat                           merchant_waistcoat
+517      Green cloak                                  green_cloak
+518      Wedding cloak                                wedding_cloak
+519      Fine steel dagger                            fine_steel_dagger
+520      Rusty shortsword                             rusty_shortsword
+521      Spring mantle                                spring_mantle
+522      Spring drapery                               spring_drapery
+1000     Short bow                                    short_bow
+1001     Jolt trident                                 jolt_trident
+1002     Swift sword                                  swift_sword
+1003     Bright staff                                 bright_staff
+1004     Frost sabre                                  frost_sabre
+1005     Student cap                                  student_cap
+1006     Merchant armor                               merchant_armor
+1007     Dark staff                                   dark_staff
+1008     Crystal staff                                crystal_staff
+1500     ==== EVENT ITEMS ====                        ==== EVENT ITEMS ====
+1501     Crystal Shard                                crystal_shard
+2000     ==== NEW 99 HAND ITEMS ====                  ==== NEW 99 HAND ITEMS====
+2001     Lucky Ring                                   lucky_ring
+2002     Steel Gauntlet                               steel_gauntlet
+2003     Magic Glove                                  magic_glove
+2004     Sage's Band                                  sages_band
+2100     ==== NEW 99 HAND ITEMS ====                  ==== NEW 99 HAND ITEMS====
+3000     =====CRAFTABLE WEAPONS=====                  ====CRAFTABLE WEAPONS====
+3001     Wooden sword                                 wooden_sword
+3002     Supple wooden sword                          supple_wooden_sword
+3003     Wooden Blade                                 wooden_blade
+3004     Supple wooden blade                          supple_wooden_blade
+3005     Viperhead woodsaber                          viperhead_woodsaber
+3006     Supple vprhd saber                           supple_viperhead_woodsaber
+3007     Viperhead woodsword                          viperhead_woodsword
+3008     Supple vprhd sword                           supple_viperhead_woodsword
+3009     Fine steel saber                             fine_steel_saber
+3010     Fine steel sword                             fine_steel_sword
+3011     Fine steel blade                             fine_steel_blade
+3012     Oaken sword                                  oaken_sword
+3013     Supple oaken sword                           supple_oaken_sword
+3014     Oaken blade                                  oaken_blade
+3015     Supple oaken blade                           supple_oaken_blade
+3016     Juk-do                                       juk_do
+3017     Elegant Juk-do                               elegant_juk_do
+4000     ====MAP FRAGMENTS===                         ====MAP FRAGMENTS====
+4001     Desert map                                   desert_map
+4002     Map fragment                                 map_fragment
+4003     Player Exp Map Mod                           map_mod_player_exp
+4004     Mob AC Map Mod                               map_mod_decreased_mob_ac
+4005     Green Squirrel Map                           green_squirrel_map
+4006     Combined map                                 combined_map
+4007     Dragon's essence                             dragon_essence
+4008     Chung Ryong's might                          chung_ryongs_might
+4009     Haunted House Map                            haunted_house_map
+4010     Lobster Map                                  lobsters_map
+4011     Mythic Dragon Map                            mythic_dragon_map
+4012     Mythic Snake Map                             mythic_snake_map
+4013     Mythic Rabbit Map                            mythic_rabbit_map
+4014     Mythic Monkey Map                            mythic_monkey_map
+4015     Mythic Sheep Map                             mythic_sheep_map
+4016     Mythic Ox Map                                mythic_ox_map
+4017     Gonjiam Map                                  gonjiam_map
+5000     ===SEASONAL MISC                             ===SEASONAL MISC
+5001     Ribbon                                       ribbon
+5002     Brown gift paper                             brown_gift_paper
+5003     Brown present                                brown_present
+5004     Fireworks (Dazzle)                           fireworks
+5005     Fireworks (X)                                fireworks1
+5006     Fireworks (Heart)                            fireworks2
+5007     Fireworks 4                                  fireworks4
+5008     Fireworks 5                                  fireworks5
+5009     Fireworks 6                                  fireworks6
+5010     Fireworks 7                                  fireworks7
+5011     Fireworks 8                                  fireworks8
+5012     Fireworks 9                                  fireworks9
+5013     Fireworks 10                                 fireworks10
+5014     Firecracker 1                                firecracker1
+5015     Firecracker 2                                firecracker2
+5016     Firecracker 3                                firecracker3
+5017     Firecracker 4                                firecracker4
+5018     Firecracker 5                                firecracker5
+5019     Firecracker 6                                firecracker6
+5020     Firecracker 7                                firecracker7
+5021     Firecracker 8                                firecracker8
+5022     Firecracker 9                                firecracker9
+5023     Firecracker 10                               firecracker10
+10000    ===FOOD===                                   ===FOOD===
+10001    Apple                                        apple
+10002    Wolf Meat                                    wolf_meat
+10003    Ginseng                                      ginseng
+10004    Fish                                         fish
+10005    Banana                                       banana
+10006    Watermelon                                   watermelon
+10007    Bone                                         bone
+10008    Chicken meat                                 chicken_meat
+10009    Acorn                                        acorn
+10010    Pork                                         pork
+10011    Rare pork                                    rare_pork
+10012    Rabbit meat                                  rabbit_meat
+10013    Bear's liver                                 bears_liver
+10014    Snake meat                                   snake_meat
+10015    Beef                                         beef
+10016    Tiger meat                                   tiger_meat
+10017    Noodles                                      noodles
+10018    Sushi on plate                               sushi_on_plate
+10019    Bird meat                                    bird_meat
+10020    Flour                                        flour
+10021    Plate of chestnuts                           plate_of_chestnuts
+10022    Boiled fish                                  boiled_fish
+10023    Rat meat                                     rat_meat
+10024    Honey                                        honey
+10025    Roasted chicken                              roasted_chicken
+10026    Fried egg                                    fried_egg
+10027    Egg                                          egg
+10028    Golden egg                                   golden_egg
+10029    Egg carton                                   egg_carton
+10030    Egg basket                                   egg_basket
+10031    Grilled beef                                 grilled_beef
+10032    Peas                                         peas
+10033    Seaweed                                      seaweed
+10034    Fortune cookie                               fortune_cookie
+10035    Meat Scrap                                   meat_scrap
+10036    Meat                                         meat
+10037    Chestnut                                     chestnut
+10038    Minnow                                       minnow
+10039    Gold acorn                                   gold_acorn
+10040    Antler                                       antler
+10041    Lean beef                                    lean_beef
+10042    Ogre cider                                   ogre_cider
+10043    Ogre drought                                 ogre_drought
+10044    Ginseng piece                                ginseng_piece
+10045    Mountain ginseng                             mountain_ginseng
+10046    Fine snake meat                              fine_snake_meat
+10047    Horse meat                                   horse_meat
+10048    Aged wine                                    aged_wine
+10049    Wine                                         wine
+10056    Moon wine                                    moon_wine
+10057    Thick wine                                   thick_wine
+10058    Rich wine                                    rich_wine
+10059    Root liquor                                  root_liquor
+10060    Rice wine                                    rice_wine
+10061    Cooked fish                                  cooked_fish
+10062    Green squirrel pelt                          green_squirrel_pelt
+10063    Splendid Tiger Pelt                          splendid_tiger_pelt
+10064    Tiger's heart                                tigers_heart
+10065    Fine rabbit meat                             fine_rabbit_meat
+10066    Iron statue                                  iron_statue
+10067    Small fish                                   small_fish
+10068    Scrawny fish                                 scrawny_fish
+10069    Tiny fish                                    tiny_fish
+10070    Tasty fish                                   tasty_fish
+10071    Large fish                                   large_fish
+10072    Delicious fish                               delicious_fish
+10073    Magical fish                                 magical_fish
+10074    Bear fur                                     bear_fur
+10075    Salt block                                   salt_block
+10076    Crap                                         crap
+10077    Fiery crap                                   crap2
+10078    Poison apple                                 poison_apple
+10500    ===POTIONS===                                ===POTIONS===
+10501    Blue potion                                  blue_potion
+10502    Yellow potion                                yellow_potion
+10503    White potion                                 white_potion
+10504    Violet potion                                violet_potion
+10505    Indigo potion                                indigo_potion
+10506    Brown potion                                 brown_potion
+10507    Green potion                                 green_potion
+10508    Red potion                                   red_potion
+10509    Aqua potion                                  aqua_potion
+10510    Muddy potion                                 muddy_potion
+10511    Kawlana                                      kawlana_potion
+10512    Purple potion                                purple_potion
+10513    Dart poison                                  dart_poison
+10514    Black potion                                 black_potion
+10515    Lime potion                                  lime_potion
+10516    Summer potion                                summer_potion
+10517    Autumn potion                                autumn_potion
+10518    Winter potion                                winter_potion
+10519    Ancient potion                               ancient_potion
+10520    Blood potion                                 blood_potion
+10521    Earth potion                                 earth_potion
+10522    Sea potion                                   sea_potion
+10523    Ruby potion                                  ruby_potion
+11000    ===SMOKED ITEMS===                           ===SMOKED ITEMS===
+11001    Cigarettes                                   cigarettes
+11002    Herb pipe                                    herb_pipe
+11003    Sonhi pipe                                   sonhi_pipe
+11900    ====ARROWS====                               ====ARROWS====
+11901    Ranger arrows                                ranger_arrows
+11902    Split head arrows                            split_head_arrows
+11903    Cursed head arrows                           cursed_head_arrows
+11904    Flame head arrows                            flame_head_arrows
+11905    Steel tip arrows                             steel_tip_arrows
+11906    Sleep arrows                                 sleep_arrows
+11907    Explosive arrows                             explosive_arrows
+11908    Dark arrows                                  dark_arrows
+11909    Deamon arrows                                deamon_arrows
+12000    ===MISC===                                   ===MISC===
+12001    Platinum Mold                                platinum_mold
+12002    Small Cup                                    small_cup
+12003    Scroll                                       scroll
+12004    Ancient Scroll                               ancient_scroll
+12005    Book                                         book
+12006    Empty water jug                              empty_water_jug
+12007    Cup                                          cup
+12009    Empty water skin                             empty_water_skin
+12010    Mirror                                       mirror
+12011    Comb                                         comb
+12013    Pebble                                       pebble
+12014    Coin                                         coin
+12015    Empty Bowl                                   empty_bowl
+12016    Soup bowl                                    soup_bowl
+12017    Cup                                          cup2
+12018    Magic mirror                                 magic_mirror
+12019    Qui hyang                                    qui_hyang
+12020    Water jug                                    water_jug
+12021    Quest paper                                  quest_paper
+12022    White paper                                  white_paper
+12023    Paper                                        paper
+12024    Ink                                          ink
+12025    Ink Pen                                      ink_pen
+12026    Ink Pen                                      ink_pen2
+12027    Big Yellow Scroll                            big_yellow_scroll
+12028    Yellow scroll                                yellow_scroll
+12029    Kindred talisman                             kindred_talisman
+12030    Big Zibong Essence                           big_zibong_essence
+12031    Blue Scroll                                  blue_scroll
+12032    Zibong Essence                               zibong_essence
+12033    Postcard                                     postcard
+12034    Moon paper                                   moon_paper
+12035    Paper                                        paper2
+12037    Smelting Agreement                           smelting_agreement
+12038    Flash dust                                   flash_dust
+12039    Flash powder                                 flash_powder
+12040    Rogue's powder                               rogues_powder
+12041    Spark powder                                 spark_powder
+12042    Moon powder                                  moon_powder
+12043    Star powder                                  star_powder
+12044    Deadly earth                                 deadly_earth
+12045    Holy dust                                    holy_dust
+12046    Holy powder                                  holy_powder
+12047    Ice shards                                   ice_shards
+12048    Shard bomb                                   shard_bomb
+12049    Shatter bomb                                 shatter_bomb
+12050    Spy's explosives                             spys_explosives
+12051    Stealth explosives                           stealth_explosives
+12052    Stealth powder                               stealth_powder
+12053    Sun powder                                   sun_powder
+12054    Sea melodies                                 sea_melodies
+12055    Sea poems                                    sea_poems
+12056    Full experience envelope                     full_experience_envelope
+12101    Rose petals                                  rose_petals
+12103    Clear water song                             clear_water_song
+12104    Sacred poem                                  sacred_poem
+12105    War poem                                     war_poem
+12106    Check (1,000)                                check_1000
+12107    Check (5,000)                                check_5000
+12108    Check (10,000)                               check_10000
+12109    Check (50,000)                               check_50000
+12110    Check (100,000)                              check_100000
+12111    Check (500,000)                              check_500000
+12112    Check (1,000,000)                            check_1000000
+12113    Little red mantle                            little_red_mantle
+12114    Blue necklace                                blue_necklace
+12115    Black bandanna                               black_bandanna
+12116    Purple bandanna                              purple_bandanna
+12117    White bandanna                               white_bandanna
+12118    Brown bandanna                               brown_bandanna
+12119    Green bandanna                               green_bandanna
+12120    Pink bandanna                                pink_bandanna
+12121    Lava bandanna                                lava_bandanna
+12122    Teal bandanna                                teal_bandanna
+12123    Navy bandanna                                navy_bandanna
+12124    Dark purple bandanna                         darkpurple_bandanna
+12125    Orange bandanna                              orange_bandanna
+12126    Baby blue bandanna                           babyblue_bandanna
+12127    Star bandanna                                star_bandanna
+12130    Green headband                               green_headband
+12131    Black headband                               black_headband
+12132    White headband                               white_headband
+12133    Blue headband                                blue_headband
+12134    Red headband                                 red_headband
+12135    Pink headband                                pink_headband
+12250    ===Library Items===                          ===Library Items===
+12251    Legend                                       legend
+12252    Divine Chronicles                            divine_chronicles
+12253    Graced by the muse                           graced_by_the_muse
+12254    The wandering monk                           the_wandering_monk
+12255    Tomes of the earth                           tomes_of_the_earth
+12256    Ranger Code                                  ranger_code
+12257    Kwanhonsagje                                 kwanhonsagje
+12258    Dragon's tooth                               dragons_tooth
+12259    Barbarian runes                              barbarian_runes
+12260    Ancient parchment                            ancient_parchment
+12261    Knowledge of wealth                          knowledge_of_wealth
+12262    Spy's journal                                spys_journal
+12263    Shu jing                                     shu_jing
+12264    Chieko                                       chieko
+13000    ===crafting mats===                          ===crafting mats===
+13001    Wool                                         wool
+13002    Mica                                         mica
+13003    Topaz                                        topaz
+13004    Spent metal                                  spent_metal
+13005    Obsidian                                     obsidian
+13006    Limestone                                    limestone
+13007    Quartz                                       quartz
+13008    Amethyst                                     amethyst
+13009    Amber                                        amber
+13010    Dark amber                                   dark_amber
+13011    White amber                                  white_amber
+13012    Tarnished amber                              tarnished_amber
+13013    Yellow amber                                 yellow_amber
+13014    Cloth                                        cloth
+13015    Fine cloth                                   fine_cloth
+13016    Pwdrd yellow amber                           powdered_yellow_amber
+13017    Fine metal                                   fine_metal
+13018    Metal                                        metal
+13019    Diamond                                      diamond
+13020    Ore [poor]                                   ore_poor
+13021    Ore [med]                                    ore_med
+13022    Ore [high]                                   ore_high
+13033    Ore [very high]                              ore_very_high
+13034    Gold ore                                     gold_ore
+13035    Silver ore                                   silver_ore
+13036    Red amber                                    red_amber
+13037    Flame amber                                  flame_amber
+13038    Slag                                         slag
+13039    Wool twine                                   wool_twine
+13040    Ginko wood                                   ginko_wood
+13041    Coal                                         coal
+13043    Hot coal                                     hot_coal
+13044    Crystal                                      crystal
+13045    Wood scraps                                  wood_scraps
+13046    Well cftd wt amber                           well_crafted_white_amber
+13047    Well cftd yw amber                           well_crafted_yellow_amber
+13048    Well cftd dk amber                           well_crafted_dark_amber
+13049    Well cftd amber                              well_crafted_amber
+13050    Crafted wt amber                             crafted_white_amber
+13051    Crafted yw amber                             crafted_yellow_amber
+13052    Crafted dk amber                             crafted_dark_amber
+13053    Crafted amber                                crafted_amber
+13054    Tarnished wt amber                           tarnished_white_amber
+13055    Tarnished yw amber                           tarnished_yellow_amber
+13056    Tarnished dk amber                           tarnished_dark_amber
+13057    Silver tree branch                           silver_tree_branch
+13058    Dragon shard                                 dragon_shard
+14001    Weaving tools                                weaving_tools
+14002    Fine weaving tools                           fine_weaving_tools
+14003    Shears                                       shears
+14004    Mining pick                                  mining_pick
+14005    Axe                                          axe
+14006    Basic sickle                                 basic_sickle
+14007    Wheat                                        wheat
+14008    Rice                                         rice
+15000    ====MOUNTS=====                              ====MOUNTS====
+15001    Horse mount                                  horse_mount
+15002    White horse mount                            white_horse_mount
+15003    Yellow horse mount                           yellow_horse_mount
+15004    Red horse mount                              red_horse_mount
+15005    Gold horse mount                             gold_horse_mount
+15006    Bridle                                       bridle
+15007    Mountain goat pan flute                      mountain_goat_pan_flute
+15008    Red mountain goat pan flute                  red_mountain_goat_pan_flute
+15009    Muddy boots mount                            muddy_boots_mount
+15010    Headless horseman's horse                    headless_horsemans_horse
+15011    Armored horse saddle                         armored_horse_saddle
+15012    Dragon dog                                   dragon_dog
+15013    Tourmaline dragon dog                        tourmaline_dragon_dog
+15014    Alexandrite dragon dog                       alexandrite_dragon_dog
+15015    Bamboo dragon dog                            bamboo_dragon_dog
+15018    Peridot dragon dog                           peridot_dragon_dog
+15019    Rhodonite dragon dog                         rhodonite_dragon_dog
+15020    Sodalite dragon dog                          sodalite_dragon_dog
+15021    Archon dragon dog                            archon_dragon_dog
+15022    Jasper dragon dog                            jasper_dragon_dog
+15023    Phantom dragon dog                           phantom_dragon_dog
+15024    Sardonyx dragon dog                          sardonyx_dragon_dog
+15025    Onyx dragon dog                              onyx_dragon_dog
+15026    Tempest dragon dog                           tempest_dragon_dog
+15027    Raheem dragon dog                            raheem_dragon_dog
+15028    Ruby dragon dog                              ruby_dragon_dog
+15029    Forest dragon dog                            forest_dragon_dog
+15030    Ivy dragon dog                               ivy_dragon_dog
+15031    Lazuli dragon dog                            lazuli_dragon_dog
+15032    Aragonite dragon dog                         aragonite_dragon_dog
+15033    Garnet dragon dog                            garnet_dragon_dog
+15034    Amethyst dragon dog                          amethyst_dragon_dog
+15035    Bloodstone dragon dog                        bloodstone_dragon_dog
+15036    Topaz dragon dog                             topaz_dragon_dog
+15037    Earth dragon dog                             earth_dragon_dog
+15038    Twilight dragon dog                          twilight_dragon_dog
+15039    Pig mount                                    pig_mount
+15040    Black pig mount                              black_pig_mount
+15041    Brown warthog mount                          brown_warthog_mount
+15042    Black warthog mount                          black_warthog_mount
+15043    Leopard mount                                leopard_mount
+15044    Snow leopard mount                           snow_leopard_mount
+15045    Black leopard mount                          black_leopard_mount
+15046    Brown chicken mount                          brown_chicken_mount
+15047    White chicken mount                          white_chicken_mount
+15048    Fox mount                                    fox_mount
+15049    Snow fox mount                               snow_fox_mount
+15050    Snow winter fox mount                        snow_winter_fox_mount
+15051    Black winter fox mount                       black_winter_fox_mount
+15052    Ice winter fox mount                         ice_winter_fox_mount
+15053    Blue-tip winter fox mount                    blue_tip_winter_fox_mount
+15054    Pink winter fox mount                        pink_winter_fox_mount
+15055    Purple winter fox mount                      purple_winter_fox_mount
+15056    Gold winter fox mount                        gold_winter_fox_mount
+15057    Night winter fox mount                       night_winter_fox_mount
+15058    Brown winter fox mount                       brown_winter_fox_mount
+15059    Purple-tip winter fox mount                  purple_tip_winter_fox_mount
+15060    Stealth winter fox mount                     stealth_winter_fox_mount
+15061    Green bobcat mount                           green_bobcat_mount
+15062    Blue bobcat mount                            blue_bobcat_mount
+15063    Brown bobcat mount                           brown_bobcat_mount
+15064    Purple bobcat mount                          purple_bobcat_mount
+15065    Black bobcat mount                           black_bobcat_mount
+15066    Dark green bobcat mount                      dark_green_bobcat_mount
+15067    White bobcat mount                           white_bobcat_mount
+15068    Gold bobcat mount                            gold_bobcat_mount
+15069    Red bobcat mount                             red_bobcat_mount
+15070    Stone bobcat mount                           stone_bobcat_mount
+15071    Festive dragon mount                         festive_dragon_mount
+15072    Rudolph sleigh mount                         rudolph_sleigh_mount
+15073    Pink cloud mount                             pink_cloud_mount
+15074    White cloud mount                            white_cloud_mount
+15075    Dark cloud mount                             dark_cloud_mount
+15076    Evening cloud mount                          evening_cloud_mount
+15077    Moonlight cloud mount                        moonlight_cloud_mount
+15078    Sunrise cloud mount                          sunrise_cloud_mount
+15079    Black elephant mount                         black_elephant_mount
+15080    Brown elephant mount                         brown_elephant_mount
+15081    Maroon elephant mount                        maroon_elephant_mount
+15082    Green elephant mount                         green_elephant_mount
+15083    Slateblue elephant mount                     slateblue_elephant_mount
+15084    Purple lamb mount                            purple_lamb_mount
+15085    Grey lamb mount                              grey_lamb_mount
+15086    Yellow lamb mount                            yellow_lamb_mount
+15087    Brown lion mount                             brown_lion_mount
+15088    Grey lion mount                              grey_lion_mount
+15089    Silver lion mount                            silver_lion_mount
+15090    Green lama mount                             green_lama_mount
+15091    Silver lama mount                            silver_lama_mount
+15092    Purple elk mount                             purple_elk_mount
+15093    Brown elk mount                              brown_elk_mount
+15094    Gold elk mount                               gold_elk_mount
+15095    Olive elk mount                              olive_elk_mount
+15096    Green elk mount                              green_elk_mount
+15097    Grey elk mount                               grey_elk_mount
+15098    Green ceratops mount                         green_ceratops_mount
+15099    Cyan ceratops mount                          cyan_ceratops_mount
+15100    Red ceratops mount                           red_ceratops_mount
+15101    Black ceratops mount                         black_ceratops_mount
+15102    Fennec mount                                 fennec_mount
+15103    Pomeranian mount                             pomeranian_mount
+15104    Yellow anteater mount                        yellow_anteater_mount
+15105    Brown anteater mount                         brown_anteater_mount
+15106    Purple anteater mount                        purple_anteater_mount
+15107    Green rhino mount                            green_rhino_mount
+15108    Blue rhino mount                             blue_rhino_mount
+15109    Brown rhino mount                            brown_rhino_mount
+15110    Purple rhino mount                           purple_rhino_mount
+15111    Black rhino mount                            black_rhino_mount
+15112    Dark green rhino mount                       dark_green_rhino_mount
+15113    White rhino mount                            white_rhino_mount
+15114    Gold rhino mount                             gold_rhino_mount
+15115    Red rhino mount                              red_rhino_mount
+15116    Stone rhino mount                            stone_rhino_mount
+15117    Blue ninetails mount                         blue_ninetails_mount
+15118    Brown ninetails mount                        brown_ninetails_mount
+15119    Purple ninetails mount                       purple_ninetails_mount
+15120    Black ninetails mount                        black_ninetails_mount
+15121    White ninetails mount                        white_ninetails_mount
+15122    Gold ninetails mount                         gold_ninetails_mount
+15123    Red ninetails mount                          red_ninetails_mount
+15124    Pegasus mount                                pegasus_mount
+15125    Zebra mount                                  zebra_mount
+15126    Polar bear                                   polar_bear
+15127    Snowy polar bear                             snowy_polar_bear
+15128    Shivery polar bear                           shivery_polar_bear
+15129    Murky polar bear                             murky_polar_bear
+15130    Algid polar bear                             algid_polar_bear
+15131    Snappy polar bear                            snappy_polar_bear
+15132    Chilled polar bear                           chilled_polar_bear
+15133    Siberian polar bear                          siberian_polar_bear
+15134    Archon polar bear                            archon_polar_bear
+15135    Cool polar bear                              cool_polar_bear
+15136    Gelid polar bear                             gelid_polar_bear
+15137    Sharp polar bear                             sharp_polar_bear
+15138    Freezing polar bear                          freezing_polar_bear
+15139    Bleak polar bear                             bleak_polar_bear
+15140    Brumal polar bear                            brumal_polar_bear
+15141    Heated polar bear                            heated_polar_bear
+15142    Raw polar bear                               raw_polar_bear
+15143    Frost polar bear                             frost_polar_bear
+15144    Bitter polar bear                            bitter_polar_bear
+15145    Frore polar bear                             frore_polar_bear
+15146    Crisp polar bear                             crisp_polar_bear
+15147    Wintery polar bear                           wintery_polar_bear
+15148    Icy polar bear                               icy_polar_bear
+15149    Deer horn                                    deer_horn
+15150    Argyle deer horn                             argyle_deer_horn
+15151    Andiron deer horn                            andiron_deer_horn
+15152    Manitou deer horn                            manitou_deer_horn
+15153    Rosemary deer horn                           rosemary_deer_horn
+15154    Auburn deer horn                             auburn_deer_horn
+15155    Merioa deer horn                             merioa_deer_horn
+15156    Framboise deer horn                          framboise_deer_horn
+15157    Blissful deer horn                           blissful_deer_horn
+15158    Calimian deer horn                           calimian_deer_horn
+15159    Sika deer horn                               sika_deer_horn
+15160    Roe deer horn                                roe_deer_horn
+15161    Sunda deer horn                              sunda_deer_horn
+15162    Sambar deer horn                             sambar_deer_horn
+15163    Fallow deer horn                             fallow_deer_horn
+15164    Archon deer horn                             archon_deer_horn
+15165    Fire deer horn                               fire_deer_horn
+15166    Barasingha deer horn                         barasingha_deer_horn
+15167    Rusa deer horn                               rusa_deer_horn
+15168    Doe horn                                     doe_horn
+15169    Brown doe horn                               brown_doe_horn
+15170    Green doe horn                               green_doe_horn
+15171    Yellow doe horn                              yellow_doe_horn
+15172    Black doe horn                               black_doe_horn
+15173    White doe horn                               white_doe_horn
+15174    Turtle shell                                 turtle_shell
+15175    Seaweed turtle shell                         seaweed_turtle_shell
+15176    Sky turtle shell                             sky_turtle_shell
+15177    Golden turtle shell                          golden_turtle_shell
+15178    Blush turtle shell                           blush_turtle_shell
+15179    Copper turtle shell                          copper_turtle_shell
+15180    Ambergris turtle shell                       ambergris_turtle_shell
+15181    Floral turtle shell                          floral_turtle_shell
+15182    Frost turtle shell                           frost_turtle_shell
+15183    Coral turtle shell                           coral_turtle_shell
+15184    Coco turtle shell                            coco_turtle_shell
+15185    Linen turtle shell                           linen_turtle_shell
+15186    Clay turtle shell                            clay_turtle_shell
+15187    Sunset turtle shell                          sunset_turtle_shell
+15188    Holiday turtle shell                         holiday_turtle_shell
+15189    Emerald turtle shell                         emerald_turtle_shell
+15190    Panther collar                               panther_collar
+15191    Midnight panther collar                      midnight_panther_collar
+15192    Black panther collar                         black_panther_collar
+15193    White panther collar                         white_panther_collar
+15194    Yellow panther collar                        yellow_panther_collar
+15195    Red panther collar                           red_panther_collar
+15196    Green panther collar                         green_panther_collar
+15197    Tiger mount                                  tiger_mount
+15198    Black tiger mount                            black_tiger_mount
+15199    White tiger mount                            white_tiger_mount
+15200    Brown tiger mount                            brown_tiger_mount
+15201    Orange tiger mount                           orange_tiger_mount
+15202    Horned tiger mount                           horned_tiger_mount
+15203    Purple bunny mount                           purple_bunny_mount
+15204    White bunny mount                            white_bunny_mount
+15205    Brown bunny mount                            brown_bunny_mount
+15206    Eagle mount                                  eagle_mount
+15207    Blue bull mount                              blue_bull_mount
+15208    Brown bull mount                             brown_bull_mount
+15209    Black bull mount                             black_bull_mount
+15210    White bull mount                             white_bull_mount
+15211    Red bull mount                               red_bull_mount
+15212    Scorpion mount                               scorpion_mount
+15213    Black scorpion mount                         black_scorpion_mount
+15214    Red scorpion mount                           red_scorpion_mount
+15215    Brown wolf mount                             brown_wolf_mount
+15216    Black wolf mount                             black_wolf_mount
+15217    White wolf mount                             white_wolf_mount
+15218    Purple bat mount                             purple_bat_mount
+15219    Blue bat mount                               blue_bat_mount
+15220    Black bat mount                              black_bat_mount
+15221    White bat mount                              white_bat_mount
+15222    Green bat mount                              green_bat_mount
+15223    Purple snake mount                           purple_snake_mount
+15224    Black snake mount                            black_snake_mount
+15225    White snake mount                            white_snake_mount
+15226    Brown snake mount                            brown_snake_mount
+15227    Green snake mount                            green_snake_mount
+15228    Black peacock mount                          black_peacock_mount
+15229    Red peacock mount                            red_peacock_mount
+15230    Purple peacock mount                         purple_peacock_mount
+15231    Floral peacock mount                         floral_peacock_mount
+15232    Blue peacock mount                           blue_peacock_mount
+15233    Green peacock mount                          green_peacock_mount
+15234    Green gama                                   green_gama
+15235    Brown gama                                   brown_gama
+15236    Black gama                                   black_gama
+15237    White gama                                   white_gama
+15238    Tan gama                                     tan_gama
+15239    Blue gama                                    blue_gama
+15240    Orange gama                                  orange_gama
+15241    Red gama                                     red_gama
+15242    Green firetail mount                         green_firetail_mount
+15243    Blue firetail mount                          blue_firetail_mount
+15244    Brown firetail mount                         brown_firetail_mount
+15245    Purple firetail mount                        purple_firetail_mount
+15246    Black firetail mount                         black_firetail_mount
+15247    Dark green firetail mount                    dark_green_firetail_mount
+15248    White firetail mount                         white_firetail_mount
+15249    Gold firetail mount                          gold_firetail_mount
+15250    Red firetail mount                           red_firetail_mount
+15251    Stone firetail mount                         stone_firetail_mount
+15252    Husky mount                                  husky_mount
+15253    ==== NON STANDARD NTK MOUNTS====             === NON STANDARD NTK MOUNTS===
+15254    Fiery winter fox mount                       fiery_winter_fox_mount
+15255    Forest winter fox mount                      forest_winter_fox_mount
+15256    Blood tip winter fox mount                   blood_tip_winter_fox_mount
+15257    Aqua tip winter fox mount                    aqua_tip_winter_fox_mount
+15258    Red tip winter fox mount                     red_tip_winter_fox_mount
+15259    Peach winter fox mount                       peach_winter_fox_mount
+15260    Twilight winter fox mount                    twilight_winter_fox_mount
+15261    Steel winter fox mount                       steel_winter_fox_mount
+15262    Black tip winter fox mount                   black_tip_winter_fox_mount
+15263    Blue rooster mount                           blue_rooster_mount
+16000    ==== PREMIUM ITEM SKINS =====                ==== PREMIUM ITEM SKINS ====
+16001    Forsaken orb blade                           forsaken_orb_blade
+16002    Forsaken orb sabre                           forsaken_orb_sabre
+16003    Shadowsteel claymore                         shadowsteel_claymore
+16004    Cursed soul reaver                           cursed_soul_reaver
+16005    Yearn blade                                  yearn_blade
+16006    Mourn blade                                  mourn_blade
+16007    Tiger blitz                                  tiger_blitz
+16008    Bear blitz                                   bear_blitz
+16009    Rose bouquet bundle                          rose_bouquet_bundle
+16010    Broom stick                                  broom_stick
+16011    Smoke fury                                   smoke_fury
+16012    Saber claw                                   saber_claw
+16013    Pink stuffed bunny                           pink_stuffed_bunny
+16014    Azure stuffed bunny                          azure_stuffed_bunny
+16015    Yellow stuffed bunny                         yellow_stuffed_bunny
+16016    Lime stuffed bunny                           lime_stuffed_bunny
+16017    Patchwork stuffed bunny                      patchwork_stuffed_bunny
+16018    White stuffed bunny                          white_stuffed_bunny
+16019    Red stuffed bunny                            red_stuffed_bunny
+16020    Blue stuffed bunny                           blue_stuffed_bunny
+16021    Tan stuffed bunny                            tan_stuffed_bunny
+16022    Green stuffed bunny                          green_stuffed_bunny
+16023    Purple stuffed bunny                         purple_stuffed_bunny
+16024    Black stuffed bunny                          black_stuffed_bunny
+17000    ====PREMIUM====                              ===PREMIUM====
+17001    Item protection I                            item_protection_i
+17002    Item protection II                           item_protection_ii
+17003    Item protection III                          Item_protection_iii
+17004    Item protection V                            item_protection_v
+17005    Butterfly wing                               butterfly_wing
+17006    Random mount I                               random_mount_i
+17007    Random mount II                              random_mount_ii
+17008    Random mount III                             random_mount_iii
+17009    Empty gift box                               easter_gift_box
+17010    Easter basket                                easter_basket
+17011    Easter egg                                   easter_egg
+17012    Empty wool bag                               empty_wool_bag
+17013    Empty amber bag                              empty_amber_bag
+17014    Crafting stone                               crafting_stone
+17015    Empty cloth bag                              empty_cloth_bag
+17016    Empty farmers bag                            empty_farmers_bag
+17017    Empty fish bag                               empty_fish_bag
+17018    Empty food bag                               empty_food_bag
+17019    Empty meat bag                               empty_meat_bag
+17020    Empty ginko bag                              empty_ginko_bag
+17021    Empty metal bag                              empty_metal_bag
+17022    Empty ore bag                                empty_ore_bag
+17023    Cleanse alignment                            cleanse_alignment
+17024    Amber bag                                    amber_bag
+17025    Cftd ambr bag                                crafted_amber_bag
+17026    Well cftd ambr bag                           well_crafted_amber_bag
+17027    Dk ambr bag                                  dark_amber_bag
+17028    Cftd dk ambr bag                             crafted_dark_amber_bag
+17029    Wt amber bag                                 white_amber_bag
+17030    Cftd wt amber bag                            crafted_white_amber_bag
+17031    Well cftd wt amber bag                       well_crafted_white_amber_bag
+17032    Yw ambr bag                                  yellow_amber_bag
+17033    Cftd yw ambr bag                             crafted_yellow_amber_bag
+17034    Well cftd yw ambr bag                        well_crafted_yellow_amber_bag
+17035    Wool bag                                     wool_bag
+17036    Ore [poor] bag                               ore_poor_bag
+17037    Ore [med] bag                                ore_med_bag
+17038    Ore [high] bag                               ore_high_bag
+17039    Ore [Very high] bag                          ore_very_high_bag
+17040    Ginko bag                                    ginko_bag
+17041    Cloth bag                                    cloth_bag
+17042    Fine cloth bag                               fine_cloth_bag
+17043    Beef bag                                     beef_bag
+17044    Lean beef bag                                lean_beef_bag
+17045    Rare pork bag                                rare_pork_bag
+17046    Egg bag                                      egg_bag
+17047    Metal bag                                    metal_bag
+17048    Fine metal bag                               fine_metal_bag
+17049    Scrawny fish bag                             scrawny_fish_bag
+17050    Tiny fish bag                                tiny_fish_bag
+17051    Small fish bag                               small_fish_bag
+17052    Large fish bag                               large_fish_bag
+17053    Tasty fish bag                               tasty_fish_bag
+17054    Delicious fish bag                           delicious_fish_bag
+17055    Well Cftd dark amber bag                     well_crafted_dark_amber_bag
+17056    Wheat bag                                    wheat_bag
+17057    Peas bag                                     peas_bag
+17058    Rice bag                                     Rice bag
+17059    Name change voucher                          name_change_voucher
+17060    Skill assessment                             skill_assessment
+17061    Scalemail Coat                               scale_mail_coat
+17062    Platemail Coat                               war_platemail_coat
+17063    Scale Dress Coat                             scale_dress_coat
+17064    War Dress Coat                               war_dress_coat
+17065    Waistcoat Coat                               waistcoat_coat
+17066    Blouse Coat                                  blouse_coat
+17067    Armor Coat                                   armor_coat
+17068    Armor Dress Coat                             armor_dress_coat
+17069    Garb Coat                                    garb_coat
+17070    Dress Coat                                   dress_coat
+17071    Skirt Coat                                   skirt_coat
+17072    Clothes Coat                                 clothes_coat
+17073    Robes Coat                                   robes_coat
+17074    Gown Coat                                    gown_coat
+17075    Mantle Coat                                  mantle_coat
+17076    Drapery Coat                                 drapery_coat
+17077    Heavy Plate Coat                             heavy_plate_coat
+17078    500 Kan Certificate                          kan_certificate_500
+17079    1000 Kan Certificate                         kan_certificate_1000
+17080    1500 Kan Certificate                         kan_certificate_1500
+17081    2000 Kan Certificate                         kan_certificate_2000
+17082    2500 Kan Certificate                         kan_certificate_2500
+17083    3000 Kan Certificate                         kan_certificate_3000
+17084    3500 Kan Certificate                         kan_certificate_3500
+17085    4000 Kan Certificate                         kan_certificate_4000
+17086    4500 Kan Certificate                         kan_certificate_4500
+17087    5000 Kan Certificate                         kan_certificate_5000
+17088    Green sprite wings                           green_sprite_wings
+17089    Blue sprite wings                            blue_sprite_wings
+17090    Teal sprite wings                            teal_sprite_wings
+17091    Grey sprite wings                            grey_sprite_wings
+17092    Silver sprite wings                          silver_sprite_wings
+17093    Golden sprite wings                          golden_sprite_wings
+17094    Red sprite wings                             red_sprite_wings
+17095    Pink sprite wings                            pink_sprite_wings
+17096    Purple sprite wings                          purple_sprite_wings
+17097    Mulberry sprite wings                        mulberry_sprite_wings
+17098    Fuschia sprite wings                         fuschia_sprite_wings
+17099    Blue ogre head                               blue_ogre_head
+17100    Blue ogre body                               blue_ogre_body
+17101    Blood ogre head                              blood_ogre_head
+17102    Blood ogre body                              blood_ogre_body
+17103    Green ogre head                              green_ogre_head
+17104    Green ogre body                              green_ogre_body
+17105    Blue ogress head                             blue_ogress_head
+17106    Blue ogress body                             blue_ogress_body
+17107    Blood ogress head                            blood_ogress_head
+17108    Blood ogress body                            blood_ogress_body
+17109    Green ogress head                            green_ogress_head
+17110    Green ogress body                            green_ogress_body
+17111    Inventory space                              inventory_space
+17112    Experience envelope pack 1 day               experience_envelope_pack_1_day
+17113    Experience envelope pack 7 days              experience_envelope_pack_7_days
+17114    Experience envelope pack 30 days             experience_envelope_pack_30_days
+17115    Yellow recess outfit                         yellow_recess_outfit
+17116    Lavender recess outfit                       lavender_recess_outfit
+17117    White recess outfit                          white_recess_outfit
+17118    Black recess outfit                          black_recess_outfit
+17119    Blue recess outfit                           blue_recess_outfit
+17120    Gold recess outfit                           gold_recess_outfit
+17121    Lilac recess outfit                          lilac_recess_outfit
+17122    Lime recess outfit                           lime_recess_outfit
+17123    Nuage recess outfit                          nuage_recess_outfit
+17124    Red recess outfit                            red_recess_outfit
+17125    Ruby recess outfit                           ruby_recess_outfit
+17126    Yellow recess lid                            yellow_recess_lid
+17127    Lavender recess lid                          lavender_recess_lid
+17128    White recess lid                             white_recess_lid
+17129    Black recess lid                             black_recess_lid
+17130    Blue recess lid                              blue_recess_lid
+17131    Gold recess lid                              gold_recess_lid
+17132    Lilac recess lid                             lilac_recess_lid
+17133    Lime recess lid                              lime_recess_lid
+17134    Nuage recess lid                             nuage_recess_lid
+17135    Red recess lid                               red_recess_lid
+17136    Ruby recess lid                              ruby_recess_lid
+17137    Forest angel wings                           forest_angel_wings
+17138    Fuschia angel wings                          fuschia_angel_wings
+17139    Garnet angel wings                           garnet_angel_wings
+17140    Gorevan angel wings                          gorevan_angel_wings
+17141    Lavender angel wings                         lavender_angel_wings
+17142    Fuschia angel wings                          fuschia_angel_wings
+17143    Lilac angel wings                            lilac_angel_wings
+17144    Mauve angel wings                            mauve_angel_wings
+17145    Midnight angel wings                         midnight_angel_wings
+17146    Mustard angel wings                          mustard_angel_wings
+17147    Nuage angel wings                            nuage_angel_wings
+17148    Old rose angel wings                         old_rose_angel_wings
+17149    Pink angel wings                             pink_angel_wings
+17150    Primavera angel wings                        primavera_angel_wings
+17151    Purple angel wings                           purple_angel_wings
+17152    Ruby angel wings                             ruby_angel_wings
+17153    Silver angel wings                           silver_angel_wings
+17154    Slate angel wings                            slate_angel_wings
+17155    Storm angel wings                            storm_angel_wings
+17156    Strawberry angel wings                       strawberry_angel_wings
+17157    Sun angel wings                              sun_angel_wings
+17158    Sunset angel wings                           sunset_angel_wings
+17159    Tundra angel wings                           tundra_angel_wings
+17160    Twilight angel wings                         twilight_angel_wings
+17161    Vermilion angel wings                        vermilion_angel_wings
+17162    Asuuri mantiya                               asuuri_mantiya
+17163    Aurora mantiya                               aurora_mantiya
+17164    Bistre mantiya                               bistre_mantiya
+17165    Cadmium mantiya                              cadmium_mantiya
+17166    Caeruleus mantiya                            caeruleus_mantiya
+17167    Celadon mantiya                              celadon_mantiya
+17168    Cerulean mantiya                             cerulean_mantiya
+17169    Chamoline mantiya                            chamoline_mantiya
+17170    Falcon mantiya                               falcon_mantiya
+17171    Gainsboro mantiya                            gainsboro_mantiya
+17172    Gold glow mantiya                            gold_glow_mantiya
+17173    Hunter mantiya                               hunter_mantiya
+17174    Kremlin mantiya                              kremlin_mantiya
+17175    Leaf mantiya                                 leaf_mantiya
+17176    Peridot mantiya                              peridot_mantiya
+17177    Pine mantiya                                 pine_mantiya
+17178    Prismatic mantiya                            prismatic_mantiya
+17179    Quercitron mantiya                           quercitron_mantiya
+17180    Romantic mantiya                             romantic_mantiya
+17181    Royal mantiya                                royal_mantiya
+17182    Ruskea mantiya                               ruskea_mantiya
+17183    Russet mantiya                               russet_mantiya
+17184    Sapphire mantiya                             sapphire_mantiya
+17185    Silver mantiya                               silver_mantiya
+17186    Sorcerer mantiya                             sorcerer_mantiya
+17187    Supreme mantiya                              supreme_mantiya
+17188    Tarragona mantiya                            tarragona_mantiya
+17189    Venetus mantiya                              venetus_mantiya
+17190    Veronan mantiya                              veronan_mantiya
+17191    Whimsical mantiya                            whimsical_mantiya
+17192    Xanadu mantiya                               xanadu_mantiya
+17193    Yu chi mantiya                               yu_chi_mantiya
+17194    Zaffiro mantiya                              zaffiro_mantiya
+17195    Pink great butterfly wings                   pink_great_butterfly_wings
+17196    Black great butterfly wings                  black_great_butterfly_wings
+17197    White great butterfly wings                  white_great_butterfly_wings
+17198    Gold great butterfly wings                   gold_great_butterfly_wings
+17199    Red great butterfly wings                    red_great_butterfly_wings
+17200    Slate great butterfly wings                  slate_great_butterfly_wings
+17201    Blue great butterfly wings                   blue_great_butterfly_wings
+17202    Green great butterfly wings                  green_great_butterfly_wings
+17203    Plum great butterfly wings                   plum_great_butterfly_wings
+17204    Fuschia great butterfly wings                fuschia_great_butterfly_wings
+17205    Amber great butterfly wings                  amber_great_butterfly_wings
+17206    Purple great butterfly wings                 purple_great_butterfly_wings
+17207    Magenta great butterfly wings                magenta_great_butterfly_wings
+17208    Bizarre ghost coat                           bizarre_ghost_coat
+17209    Black ghost coat                             black_ghost_coat
+17210    Brown ghost coat                             brown_ghost_coat
+17211    Chilling ghost coat                          chilling_ghost_coat
+17212    Creepy ghost coat                            creepy_ghost_coat
+17213    Dire ghost coat                              dire_ghost_coat
+17214    Eerie ghost coat                             eerie_ghost_coat
+17215    Frightening ghost coat                       frightening_ghost_coat
+17216    Gloomy ghost coat                            gloomy_ghost_coat
+17217    Gray ghost coat                              gray_ghost_coat
+17218    Grim ghost coat                              grim_ghost_coat
+17219    Haunted ghost coat                           haunted_ghost_coat
+17220    Murky ghost coat                             murkey_ghost_coat
+17221    Mysterious ghost coat                        mysterious_ghost_coat
+17222    Odd ghost coat                               odd_ghost_coat
+17223    Ominous ghost coat                           ominous_ghost_coat
+17224    Purple ghost coat                            purple_ghost_coat
+17225    Red ghost coat                               red_ghost_coat
+17226    Scary ghost coat                             scary_ghost_coat
+17227    Shadowy ghost coat                           bizarre_ghost_coat
+17228    Sinister ghost coat                          sinister_ghost_coat
+17229    Slimey ghost coat                            slimey_ghost_coat
+17230    Uncanny ghost coat                           uncanny_ghost_coat
+17231    Berry shades                                 berry_shades
+17232    Black shades                                 black_shades
+17233    Blue shades                                  blue_shades
+17234    Brown shades                                 brown_shades
+17235    Emerald shades                               emerald_shades
+17236    Gray shades                                  gray_shades
+17237    Green shades                                 green_shades
+17238    Lime shades                                  lime_shades
+17239    Maroon shades                                maroon_shades
+17240    Mustard shades                               mustard_shades
+17241    Obsidian shades                              obsidian_shades
+17242    Orange shades                                orange_shades
+17243    Pitch shades                                 pitch_shades
+17244    Purple shades                                purple_shades
+17245    Rusty shades                                 rusty_shades
+17246    Silver shades                                silver_shades
+17247    Tan shades                                   tan_shades
+17248    Lava shades                                  lava_shades
+17249    Black female kimono                          black_female_kimono
+17250    Bondi female kimono                          bondi_female_kimono
+17251    Chai female kimono                           chai_female_kimono
+17252    Charcoal female kimono                       charcoal_female_kimono
+17253    Diamond female kimono                        diamond_female_kimono
+17254    Earthen female kimono                        earthen_female_kimono
+17255    Jade female kimono                           jade_female_kimono
+17256    Khaki female kimono                          khaki_female_kimono
+17257    Light blue female kimono                     light_blue_female_kimono
+17258    Lilac female kimono                          lilac_female_kimono
+17259    Lime female kimono                           lime_female_kimono
+17260    Mauve female kimono                          mauve_female_kimono
+17261    Mint female kimono                           mint_female_kimono
+17262    Olive female kimono                          olive_female_kimono
+17263    Opal female kimono                           opal_female_kimono
+17264    Pink female kimono                           pink_female_kimono
+17265    Red female kimono                            red_female_kimono
+17266    Rose female kimono                           rose_female_kimono
+17267    Sepia female kimono                          sepia_female_kimono
+17268    Shamrock female kimono                       shamrock_female_kimono
+17269    Sunglow female kimono                        sunglow_female_kimono
+17270    Taupe female kimono                          taupe_female_kimono
+17271    Twilight female kimono                       twilight_female_kimono
+17272    Wisteria female kimono                       wisteria_female_kimono
+17273    Black male kimono                            black_male_kimono
+17274    Blue male kimono                             blue_male_kimono
+17275    Brown male kimono                            brown_male_kimono
+17276    Green male kimono                            green_male_kimono
+17277    Amaranth hakama                              amaranth_hakama
+17278    Bondi hakama                                 bondi_hakama
+17279    Dark grey hakama                             dark_grey_hakama
+17280    Deep purple hakama                           deep_purple_hakama
+17281    Diamond hakama                               diamond_hakama
+17282    Grin hakama                                  grin_hakama
+17283    Indigo hakama                                indigo_hakama
+17284    Jade hakama                                  jade_hakama
+17285    Khaki hakama                                 khaki_hakama
+17286    Light blue hakama                            light_blue_hakama
+17287    Light green hakama                           light_green_hakama
+17288    Lilac hakama                                 lilac_hakama
+17289    Magenta hakama                               magenta_hakama
+17290    Olive green hakama                           olive_green_hakama
+17291    Opal hakama                                  opal_hakama
+17292    Orange hakama                                orange_hakama
+17293    Purple hakama                                purple_hakama
+17294    Red hakama                                   red_hakama
+17295    Sapphire hakama                              sapphire_hakama
+17296    Shamrock hakama                              shamrock_hakama
+17297    Sun hakama                                   sun_hakama
+17298    Twilight hakama                              twilight_hakama
+17299    White hakama                                 white_hakama
+17300    Yellow hakama                                yellow_hakama
+17301    Crimson hakama                               crimson_hakama
+17302    Black snazzy skirt                           black_snazzy_skirt
+17303    Blue snazzy skirt                            blue_snazzy_skirt
+17304    Brown snazzy skirt                           brown_snazzy_skirt
+17305    Cerulean snazzy skirt                        cerulean_snazzy_skirt
+17306    Dark snazzy skirt                            dark_snazzy_skirt
+17307    Dusk snazzy skirt                            dusk_snazzy_skirt
+17308    Green snazzy skirt                           green_snazzy_skirt
+17309    Kelly snazzy skirt                           kelly_snazzy_skirt
+17310    Mint snazzy skirt                            mint_snazzy_skirt
+17311    Mustard snazzy skirt                         mustard_snazzy_skirt
+17312    Navy snazzy skirt                            navy_snazzy_skirt
+17313    Pink snazzy skirt                            pink_snazzy_skirt
+17314    Purple snazzy skirt                          purple_snazzy_skirt
+17315    Red snazzy skirt                             red_snazzy_skirt
+17316    Rust snazzy skirt                            rust_snazzy_skirt
+17317    Sweetheart snazzy skirt                      sweetheart_snazzy_skirt
+17318    Beige snazzy suit                            beige_snazzy_suit
+17319    Black snazzy suit                            black_snazzy_suit
+17320    Blue snazzy suit                             blue_snazzy_suit
+17321    Brown snazzy suit                            brown_snazzy_suit
+17322    Cerulean snazzy suit                         cerulean_snazzy_suit
+17323    Dark snazzy suit                             dark_snazzy_suit
+17324    Denim snazzy suit                            denim_snazzy_suit
+17325    Ebony snazzy suit                            ebony_snazzy_suit
+17326    Gray snazzy suit                             gray_snazzy_suit
+17327    Green snazzy suit                            green_snazzy_suit
+17328    Heartbreaker snazzy suit                     heartbreaker_snazzy_suit
+17329    Mustard snazzy suit                          mustard_snazzy_suit
+17330    Navy snazzy suit                             navy_snazzy_suit
+17331    Red snazzy suit                              red_snazzy_suit
+17332    Rust snazzy suit                             rust_snazzy_suit
+17333    Teal snazzy suit                             teal_snazzy_suit
+17334    Purple snazzy suit                           purple_snazzy_suit
+17335    Orange snazzy suit                           orange_snazzy_suit
+17336    Violet snazzy suit                           violet_snazzy_suit
+17337    Embroidered jade great cloak                 embroidered_jade_great_cloak
+17338    Embroidered red great cloak                  embroidered_red_great_cloak
+17339    Embroidered blue great cloak                 embroidered_blue_great_cloak
+17340    Embroidered purple great cloak               embroidered_purple_great_cloak
+17341    Embroidered brown great cloak                embroidered_brown_great_cloak
+17342    Embroidered green great cloak                embroidered_green_great_cloak
+17343    Embroidered white great cloak                embroidered_white_great_cloak
+17344    Embroidered pink great cloak                 embroidered_pink_great_cloak
+17345    Embroidered dk blue great cloak              embroidered_dark_blue_great_cloak
+17346    Embroidered lt green great cloak             embroidered_light_green_great_cloak
+17347    Embroidered black great cloak                embroidered_black_great_cloak
+17348    Purple soul serpent dress                    purple_soul_serpent_dress
+17349    Grey soul serpent dress                      grey_soul_serpent_dress
+17350    Green soul serpent dress                     green_soul_serpent_dress
+17351    Gold soul serpent dress                      gold_soul_serpent_dress
+17352    Red soul serpent dress                       red_soul_serpent_dress
+17353    Purple soul serpent robe                     purple_soul_serpent_robe
+17354    Grey soul serpent robe                       grey_soul_serpent_robe
+17355    Green soul serpent robe                      green_soul_serpent_robe
+17356    Gold soul serpent robe                       gold_soul_serpent_robe
+17357    Red soul serpent robe                        red_soul_serpent_robe
+17358    Lei effect                                   lei_effect
+17359    Black kanzashi                               black_kanzashi
+17360    Bondi kanzashi                               bondi_kanzashi
+17361    Chai kanzashi                                chai_kanzashi
+17362    Charcoal kanzashi                            charcoal_kanzashi
+17363    Diamond kanzashi                             diamond_kanzashi
+17364    Earthen kanzashi                             earthen_kanzashi
+17365    Jade kanzashi                                jade_kanzashi
+17366    Khaki kanzashi                               khaki_kanzashi
+17367    Light blue kanzashi                          light_blue_kanzashi
+17368    Lime kanzashi                                lime_kanzashi
+17369    Mauve kanzashi                               mauve_kanzashi
+17370    Mint kanzashi                                mint_kanzashi
+17371    Olive kanzashi                               olive_kanzashi
+17372    Pink kanzashi                                pink_kanzashi
+17373    Rose kanzashi                                rose_kanzashi
+17374    Sepia kanzashi                               sepia_kanzashi
+17375    Shamrock kanzashi                            shamrock_kanzashi
+17376    Sunrise kanzashi                             sunrise_kanzashi
+17377    Taupe kanzashi                               taupe_kanzashi
+17378    Tea rose kanzashi                            tea_rose__kanzashi
+17379    Twilight kanzashi                            twilight_kanzashi
+17380    Wintery kanzashi                             wintery_kanzashi
+17381    Zinnwaldite kanzashi                         zinnwaldite_kanzashi
+17382    Aqua samurai hairpiece                       aqua_samurai_hairpiece
+17383    Arcadia samurai hairpiece                    arcadia_samurai_hairpiece
+17384    Ardoise samurai hairpiece                    ardoise_samurai_hairpiece
+17385    Black samurai hairpiece                      black_samurai_hairpiece
+17386    Chasseur samurai hairpiece                   chasseur_samurai_hairpiece
+17387    Chestnut samurai hairpiece                   chestnut_samurai_hairpiece
+17388    Cobalt samurai hairpiece                     cobalt_samurai_hairpiece
+17389    Crimson samurai hairpiece                    crimson_samurai_hairpiece
+17390    Emerald samurai hairpiece                    emerald_samurai_hairpiece
+17391    Eminence samurai hairpiece                   eminence_samurai_hairpiece
+17392    Hazelnut samurai hairpiece                   hazelnut_samurai_hairpiece
+17393    Indigo samurai hairpiece                     indigo_samurai_hairpiece
+17394    Leather samurai hairpiece                    leather_samurai_hairpiece
+17395    Lime samurai hairpiece                       lime_samurai_hairpiece
+17396    Mahogany samurai hairpiece                   mahogany_samurai_hairpiece
+17397    Olive samurai hairpiece                      olive_samurai_hairpiece
+17398    Samurai hairpiece                            samurai_hairpiece
+17399    Sky samurai hairpiece                        sky_samurai_hairpiece
+17400    Tangerine samurai hairpiece                  tangerine_samurai_hairpiece
+17401    Teak samurai hairpiece                       teak_samurai_hairpiece
+17402    Violet samurai hairpiece                     violet_samurai_hairpiece
+17403    White samurai hairpiece                      white_samurai_hairpiece
+17404    Golden highlights                            golden_highlights
+17405    Blue highlights                              blue_highlights
+17406    Purple highlights                            purple_highlights
+17407    Light pink highlights                        light_pink_highlights
+17408    Pink highlights                              pink_highlights
+17409    Auburn highlights                            auburn_highlights
+17410    Black highlights                             black_highlights
+17411    White highlights                             white_highlights
+17412    Green highlights                             green_highlights
+17413    Brown highlights                             brown_highlights
+17414    Long cap hair                                long_cap_hair
+17415    Purple long cap hair                         purple_long_cap_hair
+17416    Black long cap hair                          black_long_cap_hair
+17417    Golden long cap hair                         golden_long_cap_hair
+17418    Silver long cap hair                         silver_long_cap_hair
+17419    Blue long cap hair                           blue_long_cap_hair
+17420    Dk purple long cap hair                      dark_purple_long_cap_hair
+17421    Black cat mask                               black_cat_mask
+17422    Emerald cat mask                             emerald_cat_mask
+17423    Gold cat mask                                gold_cat_mask
+17424    Orange cat mask                              orange_cat_mask
+17425    Teal cat mask                                teal_cat_mask
+17426    White cat mask                               white_cat_mask
+17427    Mystic cobalt necklace                       mystic_cobalt_necklace
+17428    Mystic emerald necklace                      mystic_emerald_necklace
+17429    Mystic fire necklace                         mystic_fire_necklace
+17430    Mystic gold necklace                         mystic_gold_necklace
+17431    Mystic indigo necklace                       mystic_indigo_necklace
+17432    Mystic ivory necklace                        mystic_ivory_necklace
+17433    Mystic lime necklace                         mystic_lime_necklace
+17434    Mystic multi necklace                        mystic_multi_necklace
+17435    Mystic onyx necklace                         mystic_onyx_necklace
+17436    Mystic opal necklace                         mystic_opal_necklace
+17437    Mystic pastel necklace                       mystic_pastel_necklace
+17438    Mystic rose necklace                         mystic_rose_necklace
+17439    Mystic ruby necklace                         mystic_ruby_necklace
+17440    Mystic sea necklace                          mystic_sea_necklace
+17441    Golden amulet                                golden_amulet
+17442    Ivory amulet                                 ivory_amulet
+17443    Onyx amulet                                  onyx_amulet
+17444    Silver amulet                                silver_amulet
+17445    Black female geta                            black_female_geta
+17446    Chai female geta                             chai_female_geta
+17447    Diamond female geta                          diamond_female_geta
+17448    Earthen female geta                          earthen_female_geta
+17449    Female geta                                  female_geta
+17450    Jade female geta                             jade_female_geta
+17451    Khaki female geta                            khaki_female_geta
+17452    Light blue female geta                       light_blue_female_geta
+17453    Lilac female geta                            lilac_female_geta
+17454    Lime female geta                             lime_female_geta
+17455    Mauve female geta                            mauve_female_geta
+17456    Mint female geta                             mint_female_geta
+17457    Olive female geta                            olive_female_geta
+17458    Red female geta                              red_female_geta
+17459    Rose female geta                             rose_female_geta
+17460    Sepia female geta                            sepia_female_geta
+17461    Shamrock female geta                         shamrock_female_geta
+17462    Sky female geta                              sky_female_geta
+17463    Sunglow female geta                          sunglow_female_geta
+17464    Twilight female geta                         twilight_female_geta
+17465    Wintery female geta                          wintery_female_geta
+17466    Amethyst male geta                           amethyst_male_geta
+17467    Black male geta                              black_male_geta
+17468    Cobalt male geta                             cobalt_male_geta
+17469    Light blue male geta                         light_blue_male_geta
+17470    Lime male geta                               lime_male_geta
+17471    Male geta                                    male_geta
+17472    Olive male geta                              olive_male_geta
+17473    Sand male geta                               sand_male_geta
+17474    Sunglow male geta                            sunglow_male_geta
+17475    White male geta                              white_male_geta
+17476    Wintery male geta                            wintery_male_geta
+17477    Aquamarine hair potion                       aquamarine_hair_potion
+17478    Aubergine hair potion                        aubergine_hair_potion
+17479    Birch hair potion                            birch_hair_potion
+17480    Bittersweet hair potion                      bittersweet_hair_potion
+17481    Candy apple hair potion                      candy_apple_hair_potion
+17482    Cocobolo hair potion                         cocobolo_hair_potion
+17483    Cornflower hair potion                       cornflower_hair_potion
+17484    Cucumber hair potion                         cucumber_hair_potion
+17485    Emery hair potion                            emery_hair_potion
+17486    Flamingo hair potion                         flamingo_hair_potion
+17487    Golden hair potion                           golden_hair_potion
+17488    Haze hair potion                             haze_hair_potion
+17489    Hunter hair potion                           hunter_hair_potion
+17490    Hyacinth hair potion                         hyacinth_hair_potion
+17491    Indigo hair potion                           indigo_hair_potion
+17492    Iridescent hair potion                       iridescent_hair_potion
+17493    Iris hair potion                             iris_hair_potion
+17494    Lazuli hair potion                           lazuli_hair_potion
+17495    Maple hair potion                            maple_hair_potion
+17496    Moss hair potion                             moss_hair_potion
+17497    Nuage hair potion                            nuage_hair_potion
+17498    Nutmeg hair potion                           nutmeg_hair_potion
+17499    Onyx hair potion                             onyx_hair_potion
+17500    Padauk hair potion                           padauk_hair_potion
+17501    Peridot hair potion                          peridot_hair_potion
+17502    Petunia hair potion                          petunia_hair_potion
+17503    Pine hair potion                             pine_hair_potion
+17504    Pink hair potion                             pink_hair_potion
+17505    Pumpkin hair potion                          pumpkin_hair_potion
+17506    Purpleheart hair potion                      purpleheart_hair_potion
+17507    Raspberry hair potion                        raspberry_hair_potion
+17508    Russet hair potion                           russet_hair_potion
+17509    Sapphire hair potion                         sapphire_hair_potion
+17510    Scarlet hair potion                          scarlet_hair_potion
+17511    Spearmint hair potion                        spearmint_hair_potion
+17512    Sprite hair potion                           sprite_hair_potion
+17513    Strawberry hair potion                       strawberry_hair_potion
+17514    Sunflower hair potion                        sunflower_hair_potion
+17515    Tartan hair potion                           tartan_hair_potion
+17516    Teak hair potion                             teak_hair_potion
+17517    Tigerseye hair potion                        tigerseye_hair_potion
+17518    Ultraviolet hair potion                      ultraviolet_hair_potion
+17519    White smoke hair potion                      white_smoke_hair_potion
+17520    Black hair potion                            black_hair_potion
+17521    Blonde hair potion                           blonde_hair_potion
+17522    Brown hair potion                            brown_hair_potion
+17523    Cadet hair potion                            cadet_hair_potion
+17524    Cinnamon hair potion                         cinnamon_hair_potion
+17525    Dark blue hair potion                        dark_blue_hair_potion
+17526    Fog hair potion                              fog_hair_potion
+17527    Glistening hair potion                       glistening_hair_potion
+17528    Green hair potion                            green_hair_potion
+17529    Kelly hair potion                            kelly_hair_potion
+17530    Light brown hair potion                      light_brown_hair_potion
+17531    Orange hair potion                           orange_hair_potion
+17532    Orchid hair potion                           orchid_hair_potion
+17533    Pomme hair potion                            pomme_hair_potion
+17534    Purple hair potion                           purple_hair_potion
+17535    Red hair potion                              red_hair_potion
+17536    Royal blue hair potion                       royal_hair_potion
+17537    Sandy hair potion                            sandy_hair_potion
+17538    Silver hair potion                           silver_hair_potion
+17539    Sky blue hair potion                         sky_hair_potion
+17540    Slate hair potion                            slate_hair_potion
+17541    Tan hair potion                              tan_hair_potion
+17542    Topaz hair potion                            topaz_hair_potion
+17543    Violet hair potion                           violet_hair_potion
+17544    aqua full beard                              aqua_full_beard
+17545    auburn full beard                            auburn_full_beard
+17546    black full beard                             black_full_beard
+17547    blonde full beard                            blonde_full_beard
+17548    blue full beard                              blue_full_beard
+17549    brown full beard                             brown_full_beard
+17550    dark brown full beard                        dark_brown_full_beard
+17551    deep sea full beard                          deep_sea_full_beard
+17552    ember full beard                             ember_full_beard
+17553    flame full beard                             flame_full_beard
+17554    forrest green full beard                     forrest_green_full_beard
+17555    green full beard                             green_full_beard
+17556    grey full beard                              grey_full_beard
+17557    indigo full beard                            indigo_full_beard
+17558    light brown full beard                       light_brown_full_beard
+17559    light purple full beard                      light_purple_full_beard
+17560    orange full beard                            orange_full_beard
+17561    purple full beard                            purple_full_beard
+17562    royal blue full beard                        royal_blue_full_beard
+17563    russet full beard                            russet_full_beard
+17564    scarlet full beard                           scarlet_full_beard
+17565    silver full beard                            silver_full_beard
+17566    sky blue full beard                          sky_blue_full_beard
+17567    tan full beard                               tan_full_beard
+17568    teal full beard                              teal_full_beard
+17569    walnut full beard                            walnut_full_beard
+17570    aqua short beard                             aqua_short_beard
+17571    auburn short beard                           auburn_short_beard
+17572    black short beard                            black_short_beard
+17573    blonde short beard                           blonde_short_beard
+17574    blue short beard                             blue_short_beard
+17575    brown short beard                            brown_short_beard
+17576    dark brown short beard                       dark_brown_short_beard
+17577    deep sea short beard                         deep_sea_short_beard
+17578    ember short beard                            ember_short_beard
+17579    flame short beard                            flame_short_beard
+17580    forrest green short beard                    forrest_green_short_beard
+17581    green short beard                            green_short_beard
+17582    grey short beard                             grey_short_beard
+17583    indigo short beard                           indigo_short_beard
+17584    light brown short beard                      light_brown_short_beard
+17585    light purple short beard                     light_purple_short_beard
+17586    orange short beard                           orange_short_beard
+17587    purple short beard                           purple_short_beard
+17588    royal blue short beard                       royal_blue_short_beard
+17589    russet short beard                           russet_short_beard
+17590    scarlet short beard                          scarlet_short_beard
+17591    silver short beard                           silver_short_beard
+17592    sky blue short beard                         sky_blue_short_beard
+17593    tan short beard                              tan_short_beard
+17594    teal short beard                             teal_short_beard
+17595    walnut short beard                           walnut_short_beard
+17596    aqua moustache                               aqua_moustache
+17597    auburn moustache                             auburn_moustache
+17598    black moustache                              black_moustache
+17599    blonde moustache                             blonde_moustache
+17600    blue moustache                               blue_moustache
+17601    brown moustache                              brown_moustache
+17602    dark brown moustache                         dark_brown_moustache
+17603    deep sea moustache                           deep_sea_moustache
+17604    ember moustache                              ember_moustache
+17605    flame moustache                              flame_moustache
+17606    forrest green moustache                      forrest_green_moustache
+17607    green moustache                              green_moustache
+17608    grey moustache                               grey_moustache
+17609    indigo moustache                             indigo_moustache
+17610    light brown moustache                        light_brown_moustache
+17611    light purple moustache                       light_purple_moustache
+17612    orange moustache                             orange_moustache
+17613    purple moustache                             purple_moustache
+17614    royal blue moustache                         royal_blue_moustache
+17615    russet moustache                             russet_moustache
+17616    scarlet moustache                            scarlet_moustache
+17617    silver moustache                             silver_moustache
+17618    sky blue moustache                           sky_blue_moustache
+17619    tan moustache                                tan_moustache
+17620    teal moustache                               teal_moustache
+17621    walnut moustache                             walnut_moustache
+17622    aqua whiskers                                aqua_whiskers
+17623    auburn whiskers                              auburn_whiskers
+17624    black whiskers                               black_whiskers
+17625    blonde whiskers                              blonde_whiskers
+17626    blue whiskers                                blue_whiskers
+17627    brown whiskers                               brown_whiskers
+17628    dark brown whiskers                          dark_brown_whiskers
+17629    deep sea whiskers                            deep_sea_whiskers
+17630    ember whiskers                               ember_whiskers
+17631    flame whiskers                               flame_whiskers
+17632    forrest green whiskers                       forrest_green_whiskers
+17633    green whiskers                               green_whiskers
+17634    grey whiskers                                grey_whiskers
+17635    indigo whiskers                              indigo_whiskers
+17636    light brown whiskers                         light_brown_whiskers
+17637    light purple whiskers                        light_purple_whiskers
+17638    orange whiskers                              orange_whiskers
+17639    purple whiskers                              purple_whiskers
+17640    royal blue whiskers                          royal_blue_whiskers
+17641    russet whiskers                              russet_whiskers
+17642    scarlet whiskers                             scarlet_whiskers
+17643    silver whiskers                              silver_whiskers
+17644    sky blue whiskers                            sky_blue_whiskers
+17645    tan whiskers                                 tan_whiskers
+17646    teal whiskers                                teal_whiskers
+17647    walnut whiskers                              walnut_whiskers
+17648    Argent ball gown                             argent_ball_gown
+17649    Black ball gown                              black_ball_gown
+17650    Brown ball gown                              brown_ball_gown
+17651    Cerise ball gown                             cerise_ball_gown
+17652    Cerulean ball gown                           cerulean_ball_gown
+17653    Cobalt ball gown                             cobalt_ball_gown
+17654    Dusk ball gown                               dusk_ball_gown
+17655    Forest ball gown                             forest_ball_gown
+17656    Fuschia ball gown                            fuschia_ball_gown
+17657    Golden ball gown                             golden_ball_gown
+17658    Lilac ball gown                              lilac_ball_gown
+17659    Marsh ball gown                              marsh_ball_gown
+17660    Midnight ball gown                           midnight_ball_gown
+17661    Orchid ball gown                             orchid_ball_gown
+17662    Peridot ball gown                            peridot_ball_gown
+17663    Pink ball gown                               pink_ball_gown
+17664    Red ball gown                                red_ball_gown
+17665    Rose ball gown                               rose_ball_gown
+17666    Royal ball gown                              royal_ball_gown
+17667    Spring ball gown                             spring_ball_gown
+17668    Summer ball gown                             summer_ball_gown
+17669    Sweet ball gown                              sweet_ball_gown
+17670    Valentine ball gown                          valentine_ball_gown
+17671    White ball gown                              white_ball_gown
+17672    Wintery ball gown                            wintery_ball_gown
+17673    Berry princely jacket                        berry_princely_jacket
+17674    Brown princely jacket                        brown_princely_jacket
+17675    Cobalt princely jacket                       cobalt_princely_jacket
+17676    Forest princely jacket                       forest_princely_jacket
+17677    Leather princely jacket                      leather_princely_jacket
+17678    Olive princely jacket                        olive_princely_jacket
+17679    Plum princely jacket                         plum_princely_jacket
+17680    Spruce princely jacket                       spruce_princely_jacket
+17681    Wintery princely jacket                      wintery_princely_jacket
+17682    Blue flower hairclip                         blue_flower_hairclip
+17683    Pink flower hairclip                         pink_flower_hairclip
+17684    Purple flower hairclip                       purple_flower_hairclip
+17685    Red flower hairclip                          red_flower_hairclip
+17686    White flower hairclip                        white_flower_hairclip
+17687    Black bandito                                black_bandito
+17688    Brown bandito                                brown_bandito
+17689    Copper bandito                               copper_bandito
+17690    Electric bandito                             electric_bandito
+17691    Emerald bandito                              emerald_bandito
+17692    Fuchsia bandito                              fuchsia_bandito
+17693    Gold bandito                                 gold_bandito
+17694    Green bandito                                green_bandito
+17695    Light blue bandito                           light_blue_bandito
+17696    Old gold bandito                             old_gold_bandito
+17697    Orange bandito                               orange_bandito
+17698    Purple bandito                               purple_bandito
+17699    Red bandito                                  red_bandito
+17700    Rusty bandito                                rusty_bandito
+17701    Sun glow bandito                             sun_glow_bandito
+17702    Teal bandito                                 teal_bandito
+17703    Violet bandito                               violet_bandito
+17704    White bandito                                white_bandito
+17705    Yellow bandito                               yellow_bandito
+17706    Sage 5 reward                                sage_5_reward
+17707    White turban                                 white_turban
+17708    Brown turban                                 brown_turban
+17709    Pink turban                                  pink_turban
+17710    Green turban                                 green_turban
+17711    Blue turban                                  blue_turban
+17712    Light blue turban                            light_blue_turban
+17713    Purple turban                                purple_turban
+17714    Orange turban                                orange_turban
+17715    Red turban                                   red_turban
+17716    Black turban                                 black_turban
+17717    Pharoh's outfit                              pharoh_outfit
+17718    Female Pharoh's outfit                       pharoh_outfit_f
+17719    Sultan's Coat                                sultan_coat
+17720    Sultana's Coat                               sultana_coat
+17721    Female Recess Outfit                         recess_outfit_f
+17722    Highwayman                                   highwayman_outfit
+18050    === PREMIUM FACES===                         === PREMIUM FACES====
+18051    Patch face                                   patch_face
+18052    Tribal face                                  tribal_face
+18053    Stoic face                                   stoic_face
+18054    Buck tooth                                   buck_tooth
+18055    Aloof face                                   aloof_face
+18056    Charming face                                charming_face
+18057    Happy face                                   happy_face
+18058    Nulgun face                                  nulgun_face
+18059    Angry face                                   angry_face
+18060    Smug face                                    smug_face
+18061    Lost face                                    lost_face
+18062    Clown face                                   clown_face
+18063    Heavy face                                   heavy_face
+18064    Surly face                                   surly_face
+18065    Freckle face                                 freckle_face
+18066    Mole face                                    mole_face
+18067    Content face                                 content_face
+18068    Glamour face                                 glamour_face
+18069    Heavy face                                   heavy_face
+18070    Jolly face                                   jolly_face
+18071    Mischievous face                             mischievous_face
+18072    Scar face                                    scar_face
+18073    Tribal face                                  tribal_face
+19000    ====MISC=====                                ====MISC====
+19001    Poetry Revel 1st place                       poetry_revel_1st_place
+19002    Poetry Revel 2nd place                       poetry_revel_2nd_place
+19003    Poetry Revel 3rd place                       poetry_revel_3rd_place
+19004    Poetry Revel honorable mention               poetry_revel_honorable_mention
+19500    ===MYTHIC FAVORS===                          =====MYTHIC FAVORS====
+19501    Rooster's favor                              roosters_favor
+19502    Dog's favor                                  dogs_favor
+19503    Dragon's favor                               dragons_favor
+19504    Horse's favor                                horses_favor
+19505    Monkey's favor                               monkeys_favor
+19506    Ox's favor                                   oxs_favor
+19507    Pig's favor                                  pigs_favor
+19508    Rabbit's favor                               rabbits_favor
+19509    Rat's favor                                  rats_favor
+19510    Sheep's favor                                sheeps_favor
+19511    Snake's favor                                snakes_favor
+19512    Tiger's favor                                tigers_favor
+20010    Fragile Orb of World Shout                   fragile_orb_of_world_shout
+20012    Scroll of protection                         scroll_of_protection
+20013    Scroll of invocation                         scroll_of_invocation
+20014    Scroll of defense                            scroll_of_defense
+20015    Scroll of immortality                        scroll_of_immortality
+20016    Annual ticket                                annual_ticket
+20017    Annual pass                                  annual_pass
+20018    Good fortune                                 good_fortune
+20019    Rich fortune                                 rich_fortune
+21000    ====FLOWERS=====                             ===FLOWERS====
+21001    Rose                                         rose
+21002    Dawn tulip                                   dawn_tulip
+21003    Golden sunset                                golden_sunset
+21004    Greater tulip                                greater_tulip
+21005    Heaven's bell                                heavens_bell
+21006    Midnight's reign                             midnights_reign
+21007    Old poppy                                    old_poppy
+21008    Yuri's love                                  yuris_love
+21009    Daffodil                                     daffodil
+21010    Winedrop                                     winedrop
+21011    Fallen star                                  fallen_star
+21012    Sunflower                                    sunflower
+21013    Dusk blossom                                 dusk_blossom
+21014    Lemon flower                                 lemon_flower
+21015    Orange blossom                               orange_blossom
+21016    Mango floret                                 mango_floret
+21017    Lavender wreath                              lavender_wreath
+21018    Dusty pinned flower                          dusty_pinned_flower
+21019    Icy pinned flower                            icy_pinned_flower
+21020    Pink mugunghwa                               pink_mugunghwa
+21021    Belladonna                                   belladonna
+21022    Foxglove                                     foxglove
+21023    Valentine bouquet                            valentine_bouquet
+21024    Golden dove bouquet                          golden_dove_bouquet
+21025    Sunflower bouquet                            sunflower_bouquet
+21026    Calla lily                                   calla_lily
+21027    Calla lily bouquet                           calla_lily_bouquet
+21028    Cerulean roses bouquet                       cerulean_roses_bouquet
+21029    Black rose bouquet                           black_rose_bouquet
+21030    Blue roses bouquet                           blue_roses_bouquet
+21031    Red rose bouquet                             red_roses_bouquet
+21032    Carmine roses bouquet                        carmine_roses_bouquet
+21033    Chocolate roses bouquet                      chocolate_roses_bouquet
+21034    Copper roses bouquet                         copper_roses_bouquet
+21035    Cornflower roses bouquet                     cornflower_roses_bouquet
+21036    Daffodil bouquet                             daffodil_bouquet
+21037    Dawn bouquet                                 dawn_bouquet
+21038    Dark roses bouquet                           dark_roses_bouquet
+21039    Emerald forest bouquet                       emerald_forest_bouquet
+21040    Fire roses bouquet                           fire_roses_bouquet
+21041    Glowing roses bouquet                        glowing_roses_bouquet
+21042    Gold roses bouquet                           gold_roses_bouquet
+21043    Green roses bouquet                          green_roses_bouquet
+21044    Heaven's bouquet                             heavens_bouquet
+21045    Heavenly heart bouquet                       heavenly_heart_bouquet
+21046    Lime roses bouquet                           lime_roses_bouquet
+21047    Midnight bouquet                             midnight_bouquet
+21048    Passi flora bouquet                          passi_flora_bouquet
+21049    Peach roses bouquet                          peach_roses_bouquet
+21050    Pink flower bouquet                          pink_flower_bouquet
+21051    Pink roses bouquet                           pink_roses_bouquet
+21052    Plumeria bouquet                             plumeria_bouquet
+21053    Poppy bouquet                                poppy_bouquet
+21054    Rose bouquet                                 rose_bouquet
+21055    Rose bundle bouquet                          rose_bundle_bouquet
+21056    Spring bouquet                               spring_bouquet
+21057    Sunset bouquet                               sunset_bouquet
+21058    Sunset roses bouquet                         sunset_roses_bouquet
+21059    Tulip bouquet                                tulip_bouquet
+21060    Violet roses bouquet                         violet_roses_bouquet
+21061    White roses bouquet                          white_roses_bouquet
+21062    Wilted roses bouquet                         wilted_roses_bouquet
+22000    ====COSMETICS=======                         ===COSMETICS=====
+22001    Green faerie wings                           green_faerie_wings
+22002    Blue faerie wings                            blue_faerie_wings
+22003    Golden faerie wings                          golden_faerie_wings
+22004    Platinum faerie wings                        platinum_faerie_wings
+22005    Red faerie wings                             red_faerie_wings
+22006    Random faerie wings box                      random_faerie_wings_box
+23000    ===PREMIUM ITEM SETS===                      ===PREMIUM ITEM SETS===
+23001    Test collection box                          test_collection_box
+25000    ===RINGS===                                  ===RINGS===
+25001    Blue ring                                    blue_ring
+25002    Red ring                                     red_ring
+25003    Purple ring                                  purple_ring
+25004    Black ring                                   black_ring
+25005    Exorcist ring                                exorcist_ring
+25006    Sea ring                                     sea_ring
+25007    Engagement ring                              engagement_ring
+25008    Wedding band                                 wedding_band
+25009    Love                                         love
+25010    Forsaken ring                                forsaken_ring
+25011    Holy ring                                    holy_ring
+25014    Shee-Lee ring                                shee_lee_ring
+25015    Water queen ring                             water_queen_ring
+25016    Tainted ring                                 tainted_ring
+25017    Large amber ring                             large_amber_ring
+25018    Large baekho ring                            large_baekho_ring
+25019    Large chung ryong ring                       large_chung_ryong_ring
+25020    Large dark ring                              large_dark_ring
+25021    Large hyun moo ring                          large_hyun_moo_ring
+25022    Large ju jak ring                            large_ju_jak_ring
+25023    Large white ring                             large_white_ring
+25024    Large yellow ring                            large_yellow_ring
+25025    Medium amber ring                            medium_amber_ring
+25026    Medium baekho ring                           medium_baekho_ring
+25027    Medium chung ryong ring                      medium_chung_ryong_ring
+25028    Medium dark ring                             medium_dark_ring
+25029    Medium hyun moo ring                         medium_hyun_moo_ring
+25030    Medium ju jak ring                           medium_ju_jak_ring
+25031    Medium white ring                            medium_white_ring
+25032    Medium yellow ring                           medium_yellow_ring
+25033    Small amber ring                             small_amber_ring
+25034    Small baekho ring                            small_baekho_ring
+25035    Small chung ryong ring                       small_chung_ryong_ring
+25036    Small dark ring                              small_dark_ring
+25037    Small hyun moo ring                          small_hyun_moo_ring
+25038    Small ju jak ring                            small_ju_jak_ring
+25039    Small white ring                             small_white_ring
+25040    Small yellow ring                            small_yellow_ring
+25041    Floating ring of Substratum                  floating_ring_of_substratum
+25042    Jeweled ring of Substratum                   jeweled_ring_of_substratum
+25043    Small ring of Substratum                     small_ring_of_substratum
+25044    Dragon's liver                               dragons_liver
+25045    Corrupted ring                               corrupted_ring
+25046    Blood stone                                  blood_stone
+25047    Spirit stone                                 spirit_stone
+25048    Cursed ring                                  cursed_ring
+26000    ===Hand Items===                             ===Hand Items===
+26001    Ambrosia                                     ambrosia
+26002    Whisper bracelet                             whisper_bracelet
+26003    Lara's Royal Signet                          laras_royal_signet
+26004    Lucky Coin                                   lucky_coin
+26005    Lucky silver coin                            lucky_silver_coin
+26006    Mountain's champion                          mountains_champion
+26007    Mountain's promise                           mountains_promise
+26008    Noble tag                                    noble_tag
+26009    Purified water                               purified_water
+26010    Scorched bone                                scorched_bone
+26011    Scribe's pen                                 scribes_pen
+26012    Scribe's book                                scribes_book
+26013    Sen glove                                    sen_glove
+26014    Silken Squall glove                          silken_squall_glove
+26015    Titanium glove                               titanium_glove
+26016    Tuna wizard eye                              tuna_wizard_eye
+26017    Luxury amber bracelet                        luxury_amber_bracelet
+26018    Luxury dark bracelet                         luxury_dark_bracelet
+26019    Luxury white bracelet                        luxury_white_bracelet
+26020    Luxury yellow bracelet                       luxury_yellow_bracelet
+26021    Plain amber bracelet                         plain_amber_bracelet
+26022    Plain dark bracelet                          plain_dark_bracelet
+26023    Plain white bracelet                         plain_white_bracelet
+26024    Plain yellow bracelet                        plain_yellow_bracelet
+26025    Covert band                                  covert_band
+26026    Darkstone                                    darkstone
+26027    Demon dagger                                 demon_dagger
+26028    Ice shard                                    ice_shard
+26029    Insidious disk                               insidious_disk
+26030    Perseverance                                 perseverance
+26031    Substratum gauntlet                          substratum_gauntlet
+26032    Platinum jubilee gauntlet                    platinum_jubilee_gauntlet
+26033    Qi shard                                     qi_shard
+26034    Wood orb                                     wood_orb
+26035    Fire orb                                     fire_orb
+26036    Metal orb                                    metal_orb
+26037    Earth orb                                    earth_orb
+26038    Water orb                                    water_orb
+26039    Fragile Rose                                 fragile_rose
+26048    War amulet                                   war_amulet
+26049    War rune                                     war_rune
+26050    Battle amulet                                battle_amulet
+26051    Battle rune                                  battle_rune
+26052    Magic amulet                                 magic_amulet
+26053    Magic rune                                   magic_rune
+26054    Love amulet                                  love_amulet
+26055    Love rune                                    love_rune
+27000    ===SUB SCRIPTS===                            ===SUB SCRIPTS===
+27001    Gruff ring                                   gruff_ring
+27002    Jade diamond                                 jade_diamond
+27003    Forest diamond                               forest_diamond
+27004    Azure diamond                                azure_diamond
+27005    Lazuline diamond                             lazuline_diamond
+27006    Night diamond                                night_diamond
+27007    Shade diamond                                shade_diamond
+27008    Crimson diamond                              crimson_diamond
+27009    Cerise diamond                               cerise_diamond
+27010    Searing diamond                              searing_diamond
+27011    Lucent diamond                               lucent_diamond
+27012    Radiant diamond                              radiant_diamond
+27013    Torrid diamond                               torrid_diamond
+28000    ===FANS====                                  ===FANS===
+28001    Fan                                          fan
+28002    Fighting fan                                 fighting_fan
+28003    Ferocity fan                                 ferocity_fan
+28004    Fury fan                                     fury_fan
+28005    Fatality fan                                 fatality_fan
+28006    Spider fan                                   spider_fan
+28007    Mongoose fan                                 mongoose_fan
+28008    Serpent fan                                  serpent_fan
+28009    Death fan                                    death_fan
+28010    Evening fan                                  evening_fan
+28011    Starry fan                                   starry_fan
+28012    Meteor fan                                   meteor_fan
+28013    Comet fan                                    comet_fan
+28014    Pond fan                                     pond_fan
+28015    Tindered fan                                 tindered_fan
+28016    Hill fan                                     hill_fan
+28017    Breeze fan                                   breeze_fan
+29000    ===QUEST ONLY USELESS ITEMS===               ==QUEST ONLY USELESS ITEMS===
+29001    Young ginseng                                young_ginseng
+29002    Traveling shoes                              traveling_shoes
+29003    Ice heart                                    ice_heart
+29004    Sute's key                                   sutes_key
+29005    Stardrop                                     stardrop
+29006    Hamgyong gem fragment                        hamgyong_gem_fragment
+29007    Leviathan talisman                           leviathan_talisman
+29008    Fox charm                                    fox_charm
+29009    Magical net                                  magical_net
+29010    Sonhi pass                                   sonhi_pass
+29011    Star sword                                   star_sword
+29012    Legend of the Winds 2                        legend_of_the_winds_2
+29013    Captured wind                                captured_wind
+29014    Forever branch                               forever_branch
+29015    Sacred water                                 sacred_water
+29016    Ogre message                                 ogre_message
+29017    Silvery acorn                                silvery_acorn
+29018    Maso scroll                                  maso_scroll
+29019    Silvered acorn                               silvered_acorn
+29020    Stilts                                       stilts
+29021    Angel's tear                                 angels_tear
+29022    Lun-Ho's cubs                                lunho_cubs
+30000    ====COATS====                                ===COATS====
+30001    Novice Waistcoat                             novice_waistcoat
+30002    Farmer waistcoat                             farmer_waistcoat
+30003    Royal waistcoat                              royal_waistcoat
+30004    Sky waistcoat                                sky_waistcoat
+30005    Ancient waistcoat                            ancient_waistcoat
+30006    Blood waistcoat                              blood_waistcoat
+30007    Earth waistcoat                              earth_waistcoat
+30008    Star waistcoat                               star_waistcoat
+30009    Moon waistcoat                               moon_waistcoat
+30010    Sun waistcoat                                sun_waistcoat
+31000    ====BLOUSES====                              ===BLOUSES=====
+31001    Summer blouse                                summer_blouse
+31002    Autumn blouse                                autumn_blouse
+31003    Winter blouse                                winter_blouse
+31004    Leather blouse                               leather_blouse
+31005    Ancient blouse                               ancient_blouse
+31006    Earth blouse                                 earth_blouse
+31007    Star blouse                                  star_blouse
+31008    Moon blouse                                  moon_blouse
+31009    Sun blouse                                   sun_blouse
+32000    ===ROBES===                                  ===ROBES====
+32001    Summer robes                                 summer_robes
+32002    Autumn robes                                 autumn_robes
+32003    Winter robes                                 winter_robes
+32004    Ancient robes                                ancient_robes
+32005    Blood robes                                  blood_robes
+32006    Earth robes                                  earth_robes
+32007    Star robes                                   star_robes
+32008    Moon robes                                   moon_robes
+32009    Sun robes                                    sun_robes
+33000    ===DRESSES===                                ===DRESSES===
+33001    Summer dress                                 summer_dress
+33002    Autumn dress                                 autumn_dress
+33003    Winter dress                                 winter_dress
+33004    Leather dress                                leather_dress
+33005    Ancient dress                                ancient_dress
+33006    Earth dress                                  earth_dress
+33007    Star dress                                   star_dress
+33008    Moon dress                                   moon_dress
+33009    Sun dress                                    sun_dress
+34000    ====GARBS====                                ===GARBS====
+34001    Summer garb                                  summer_garb
+34002    Royal garb                                   royal_garb
+34003    Sky garb                                     sky_garb
+34004    Leather garb                                 leather_garb
+34005    Blood garb                                   blood_garb
+34006    Earth garb                                   earth_garb
+34007    Star garb                                    star_garb
+34008    Moon garb                                    moon_garb
+34009    Sun garb                                     sun_garb
+34500    ===PLATEMAIL===                              ===PLATEMAIL===
+34501    Jade war platemail                           jade_war_platemail
+34502    Royal war platemail                          royal_war_platemail
+34503    Sky war platemail                            sky_war_platemail
+34504    Ancient war platemail                        ancient_war_platemail
+34505    Blood war platemail                          blood_war_platemail
+34506    Earth war platemail                          earth_war_platemail
+34507    Star war platemail                           star_war_platemail
+34508    Moon war platemail                           moon_war_platemail
+34509    Sun war platemail                            sun_war_platemail
+35000    ====SCALE MAIL=====                          ===SCALE MAIL====
+35001    Jade scale mail                              jade_scale_mail
+35002    Royal scale mail                             royal_scale_mail
+35003    Sky scale mail                               sky_scale_mail
+35004    Ancient scale mail                           ancient_scale_mail
+35005    Blood scale mail                             blood_scale_mail
+35006    Earth scale mail                             earth_scale_mail
+35007    Star scale mail                              star_scale_mail
+35008    Moon scale mail                              moon_scale_mail
+35009    Sun scale mail                               sun_scale_mail
+35500    ===PLATE DRESS===                            ====PLATE DRESS====
+35501    Summer war dress                             summer_war_dress
+35502    Autumn war dress                             autumn_war_dress
+35503    Winter war dress                             winter_war_dress
+35504    Ancient war dress                            ancient_war_dress
+35505    Blood war dress                              blood_war_dress
+35506    Earth war dress                              earth_war_dress
+35507    Star war dress                               star_war_dress
+35508    Moon war dress                               moon_war_dress
+35509    Sun war dreses                               sun_war_dress
+36000    ====MAIL DRESS====                           ===MAIL DRESS====
+36001    Summer mail dress                            summer_mail_dress
+36002    Autumn mail dress                            autumn_mail_dress
+36003    Winter mail dress                            winter_mail_dress
+36004    Ancient mail dress                           ancient_mail_dress
+36005    Blood mail dress                             blood_mail_dress
+36006    Earth mail dress                             earth_mail_dress
+36007    Star mail dress                              star_mail_dress
+36008    Moon mail dress                              moon_mail_dress
+36009    Sun mail dress                               sun_mail_dress
+37000    ===GOWNS===                                  ===GOWNS===
+37001    Summer gown                                  summer_gown
+37002    Autumn gown                                  autumn_gown
+37003    Winter gown                                  winter_gown
+37004    Leather gown                                 leather_gown
+37005    Ancient gown                                 ancient_gown
+37006    Earth gown                                   earth_gown
+37007    Star gown                                    star_gown
+37008    Moon gown                                    moon_gown
+37009    Sun gown                                     sun_gown
+38000    ===ROGUEARMOR===                             ===ROGUEARMOR====
+38001    Farmer armor                                 farmer_armor
+38002    Royal armor                                  royal_armor
+38003    Sky armor                                    sky_armor
+38004    Ancient armor                                ancient_armor
+38005    Blood armor                                  blood_armor
+38006    Earth armor                                  earth_armor
+38007    Star armor                                   star_armor
+38008    Moon armor                                   moon_armor
+38009    Sun armor                                    sun_armor
+38010    Summer armor dress                           summer_armor_dress
+38011    Autumn armor dress                           autumn_armor_dress
+38012    Winter armor dress                           winter_armor_dress
+38013    Ancient armor dress                          ancient_armor_dress
+38014    Blood armor dress                            blood_armor_dress
+38015    Earth armor dress                            earth_armor_dress
+38016    Star armor dress                             star_armor_dress
+38017    Moon armor dress                             moon_armor_dress
+38018    Sun armor dress                              sun_armor_dress
+38500    ===MAGECLOTHES===                            ===MAGECLOTHES===
+38501    Farmer clothes                               farmer_clothes
+38502    Royal clothes                                royal_clothes
+38503    Sky clothes                                  sky_clothes
+38504    Ancient clothes                              ancient_clothes
+38505    Family clothes                               family_clothes
+38506    Earth clothes                                earth_clothes
+38507    Star clothes                                 star_clothes
+38508    Moon clothes                                 moon_clothes
+38509    Sun clothes                                  sun_clothes
+39000    ===MAGESKIRTS===                             ===MAGESKIRTS===
+39001    Summer skirt                                 summer_skirt
+39002    Autumn skirt                                 autumn_skirt
+39003    Winter skirt                                 winter_skirt
+39004    Leather skirt                                leather_skirt
+39005    Heart skirt                                  heart_skirt
+39006    Earth skirt                                  earth_skirt
+39007    Star skirt                                   star_skirt
+39008    Moon skirt                                   moon_skirt
+39009    Sun skirt                                    sun_skirt
+40000    ===POETMANTLES===                            ===POETMANTLES===
+40001    Summer mantle                                summer_mantle
+40002    Autumn mantle                                autumn_mantle
+40003    Winter mantle                                winter_mantle
+40004    Ancient mantle                               ancient_mantle
+40005    Blood mantle                                 blood_mantle
+40006    Earth mantle                                 earth_mantle
+40007    Star mantle                                  star_mantle
+40008    Moon mantle                                  moon_mantle
+40009    Sun mantle                                   sun_mantle
+40500    ===POETDRAPERY===                            ===POETDRAPERY===
+40501    Summer drapery                               summer_drapery
+40502    Autumn drapery                               autumn_drapery
+40503    Winter drapery                               winter_drapery
+40504    Leather drapery                              leather_drapery
+40505    Ancient drapery                              ancient_drapery
+40506    Earth drapery                                earth_drapery
+40507    Star drapery                                 star_drapery
+40508    Moon drapery                                 moon_drapery
+40509    Sun drapery                                  sun_drapery
+40900    ===WIND ARMORS===                            ===WIND ARMORS===
+40901    Wind platemail                               wind_platemail
+40902    Wind platemail dress                         wind_platemail_dress
+40903    Wind armor                                   wind_armor
+40904    Wind armor dress                             wind_armor_dress
+40905    Wind garb                                    wind_garb
+40906    Wind skirt                                   wind_skirt
+40907    Wind robes                                   wind_robes
+40908    Wind gown                                    wind_gown
+40909    Ice robes                                    ice_robes
+40910    Ice gown                                     ice_gown
+41000    ===HELM===                                   ===HELMS===
+41001    Merchant helm                                merchant_helm
+41002    Farmer helm                                  farmer_helm
+41003    Royal helm                                   royal_helm
+41004    Sky helm                                     sky_helm
+41005    Ancient helm                                 ancient_helm
+41006    Blood helm                                   blood_helm
+41007    Earth helm                                   earth_helm
+41008    Baekho helm                                  baekho_helm
+41009    Chung ryong helm                             chung_ryong_helm
+41010    Hyun moo helm                                hyun_moo_helm
+41011    Ju jak helm                                  ju_jak_helm
+41012    Star helm                                    star_helm
+41013    Moon helm                                    moon_helm
+41014    Sun helm                                     sun_helm
+41250    ===Headgear===                               ===Unisex===
+41251    Battle helm                                  battle_helm
+41252    Tao stone                                    tao_stone
+41253    Pearl charm                                  pearl_charm
+41254    Amber circlet                                amber_circlet
+41255    Dark circlet                                 dark_circlet
+41256    Yellow circlet                               yellow_circlet
+41257    White circlet                                white_circlet
+41258    Baekho circlet                               baekho_circlet
+41259    Chung ryong circlet                          chung_ryong_circlet
+41260    Ju jak circlet                               ju_jak_circlet
+41261    Hyun moo circlet                             hyun_moo_circlet
+41262    Amber casque                                 amber_casque
+41263    Dark casque                                  dark_casque
+41264    Yellow casque                                yellow_casque
+41265    White casque                                 white_casque
+41266    Baekho casque                                baekho_casque
+41267    Chung ryong casque                           chung_ryong_casque
+41268    Ju jak casque                                ju_jak_casque
+41269    Hyun moo casque                              hyun_moo_casque
+41270    Diadem                                       diadem
+41500    ===Helmets===                                ===Helmets===
+41501    Spring helmet                                spring_helmet
+41502    Summer helmet                                summer_helmet
+41503    Autumn helmet                                autumn_helmet
+41504    Winter helmet                                winter_helmet
+41505    Ancient helmet                               ancient_helmet
+41506    Blood helmet                                 blood_helmet
+41507    Earth helmet                                 earth_helmet
+41508    Baekho helmet                                baekho_helmet
+41509    Chung ryong helmet                           chung_ryong_helmet
+41510    Hyun moo helmet                              hyun_moo_helmet
+41511    Ju jak helmet                                ju_jak_helmet
+41512    Star helmet                                  star_helmet
+41513    Moon helmet                                  moon_helmet
+41517    Sun helmet                                   sun_helmet
+42000    === TIGER MAIL / TIGRES====                  === TIGER MAIL / TIGRESS===
+42001    =====TIGER MAIL======                        =====TIGER MAIL====
+42002    Tiger mail                                   tiger_mail
+42003    Jade tiger mail                              jade_tiger_mail
+42004    Royal tiger mail                             royal_tiger_mail
+42005    Sky tiger mail                               sky_tiger_mail
+42006    Ancient tiger mail                           ancient_tiger_mail
+42007    Blood tiger mail                             blood_tiger_mail
+42008    Earth tiger mail                             earth_tiger_mail
+42009    Star tiger mail                              star_tiger_mail
+42010    Moon tiger mail                              moon_tiger_mail
+42011    Sun tiger mail                               sun_tiger_mail
+42012    =====TIGRESS====                             =====TIGRESS====
+42013    Tigress                                      tigress
+42014    Jade tigress                                 jade_tigress
+42015    Royal tigress                                royal_tigress
+42016    Sky tigress                                  sky_tigress
+42017    Ancient tigress                              ancient_tigress
+42018    Blood tigress                                blood_tigress
+42019    Earth tigress                                earth_tigress
+42020    Star tigress                                 star_tigress
+42021    Moon tigress                                 moon_tigress
+42022    Sun tigress                                  sun_tigress
+43000    =====CLOAKS========                          =====CLOAKS=====
+43001    Sonhi cloak                                  sonhi_cloak
+44000    ====DRESS=====                               ===DRESS====
+44001    Sonhi dress                                  sonhi_dress
+45000    ===Equipment===                              ===Equipment===
+45121    Augury Staff                                 augury_staff
+46000    =====Staves===                               =====Staves====
+46001    Staff of Power                               staff_of_power
+46002    Staff of defense                             staff_of_defense
+46003    Wicked staff                                 wicked_staff
+46004    Death's head                                 deaths_head
+46005    Bekyun's spear                               bekyuns_spear
+46006    Star-staff                                   star_staff
+46007    Titanium lance                               titanium_lance
+46008    Corrupted staff                              corrupted_staff
+46009    Poet whip                                    poet_whip
+46010    Tainted staff                                tainted_staff
+46011    Cursed staff                                 cursed_staff
+46012    Forsaken staff                               forsaken_staff
+46013    Wand of fire                                 wand_of_fire
+46014    Winter scepter                               winter_scepter
+46015    Bekyun's set                                 bekyuns_set
+47000    ===AXES===                                   ===AXES====
+47001    Hunang's axe                                 hunangs_axe
+47002    White moon axe                               white_moon_axe
+47003    Big axe                                      big_axe
+48000    =====Swords=====                             =====Swords=====
+48001    Maxcaliber                                   maxcaliber
+48002    Moonblade                                    moonblade
+48003    Flameblade                                   flameblade
+48004    Hoof sabre                                   hoof_sabre
+48005    Mythic sabre                                 mythic_sabre
+48006    Steelthorn                                   steelthorn
+48007    Zibong blade                                 zibong_blade
+48008    Corrupted blade                              corrupted_blade
+48009    Cursed blade                                 cursed_blade
+48010    Dark scimitar                                dark_scimitar
+48011    Electra                                      electra
+48013    Forsaken blade                               forsaken_blade
+48014    Light broadsword                             light_broadsword
+48015    Swift dagger                                 swift_dagger
+48016    Tainted blade                                tainted_blade
+48017    Dark dagger                                  dark_dagger
+48018    Fate's blade                                 fates_blade
+48019    Fire blade                                   fire_blade
+48020    Midnight broadsword                          midnight_broadsword
+48021    Midnight cutlass                             midnight_cutlass
+48022    Midnight sword                               midnight_sword
+48023    Molten blade                                 molten_blade
+48025    Plasmic substratum                           plasmic_substratum
+48026    Sabre                                        sabre
+48027    Baronial Kagum Huan                          baronial_kagum_huan
+48028    Baronial Kagum Xu                            baronial_kagum_xu
+48029    Chaos blade                                  chaos_blade
+48030    Sevenleaf sword                              sevenleaf_sword
+48031    Light sword                                  light_sword
+48032    Holy sword                                   holy_sword
+48033    White sword                                  white_sword
+48034    Ilbon knife                                  ilbon_knife
+49000    ===NPC/PC SUBPATH Equipment/Items===         ===NPC/PC SUBPATH Equipment/Items===
+49001    Chung Ryong scale                            chung_ryong_scale
+49002    Nimble blade                                 nimble_blade
+49003    Ju jak staff                                 ju_jak_staff
+49004    Life lance                                   life_lance
+49005    Enchanted Chung Ryong scale                  enchanted_chung_ryong_scale
+49006    Enchanted Nimble blade                       enchanted_nimble_blade
+49007    Enchanted Ju jak staff                       enchanted_ju_jak_staff
+49008    Enchanted Life lance                         enchanted_life_lance
+49009    Il san Chung Ryong scale                     il_san_chung_ryong_scale
+49010    Il san Nimble blade                          il_san_nimble_blade
+49011    Il san Ju jak staff                          il_san_ju_jak_staff
+49012    Il san Life lance                            il_san_life_lance
+49013    Ee san Chung Ryong scale                     ee_san_chung_ryong_scale
+49014    Ee san Nimble blade                          ee_san_nimble_blade
+49015    Ee san Ju jak staff                          ee_san_ju_jak_staff
+49016    Ee san Life lance                            ee_san_life_lance
+49017    Sam san Chung Ryong scale                    sam_san_chung_ryong_scale
+49018    Sam san Nimble blade                         sam_san_nimble_blade
+49019    Sam san Ju jak staff                         sam_san_ju_jak_staff
+49020    Sam san Life lance                           sam_san_life_lance
+49021    Sa san Chung Ryong scale                     sa_san_chung_ryong_scale
+49022    Sa san Nimble blade                          sa_san_nimble_blade
+49023    Sa san Ju jak staff                          sa_san_ju_jak_staff
+49024    Sa san Life lance                            sa_san_life_lance
+49025    Spike                                        spike
+49026    Enchanted spike                              enchanted_spike
+49027    Il san spike                                 il_san_spike
+49028    Ee san spike                                 ee_san_spike
+49029    Sam san spike                                sam_san_spike
+49030    Sa san spike                                 sa_san_spike
+49031    Blood                                        blood
+49032    Enchanted blood                              enchanted_blood
+49033    Il san blood                                 il_san_blood
+49034    Ee san blood                                 ee_san_blood
+49035    Sam san blood                                sam_san_blood
+49036    Sa san blood                                 sa_san_blood
+49037    Surge                                        surge
+49038    Enchanted surge                              enchanted_surge
+49039    Il san surge                                 il_san_surge
+49040    Ee san surge                                 ee_san_surge
+49041    Sam san surge                                sam_san_surge
+49042    Sa san surge                                 sa_san_surge
+49043    Charm                                        charm
+49044    Enchanted charm                              enchanted_charm
+49045    Il san charm                                 il_san_charm
+49046    Ee san charm                                 ee_san_charm
+49047    Sam san charm                                sam_san_charm
+49048    Sa san charm                                 sa_san_charm
+49049    Do                                           do
+49050    Enchanted do                                 enchanted_do
+49051    Il san do                                    il_san_do
+49052    Ee san do                                    ee_san_do
+49053    Sam san do                                   sam_san_do
+49054    Sa san do                                    sa_san_do
+49055    War axe                                      war_axe
+49056    Enchanted war axe                            enchanted_war_axe
+49057    Il san war axe                               il_san_war_axe
+49058    Ee san war axe                               ee_san_war_axe
+49059    Sam san war axe                              sam_san_war_axe
+49060    Sa san war axe                               sa_san_war_axe
+49061    Battle-ready Shinsho                         shinsho
+49062    Battle-scarred Shinsho                       enchanted_shinsho
+49063    War-tempered Shinsho                         il_san_shinsho
+49064    War-ravaged Shinso                           ee_san_shinsho
+49065    Blood-stained Shinsho                        sam_san_shinsho
+49066    Blood-soaked Shinsho                         sa_san_shinsho
+49067    Bullwhip                                     bullwhip
+49068    Enchanted bullwhip                           enchanted_bullwhip
+49069    Il san bullwhip                              il_san_bullwhip
+49070    Ee san bullwhip                              ee_san_bullwhip
+49071    Sam san bullwhip                             sam_san_bullwhip
+49072    Sa san bullwhip                              sa_san_bullwhip
+49073    Wilderness bow                               wilderness_bow
+49074    Enchanted wilderness bow                     enchanted_wilderness_bow
+49075    Il san wilderness bow                        il_san_wilderness_bow
+49076    Ee san wilderness bow                        ee_san_wilderness_bow
+49077    Sam san wilderness bow                       sam_san_wilderness_bow
+49078    Sa san wilderness bow                        sa_san_wilderness_bow
+49079    Dakashi Blade                                dakashi_blade
+49080    Enchanted dakashi blade                      enchanted_dakashi_blade
+49081    Il san dakashi blade                         il_san_dakashi_blade
+49082    Ee san dakashi blade                         ee_san_dakashi_blade
+49083    Sam san dakashi blade                        sam_san_dakashi_blade
+49084    Sa san dakashi blade                         sa_san_dakashi_blade
+49085    Hsiao chu staff                              hsiao_chu_staff
+49086    Enchanted hsiao chu staff                    enchanted_hsiao_chu_staff
+49087    Il san hsiao chu staff                       il_san_hsiao_chu_staff
+49088    Ee san hsiao chu staff                       ee_san_hsiao_chu_staff
+49089    Sam san hsiao chu staff                      sam_san_hsiao_chu_staff
+49090    Sa san hsiao chu staff                       sa_san_hsiao_chu_staff
+49091    Staff of chi                                 staff_of_chi
+49092    Enchanted staff of chi                       enchanted_staff_of_chi
+49093    Il san staff of chi                          il_san_staff_of_chi
+49094    Ee san staff of chi                          ee_san_staff_of_chi
+49095    Sam san staff of chi                         sam_san_staff_of_chi
+49096    Sa san staff of chi                          sa_san_staff_of_chi
+49097    YongSang                                     yongsang
+49098    Enchanted YongSang                           enchanted_yongsang
+49099    Il san YongSang                              il_san_yongsang
+49100    Ee san YongSang                              ee_san_yongsang
+49101    Sam san YongSang                             sam_san_yongsang
+49102    Sa san YongSang                              sa_san_yongsang
+49103    Tree branch                                  tree_branch
+49104    Enchanted tree branch                        enchanted_tree_branch
+49105    Il san tree branch                           il_san_tree_branch
+49106    Ee san tree branch                           ee_san_tree_branch
+49107    Sam san tree branch                          sam_san_tree_branch
+49108    Sa san tree branch                           sa_san_tree_branch
+49109    Destiny spear                                destiny_spear
+49110    Enchanted destiny spear                      enchanted_destiny_spear
+49111    Il san destiny spear                         il_san_destiny_spear
+49112    Ee san destiny spear                         ee_san_destiny_spear
+49113    Sam san destiny spear                        sam_san_destiny_spear
+49114    Sa san destiny spear                         sa_san_destiny_spear
+49115    Aureate Aspiration                           aureate_aspiration
+49116    Enchanted Aureate                            enchanted_aureate_aspiration
+49117    Glistening Aureate                           il_san_aureate_aspiration
+49118    Lucent Aureate Aspiration                    ee_san_aureate_aspiration
+49119    Ardent Aureate Aspiration                    sam_san_aureate_aspiration
+49120    Scintillating Aureate                        sa_san_aureate_aspiration
+49121    Musical charm                                musical_charm
+49122    Enchanted musical charm                      enchanted_musical_charm
+49123    Il san musical charm                         il_san_musical_charm
+49124    Ee san musical charm                         ee_san_musical_charm
+49125    Sam san musical charm                        sam_san_musical_charm
+49126    Sa san musical charm                         sa_san_musical_charm
+50000    ===BOWS===                                   ==BOWS===
+50001    Spring bow                                   spring_bow
+50002    Molghi bow                                   molghi_bow
+50500    ===QUIVERS=====                              ===QUIVERS===
+50501    Spring quiver                                spring_quiver
+50502    Summer quiver                                summer_quiver
+50503    Autumn quiver                                autumn_quiver
+50504    Winter quiver                                winter_quiver
+50505    Ancient quiver                               ancient_quiver
+50506    Blood quiver                                 blood_quiver
+50507    Earth quiver                                 earth_quiver
+50508    Long sheath                                  long_sheath
+50600    ===DARTS===                                  ===DARTS===
+50601    Spring dart                                  spring_dart
+50602    Summer dart                                  summer_dart
+50603    Autumn dart                                  autumn_dart
+50604    Winter dart                                  winter_dart
+50605    Ancient dart                                 ancient_dart
+50606    Blood dart                                   blood_dart
+50607    Earth dart                                   earth_dart
+50608    Star dart                                    star_dart
+51000    ===SHIELDS===                                ====SHIELDS====
+51001    Nagnang shield                               nagnang_shield
+51002    Tall shield                                  tall_shield
+51003    Bamboo shield                                bamboo_shield
+51004    Stone shield                                 stone_shield
+51005    Hide shield                                  hide_shield
+51006    Brass shield                                 brass_shield
+51007    Titanium shield                              titanium_shield
+51008    Noble shield                                 noble_shield
+51009    Light buckler                                light_buckler
+51010    Basic buckler                                basic_buckler
+51011    Heavy buckler                                heavy_buckler
+51012    Amber buckler                                amber_buckler
+51013    Enchanted buckler                            enchanted_buckler
+51014    Mystic buckler                               mystic_buckler
+51015    Magic ward                                   magic_ward
+51016    Mage's ward                                  mages_ward
+51017    Enchanted ward                               enchanted_ward
+51018    Conjurer's ward                              conjurers_ward
+51019    Mysticism ward                               mysticism_ward
+51020    Master's ward                                masters_ward
+51021    Nature charm                                 nature_charm
+51022    Soul charm                                   soul_charm
+51023    Spirit charm                                 spirit_charm
+51024    Love charm                                   love_charm
+51025    Life charm                                   life_charm
+51026    Immortality charm                            immortality_charm
+51027    Honor shield                                 honor_shield
+51028    Enchanted honor shield                       enchanted_honor_shield
+51029    Il san honor shield                          il_san_honor_shield
+51030    Ee san honor shield                          ee_san_honor_shield
+51031    Sam san honor shield                         sam_san_honor_shield
+51032    Sa san honor shield                          sa_san_honor_shield
+51500    Doug                                         doug_shield
+52000    ===COATS===                                  ===COATS===
+52001    Scalemail                                    coat_scale_mail
+52002    Platemail                                    coat_war_platemail
+52003    Scale Dress                                  coat_scale_dress
+52004    War Dress                                    coat_war_dress
+52005    Waistcoat                                    coat_waistcoat
+52006    Blouse                                       coat_blouse
+52007    Armor                                        coat_armor
+52008    Armor Dress                                  coat_armor_dress
+52009    Garb                                         coat_garb
+52010    Dress                                        coat_dress
+52011    Skirt                                        coat_skirt
+52012    Clothes                                      coat_clothes
+52013    Robes                                        coat_robes
+52014    Gown                                         coat_gown
+52015    Mantle                                       coat_mantle
+52016    Drapery                                      coat_drapery
+52017    Heavy Plate                                  coat_heavy_plate
+55000    ====PC SUBPATH ITEMS===                      ====PC SUBPATH ITEMS===
+55001    Barbarian brew                               barbarian_brew
+55002    Bottle of rage                               bottle_of_rage
+55500    HELM(ET)S===                                 ===PC SUBPATH
+55501    Tiger skull helm                             tiger_skull_helm
+55502    War helm                                     war_helm
+55503    Do headband                                  do_headband
+55504    Kabuto                                       kabuto
+55505    Honor laurel                                 honor_laurel
+55506    Hooded cloak                                 hooded_cloak
+55507    Chung Fu                                     chung_fu
+55508    Elemental Orbs                               elemental_orbs
+55509    Helmet of Balance                            helmet_of_balance
+55510    Mog-Ur's Mask                                mog_urs_mask
+56000    HAND ITEMS===                                ===PC SUBPATH
+56001    Savage gauntlet                              savage_gauntlet
+56002    Enchanted savage gauntlet                    enchanted_savage_gauntlet
+56003    Il san savage gauntlet                       il_san_savage_gauntlet
+56004    Ee san savage gauntlet                       ee_san_savage_gauntlet
+56005    Sam san savage gauntlet                      sam_san_savage_gauntlet
+56006    Sa san savage gauntlet                       sa_san_savage_gauntlet
+56007    Silver glove                                 silver_glove
+56008    Spirit armlet                                spirit_armlet
+56009    Medal of honor                               medal_of_honor
+56010    Pal-mok                                      pal_mok
+56011    Gold bangle                                  gold_bangle
+56012    Gold nuggets                                 gold_nuggets
+56013    Enchanted gold nuggets                       enchanted_gold_nuggets
+56014    Il san gold nuggets                          il_san_gold_nuggets
+56015    Ee san gold nuggets                          ee_san_gold_nuggets
+56016    Sam san gold nuggets                         sam_san_gold_nuggets
+56017    Sa san gold nuggets                          sa_san_gold_nuggets
+56018    Demon dagger                                 demon_dagger
+56019    Bracer                                       bracer
+56020    Enchanted bracer                             enchanted_bracer
+56021    Il san bracer                                il_san_bracer
+56022    Ee san bracer                                ee_san_bracer
+56023    Sam san bracer                               sam_san_bracer
+56024    Sa san bracer                                sa_san_bracer
+56025    Fabled Trowel                                fabled_trowel
+56026    Honor medal                                  honor_medal
+56027    Covert Band                                  covert_band
+56028    Insidious Disk                               insidious_disk
+56029    Stealth glove                                stealth_glove
+56030    Enchanted stealth glove                      enchanted_stealth_glove
+56031    Il san stealth glove                         il_san_stealth_glove
+56032    Ee san stealth glove                         ee_san_stealth_glove
+56033    Sam san stealth glove                        sam_san_stealth_glove
+56034    Sa san stealth glove                         sa_san_stealth_glove
+56035    Crystal ball                                 crystal_ball
+56036    Enchanted crystal ball                       enchanted_crystal_ball
+56037    Il san crystal ball                          il_san_crystal_ball
+56038    Ee san crystal ball                          ee_san_crystal_ball
+56039    Sam san crystal ball                         sam_san_crystal_ball
+56040    Sa san crystal ball                          sa_san_crystal_ball
+56041    Messenger's Feather                          messengers_feather
+56042    Mecidine Wheel                               medicine_wheel
+56043    Soul crystal                                 soul_crystal
+56044    Enchanted soul crystal                       enchanted_soul_crystal
+56045    Il san soul crystal                          il_san_soul_crystal
+56046    Ee san soul crystal                          ee_san_soul_crystal
+56047    Sam san soul crystal                         sam_san_soul_crystal
+56048    Sa san soul crystal                          sa_san_soul_crystal
+56049    Faded stone                                  faded_stone
+56050    Skeleton key                                 skeleton_key
+56051    Explosive Spores                             explosive_spores
+56052    Kaleidoscope                                 kaleidoscope
+56054    Drum of knowledge                            drum_of_knowledge
+56055    Piri                                         piri
+56056    Sogo                                         sogo
+56057    Euterpe's flute                              euterpes_flute
+56058    Senap                                        senap
+56059    Kayagum                                      kayagum
+56060    Tanso                                        tanso
+56061    Changgo                                      changgo
+56062    Gyobanggo                                    gyobanggo
+59000    ===FACE ACCESSORIES===                       === FACE ACCESSORIES===
+59001    Whiskers                                     whiskers
+60000    ===GM ITEMS===                               ===GM ITEMS===
+60001    Shtick                                       chaos_weapon
+60002    Long day                                     chaos_armor
+60003    Cimmerian steel                              cimmerian_steel
+60004    Enigma's boots                               enigmas_boots
+60005    Shot gun                                     shot_gun
+60006    Flameblade                                   flameblade_test
+60007    Crafting hat                                 chaos_crown
+60008    Donor Scroll 1                               donor_scroll
+60009    Donor Scroll 2                               donor_scroll
+60010    Donor Scroll 3                               donor_scroll
+60011    Donor Scroll 4                               donor_scroll
+60012    Donor Scroll 5                               donor_scroll
+60500    ===SPAWN TOOL SCROLLS===                     ==SPAWN TOOL SCROLLS==
+60501    Red Script                                   red_script
+60502    Blue Script                                  blue_script
+60503    Orange Script                                orange_script
+60504    Yellow Script                                yellow_script
+60505    Green Script                                 green_script
+60506    Pink Script                                  pink_script
+63001    Barricade                                    barricade
+65000    Carnage token                                carnage_token
+65001    Elixir trophy                                elixir_trophy
+65002    Red elixir                                   red_elixir
+65003    Blue elixir                                  blue_elixir
+65004    Bomb                                         set_bomb

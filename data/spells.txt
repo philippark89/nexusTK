@@ -1,0 +1,1003 @@
+# Spells Reference
+# Format: ID | Name | Identifier | Path | Level | Mark
+# Usage: /givespell <ID>
+
+
+## Peasant
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+0        ==BASEFUNCSPELLS==                   0        0      ==BASEFUNCSPELLS==
+106      Mentor                               0        0      mentor
+400      ===Sage Spells                       0        0      ===Sage Spells===
+408      Return                               0        0      return_spell
+101      Soothe                               1        0      soothe
+103      Gateway                              1        0      gateway
+104      Approach                             25       0      approach_spell
+105      Summon                               25       0      summon_spell
+
+## Warrior
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+1001     Taunt                                0        0      taunt_warrior
+1002     Anger                                0        0      anger_warrior
+1003     Tease                                0        0      tease_warrior
+1004     Mock                                 0        0      mock_warrior
+1005     Wolf's Fury                          0        0      wolfs_fury_warrior
+1006     Soul's Rage                          0        0      souls_rage_warrior
+1007     Spirit of the Forest                 0        0      spirit_of_the_forest_warrior
+1008     Augmentation                         0        0      augmentation_warrior
+1009     Bless                                0        0      bless_warrior
+1010     Sancification                        0        0      sanctification_warrior
+1011     Tribal Gathering                     0        0      tribal_gathering_warrior
+1012     Strength of Purpose                  0        0      strength_of_purpose_warrior
+1013     Fleshspeak                           0        0      fleshspeak_warrior
+1014     Spiritsong                           0        0      spiritsong_warrior
+1015     Helping Hand                         0        0      helping_hand_warrior
+1016     Heal Others                          0        0      heal_others_warrior
+1017     Backstab                             0        0      backstab_warrior
+1018     Back Battle                          0        0      back_battle_warrior
+1024     Back Attack                          0        0      back_attack_warrior
+1025     Back Damage                          0        0      back_damage_warrior
+1026     Flank                                0        0      flank_warrior
+1027     Flank Battle                         0        0      flank_battle_warrior
+1028     Flank Attack                         0        0      flank_attack_warrior
+1029     Flank Damage                         0        0      flank_damage_warrior
+1030     Tiger's Fury                         0        0      tigers_fury_warrior
+1031     Filling the Soul                     0        0      filling_the_soul_warrior
+1032     Spirit of the Wild                   0        0      spirit_of_the_wild_warrior
+1033     Ohaeng's Grace                       0        0      ohaengs_grace_warrior
+1034     Enchant                              0        0      enchant_warrior
+1035     Spiritual Aid                        0        0      spiritual_aid_warrior
+1036     Oneness                              0        0      oneness_warrior
+1037     Strengthen Weapon                    0        0      strengthen_weapon_warrior
+1038     Relief                               0        0      relief_warrior
+1039     Renew Essence                        0        0      renew_essence_warrior
+1040     Lifesong                             0        0      lifesong_warrior
+1041     Sweet Waters                         0        0      sweet_waters_warrior
+1042     Potence                              0        0      potence_warrior
+1043     Spirit Arm                           0        0      spirit_arm_warrior
+1044     Touch of the Bear                    0        0      touch_of_the_bear_warrior
+1045     Sharpen                              0        0      sharpen_warrior
+1046     Watchful Eye                         0        0      watchful_eye_warrior
+1047     Spirit's Whisper                     0        0      spirits_whisper_warrior
+1048     Creature's Guidance                  0        0      creatures_guidance_warrior
+1049     Spot Unbalance                       0        0      spot_unbalance_warrior
+1050     Dragon's Fury                        0        0      dragons_fury_warrior
+1051     Strength of Ancestors                0        0      strength_of_ancestors_warrior
+1052     Spirit of the Dragon                 0        0      spirit_of_the_dragon_warrior
+1053     Ohaeng's Anger                       0        0      ohaengs_anger_warrior
+1054     Infuse                               0        0      infuse_warrior
+1055     Tincture of the Unknown              0        0      tincture_of_the_unknown_warrior
+1056     Tiger's Claw                         0        0      tigers_claw_warrior
+1057     Whetstone                            0        0      whetstone_warrior
+1059     Ingress                              0        0      ingress_warrior
+1060     Hand of Darkness                     0        0      hand_of_darkness_warrior
+1061     Dragon's Claw                        0        0      dragons_claw_warrior
+1062     Razor's Edge                         0        0      razors_edge_warrior
+1064     Berserk                              0        0      berserk_warrior
+1065     No Fear                              0        0      no_fear_warrior
+1066     Tiger's Pounce                       0        0      tigers_pounce_warrior
+1067     Wind's Blast                         0        0      winds_blast_warrior
+1068     Vigor                                0        0      vigor_warrior
+1069     Touch of Health                      0        0      touch_of_health_warrior
+1070     Balm                                 0        0      balm_warrior
+1071     Restoration                          0        0      restoration_warrior
+1072     Whirlwind                            0        0      whirlwind_warrior
+1073     Death's Angel                        0        0      deaths_angel_warrior
+1074     Nature's Own                         0        0      natures_own_warrior
+1075     Bladedance                           0        0      bladedance_warrior
+1076     Hoche                                0        1      hoche_warrior
+1077     Immunity                             0        1      immunity_warrior
+1078     Forest Blessing                      0        1      forest_blessing_warrior
+1079     Magic Shield                         0        1      magics_shield_warrior
+1080     Salvation                            0        1      salvation_warrior
+1081     Redemption                           0        1      redemption_warrior
+1082     Ointment of Light                    0        1      ointment_of_light_warrior
+1083     Return of Life                       0        1      return_of_life_warrior
+1084     Viper's Venom                        0        1      vipers_venom_warrior
+1085     Assault                              0        2      assault_warrior
+1086     Death's Challenge                    0        2      deaths_challenge_warrior
+1087     Cold Snap                            0        2      cold_snap_warrior
+1088     Volley                               0        2      volley_warrior
+1089     Dragon's Flame                       0        2      dragons_flame_warrior
+1090     Hunang's Relief                      0        2      hunangs_relief_warrior
+1091     From the Brink                       0        2      from_the_brink_warrior
+1092     Nature's Slave                       0        2      natures_slave_warrior
+1093     Life's Essence                       0        2      lifes_essence_warrior
+
+## Rogue
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+2001     Fleshspeak                           0        0      fleshspeak_rogue
+2002     Spiritsong                           0        0      spiritsong_rogue
+2003     Helping Hand                         0        0      helping_hand_rogue
+2004     Heal Others                          0        0      heal_others_rogue
+2005     Feral                                0        0      feral_rogue
+2009     Might                                0        0      might_rogue
+2010     Spirit Strength                      0        0      spirit_strength_rogue
+2011     Inner Blessing                       0        0      inner_blessing_rogue
+2012     Temper                               0        0      temper_rogue
+2013     Judge                                0        0      judge_rogue
+2014     Spiritual Advisor                    0        0      spiritual_advisor_rogue
+2015     Natural Talent                       0        0      natural_talent_rogue
+2016     Appraise                             0        0      appraise_rogue
+2017     Singe                                0        0      singe_rogue
+2018     Embrace of the Void                  0        0      embrace_of_the_void_rogue
+2019     Lightning                            0        0      lightning_rogue
+2020     Nature's Storm                       0        0      natures_storm_rogue
+2021     Mend Wounds                          0        0      mend_wounds_rogue
+2022     Spiritual Cure                       0        0      spiritual_cure_rogue
+2023     Nature's Kiss                        0        0      natures_kiss_rogue
+2024     Cooling Touch                        0        0      cooling_touch_rogue
+2025     Ignite                               0        0      ignite_rogue
+2026     Spirit Strike                        0        0      spirit_strike_rogue
+2027     Wrath of Nature                      0        0      wrath_of_nature_rogue
+2028     Thunderclap                          0        0      thunderclap_rogue
+2029     Shadow Figure                        0        0      shadow_figure_rogue
+2030     Spirit Warrior                       0        0      spirit_warrior_rogue
+2031     Natural Defense                      0        0      natural_defense_rogue
+2032     Ohaeng's Armor                       0        0      ohaengs_armor_rogue
+2033     Rodent                               0        0      rodent_rogue
+2037     Spy                                  0        0      spy_rogue
+2038     Spiritual Guide                      0        0      spiritual_guide_rogue
+2039     Nature's Handiwork                   0        0      natures_handiwork_rogue
+2040     Judgement Day                        0        0      judgement_day_rogue
+2041     Wolf's Fury                          0        0      wolfs_fury_rogue
+2042     Soul's Rage                          0        0      souls_rage_rogue
+2043     Spirit of the Forest                 0        0      spirit_of_the_forest_rogue
+2044     Augmentation                         0        0      augmentation_rogue
+2045     Gangrel                              0        0      gangrel_rogue
+2046     Kwi-Sin Mask                         0        0      kwisin_mask_rogue
+2047     Ming-Ken Mask                        0        0      mingken_mask_rogue
+2048     Ohaeng Mask                          0        0      ohaeng_mask_rogue
+2049     Invisible                            0        0      invisible_rogue
+2050     Spirit's Form                        0        0      spirits_form_rogue
+2051     Life's Cloak                         0        0      lifes_cloak_rogue
+2052     Glass Form                           0        0      glass_form_rogue
+2053     Ambush                               0        0      ambush_rogue
+2054     Displacement                         0        0      displacement_rogue
+2055     Waylay                               0        0      waylay_rogue
+2056     Reflect                              0        0      reflect_rogue
+2057     Beast                                0        0      beast_rogue
+2061     Amnesia                              0        0      amnesia_rogue
+2062     Forgetfulness                        0        0      forgetfulness_rogue
+2063     Free Spirit                          0        0      free_spirit_rogue
+2064     Mislead                              0        0      mislead_rogue
+2065     Recover                              0        0      recover_rogue
+2066     Spiritual Embrace                    0        0      spirits_embrace_rogue
+2067     Infuse Energy                        0        0      infuse_energy_rogue
+2068     Life's River                         0        0      lifes_river_rogue
+2069     Desperate Attack                     0        0      desperate_attack_rogue
+2070     The Void's Measure                   0        0      the_voids_measure_rogue
+2071     Beastly Frenzy                       0        0      beastly_frenzy_rogue
+2072     Tilting the Balance                  0        0      tilting_the_balance_rogue
+2073     Tiger's Fury                         0        0      tigers_fury_rogue
+2074     Filling the Soul                     0        0      filling_the_soul_rogue
+2075     Spirit of the Wild                   0        0      spirit_of_the_wild_rogue
+2076     Ohaeng's Grace                       0        0      ohaengs_grace_rogue
+2077     Filch                                0        0      filch_rogue
+2078     Spirit's Hand                        0        0      spirits_hand_rogue
+2079     Quick Fingers                        0        0      quick_fingers_rogue
+2080     Light Touch                          0        0      light_touch_rogue
+2081     Drain                                0        0      drain_rogue
+2082     Drink of Souls                       0        0      drink_of_souls_rogue
+2083     Parasite                             0        0      parasite_rogue
+2084     Absorb                               0        0      absorb_rogue
+2085     Seal Wounds                          0        0      seal_wounds_rogue
+2086     Spirit Caress                        0        0      spirit_caress_rogue
+2087     Heal Injury                          0        0      heal_injury_rogue
+2088     Bandage                              0        0      bandage_rogue
+2089     Lethal Strike                        0        0      lethal_strike_rogue
+2090     Afterlife's Embrace                  0        0      afterlifes_embrace_rogue
+2091     Ming-Ken's Judgement                 0        0      mingkens_judgement_rogue
+2092     Calculating Blow                     0        0      calculating_blow_rogue
+2093     Maro's Remedy                        0        0      maros_remedy_rogue
+2094     Maro's Remedy                        0        0      kwisin_maros_remedy_rogue
+2095     Maro's Remedy                        0        0      mingken_maros_remedy_rogue
+2096     Maro's Remedy                        0        0      ohaeng_maros_remedy_rogue
+2097     Baekho's rage                        0        1      baekhos_rage_rogue
+2098     Maso's Remedy                        0        1      masos_remedy_rogue
+2099     Maso's Remedy                        0        1      kwisin_masos_remedy_rogue
+2100     Maso's Remedy                        0        1      mingken_masos_remedy_rogue
+2101     Maso's Remedy                        0        1      ohaeng_masos_remedy_rogue
+2102     Race                                 0        1      race_rogue
+2103     Spiritual Jump                       0        1      spiritual_jump_rogue
+2104     Leap of Faith                        0        1      leap_of_faith_rogue
+2105     Transport                            0        1      transport_rogue
+2106     Refresh                              0        1      refresh_rogue
+2107     Soul's Awakening                     0        1      souls_awakening_rogue
+2108     Healing Waters                       0        1      healing_waters_rogue
+2109     Fire Dance                           0        1      fire_dance_rogue
+2110     Tiger's Fortitude                    0        1      tigers_fortitude_rogue
+2111     Baekho's Blade                       0        2      baekhos_blade_rogue
+2112     Chance                               0        2      chance_rogue
+2113     Randomness                           0        2      randomness_rogue
+2114     Nature's Choice                      0        2      natures_choice_rogue
+2115     Trial by Fire                        0        2      trial_by_fire_rogue
+2120     Swift Recovery                       0        2      swift_recovery_rogue
+2121     Renew Energy                         0        2      renew_energy_rogue
+2122     Loving Dew                           0        2      loving_dew_rogue
+2123     Invigorate                           0        2      invigorate_rogue
+2701     Set Trap                             0        0      set_trap
+2702     Dart Trap                            0        0      set_dart_trap
+2703     Flash Trap                           0        0      set_flash_trap
+2704     Repeating Dart                       0        0      set_repeating_dart_trap
+2705     Snare Trap                           0        0      set_snare_trap
+2706     Spear Trap                           0        0      set_spear_trap
+2707     Poison Dart Trap                     0        0      set_poison_dart_trap
+2708     Death Trap                           0        0      set_death_trap
+2709     Sleep Trap                           0        0      set_sleep_trap
+2710     Bladestorm                           0        2      set_bladestorm_trap
+2711     Sword's Dance                        0        2      set_swords_dance_trap
+2712     Tiger's Ambush                       0        2      set_tigers_ambush_trap
+2713     Cutting Edge                         0        2      set_cutting_edge_trap
+
+## Mage
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+3001     Thunder Bolt                         0        0      thunder_bolt_mage
+3002     Might                                0        0      might_mage
+3003     Spirit Strength                      0        0      spirit_strength_mage
+3004     Inner Blessing                       0        0      inner_blessing_mage
+3005     Temper                               0        0      temper_mage
+3006     Pestilence                           0        0      pestilence_mage
+3007     Static                               0        0      static_mage
+3008     Spark                                0        0      spark_mage
+3009     Glimpse of the Void                  0        0      glimpse_of_the_void_mage
+3010     Bolt                                 0        0      bolt_mage
+3011     Nature's Ire                         0        0      natures_ire_mage
+3012     Fleshspeak                           0        0      fleshspeak_mage
+3013     Spiritsong                           0        0      spiritsong_mage
+3014     Helping Hand                         0        0      helping_hand_mage
+3015     Heal Others                          0        0      heal_others_mage
+3016     Singe                                0        0      singe_mage
+3017     Embrace of the Void                  0        0      embrace_of_the_void_mage
+3018     Lightning                            0        0      lightning_mage
+3019     Nature's Storm                       0        0      natures_storm_mage
+3020     Harden armor                         0        0      harden_armor_mage
+3021     Thicken Skin                         0        0      thicken_skin_mage
+3022     Shield of Life                       0        0      shield_of_life_mage
+3023     Elemental Armor                      0        0      elemental_armor_mage
+3024     Ignite                               0        0      ignite_mage
+3025     Spirit Strike                        0        0      spirit_strike_mage
+3026     Wrath of Nature                      0        0      wrath_of_nature_mage
+3027     Thunder Clap                         0        0      thunderclap_mage
+3028     Lay hands                            0        0      lay_hands_mage
+3029     Spirit's Smile                       0        0      spirits_smile_mage
+3030     Life's Water                         0        0      lifes_water_mage
+3031     Quicken                              0        0      quicken_mage
+3032     Erupt                                0        0      erupt_mage
+3033     Soulstorm                            0        0      soulstorm_mage
+3034     Avalanche                            0        0      avalanche_mage
+3035     Deluge                               0        0      deluge_mage
+3036     Mend wounds                          0        0      mend_wounds_mage
+3037     Spiritual Cure                       0        0      spiritual_cure_mage
+3038     Nature's Kiss                        0        0      natures_kiss_mage
+3039     Cooling Touch                        0        0      cooling_touch_mage
+3040     Valor                                0        0      valor_mage
+3041     Strengthen                           0        0      strengthen_mage
+3042     Bless Muscles                        0        0      bless_muscles_mage
+3043     Power Burst                          0        0      power_burst_mage
+3044     Ion                                  0        0      ion_mage
+3045     Soul Strike                          0        0      soul_strike_mage
+3046     Tree Dart                            0        0      tree_dart_mage
+3047     Sunstroke                            0        0      sunstroke_mage
+3048     Relief                               0        0      relief_mage
+3049     Renew Essence                        0        0      renew_essence_mage
+3050     Lifesong                             0        0      lifesong_mage
+3051     Sweet Waters                         0        0      sweet_waters_mage
+3052     Purge                                0        0      purge_mage
+3053     Cure Illness                         0        0      cure_illness_mage
+3054     Restore Health                       0        0      restore_health_mage
+3055     Remove Poison                        0        0      remove_poison_mage
+3056     Ion Charge                           0        0      ion_charge_mage
+3057     Crescendo                            0        0      crescendo_mage
+3058     Flight of Arrows                     0        0      flight_of_arrows_mage
+3059     Blazing Sands                        0        0      blazing_sands_mage
+3060     Recover                              0        0      recover_mage
+3061     Spirit's Embrace                     0        0      spirits_embrace_mage
+3062     Infuse Energy                        0        0      infuse_energy_mage
+3063     Life's River                         0        0      lifes_river_mage
+3064     Cure paralysis                       0        0      cure_paralysis_mage
+3065     Release Binds                        0        0      release_binds_mage
+3066     Return Movement                      0        0      return_movement_mage
+3067     Free Movement                        0        0      free_movement_mage
+3068     Sanctuary                            0        0      sanctuary_mage
+3069     Protect Soul                         0        0      protect_soul_mage
+3070     Guard Life                           0        0      guard_life_mage
+3071     Magic Shield                         0        0      magic_shield_mage
+3072     Invoke                               0        0      invoke_mage
+3073     Spirit's Power                       0        0      spirits_power_mage
+3074     Life Force                           0        0      life_force_mage
+3075     Gather Magic                         0        0      gather_magic_mage
+3076     Gangrel                              0        0      gangrel_mage
+3077     Kwi-Sin Mask                         0        0      kwisin_mask_mage
+3078     Ming-Ken Mask                        0        0      mingken_mask_mage
+3079     Ohaeng Mask                          0        0      ohaeng_mask_mage
+3080     Heal                                 0        0      heal_mage
+3081     Ancestor's Touch                     0        0      ancestors_touch_mage
+3082     Life Flow                            0        0      life_flow_mage
+3083     Infuse Life-Force                    0        0      infuse_lifeforce_mage
+3084     Impact                               0        0      impact_mage
+3085     Soul Spike                           0        0      soul_spike_mage
+3086     Treefall                             0        0      treefall_mage
+3087     Shatter                              0        0      shatter_mage
+3088     Explode                              0        0      explode_mage
+3089     Soul Chasm                           0        0      soul_chasm_mage
+3090     Winter's Vortex                      0        0      winters_vortex_mage
+3091     Volcano                              0        0      volcano_mage
+3092     Remove Curse                         0        0      remove_curse_mage
+3093     Release Curse                        0        0      release_curse_mage
+3094     Undo Evil                            0        0      undo_evil_mage
+3095     Restore Armor                        0        0      restore_armor_mage
+3096     Beast                                0        0      beast_mage
+3100     Call Lightning                       0        0      call_lightning_mage
+3101     Death Scream                         0        0      death_scream_mage
+3102     Nature's Wounding                    0        0      natures_wounding_mage
+3103     Rain of Fire                         0        0      rain_of_fire_mage
+3104     Vex                                  0        0      vex_mage
+3105     Death's Face                         0        0      deaths_face_mage
+3106     Unnatural Selection                  0        0      unnatural_selection_mage
+3107     Flaw                                 0        0      flaw_mage
+3108     Venom                                0        0      venom_mage
+3109     Spirit's Leech                       0        0      spirits_leech_mage
+3110     Snake Bite                           0        0      snake_bite_mage
+3111     Corruption                           0        0      corruption_mage
+3112     Blind                                0        0      blind_mage
+3113     Dark Veil                            0        0      dark_veil_mage
+3114     Winter's Shadow                      0        0      winters_shadow_mage
+3115     Ice Glare                            0        0      ice_glare_mage
+3116     Paralyze                             0        0      paralyze_mage
+3117     Spirit Leash                         0        0      spirit_leash_mage
+3118     Cold Binds                           0        0      cold_binds_mage
+3119     Lockup                               0        0      lockup_mage
+3120     Electrocute                          0        0      electrocute_mage
+3121     Eater of the Dead                    0        0      eater_of_the_dead_mage
+3122     Forest's Discord                     0        0      forests_discord_mage
+3123     Shatter Storm                        0        0      shatter_storm_mage
+3124     Confuse                              0        0      confuse_mage
+3125     Curse of the Void                    0        0      curse_of_the_void_mage
+3126     Despise Friend                       0        0      despise_friend_mage
+3127     Chaos Rain                           0        0      chaos_rain_mage
+3128     Sleep                                0        0      sleep_mage
+3129     Sweet Musings                        0        0      sweet_musings_mage
+3130     Essence of Poppies                   0        0      essence_of_poppies_mage
+3131     Stillness                            0        0      stillness_mage
+3132     Stormstrike                          0        0      stormstrike_mage
+3133     River of Blood                       0        0      river_of_blood_mage
+3134     Natural Disaster                     0        0      natural_disaster_mage
+3135     Winds of Disaster                    0        0      winds_of_disaster_mage
+3136     Doze                                 0        0      doze_mage
+3137     Void's Touch                         0        0      voids_touch_mage
+3138     Still Ethers                         0        0      still_ethers_mage
+3139     Still Waters                         0        0      still_waters_mage
+3140     Tempest                              0        0      tempest_mage
+3141     Dance Macabre                        0        0      dance_macabre_mage
+3142     Wilding                              0        0      wilding_mage
+3143     Chain Lightning                      0        0      chain_lightning_mage
+3144     Rejuvenate                           0        0      rejuvenate_mage
+3145     Still Embrace                        0        0      still_embrace_mage
+3146     Infuse Life                          0        0      infuse_life_mage
+3147     Healing Rain                         0        0      healing_rain_mage
+3148     Hellfire                             0        0      hellfire_mage
+3149     Consume Soul                         0        0      consume_soul_mage
+3150     Flesh Eaters                         0        0      flesh_eaters_mage
+3151     Hurricane                            0        0      hurricane_mage
+3152     Hindrance                            0        1      hindrance_mage
+3153     Solace                               0        1      solace_mage
+3154     Festival of Souls                    0        1      festival_of_souls_mage
+3155     Nature's Bounty                      0        1      natures_bounty_mage
+3156     Ohaeng's Blessing                    0        1      ohaengs_blessing_mage
+3157     Volcanic Blast                       0        1      volcanic_blast_mage
+3158     Bekyun's Heal                        0        2      bekyuns_heal_mage
+3159     Death Denied                         0        2      death_denied_mage
+3160     One with Life                        0        2      one_with_life_mage
+3161     Balanced Touch                       0        2      balanced_touch_mage
+3162     Inferno                              0        2      inferno_mage
+3163     Death's Door                         0        2      deaths_door_mage
+3164     Nature's Denial                      0        2      natures_denial_mage
+3165     Steel Storm                          0        2      steel_storm_mage
+3166     Ju Jak Curse                         0        2      ju_jak_curse_mage
+
+## Poet
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+4001     Invoke                               0        0      invoke_poet
+4002     Spirit's Power                       0        0      spirits_power_poet
+4003     Life Force                           0        0      life_force_poet
+4004     Gather Magic                         0        0      gather_magic_poet
+4005     Lay Hands                            0        0      lay_hands_poet
+4006     Spirit's Smile                       0        0      spirits_smile_poet
+4007     Life's Water                         0        0      lifes_water_poet
+4008     Quicken                              0        0      quicken_poet
+4010     Spirit's Embrace                     0        0      spirits_embrace_poet
+4011     Infuse Energy                        0        0      infuse_energy_poet
+4012     Life's River                         0        0      lifes_river_poet
+4013     Spark                                0        0      spark_poet
+4014     Glimpse of the Void                  0        0      glimpse_of_the_void_poet
+4015     Bolt                                 0        0      bolt_poet
+4016     Nature's Ire                         0        0      natures_ire_poet
+4017     Purge                                0        0      purge_poet
+4018     Cure Illness                         0        0      cure_illness_poet
+4019     Restore Health                       0        0      restore_health_poet
+4020     Remove Poison                        0        0      remove_poison_poet
+4021     Harden Armor                         0        0      harden_armor_poet
+4022     Thicken Skin                         0        0      thicken_skin_poet
+4023     Shield of Life                       0        0      shield_of_life_poet
+4024     Elemental Armor                      0        0      elemental_armor_poet
+4025     Vital Spark                          0        0      vital_spark_poet
+4026     Spirit's Kiss                        0        0      spirits_kiss_poet
+4027     Spark of Health                      0        0      spark_of_health_poet
+4028     Water of Nature                      0        0      water_of_nature_poet
+4029     Singe                                0        0      singe_poet
+4030     Embrace of the Void                  0        0      embrace_of_the_void_poet
+4031     Lightning                            0        0      lightning_poet
+4032     Nature's Storm                       0        0      natures_storm_poet
+4033     Remove curse                         0        0      remove_curse_poet
+4034     Release Curse                        0        0      release_curse_poet
+4035     Undo Evil                            0        0      undo_evil_poet
+4036     Restore Armor                        0        0      restore_armor_poet
+4037     Valor                                0        0      valor_poet
+4038     Strengthen                           0        0      strengthen_poet
+4039     Bless Muscles                        0        0      bless_muscles_poet
+4040     Power Burst                          0        0      power_burst_poet
+4041     Ignite                               0        0      ignite_poet
+4042     Spirit Strike                        0        0      spirit_strike_poet
+4043     Wrath of Nature                      0        0      wrath_of_nature_poet
+4044     Thunderclap                          0        0      thunderclap_poet
+4045     Heal                                 0        0      heal_poet
+4046     Ancestor's Touch                     0        0      ancestors_touch_poet
+4047     Life Flow                            0        0      life_flow_poet
+4048     Infuse Life-Force                    0        0      infuse_lifeforce_poet
+4049     Anoint                               0        0      anoint_poet
+4050     Brother's of Spirit                  0        0      brothers_of_spirit_poet
+4051     Gathering of Power                   0        0      gathering_of_power_poet
+4052     Nature's Family                      0        0      natures_family_poet
+4053     Sanctuary                            0        0      sanctuary_poet
+4054     Protect Soul                         0        0      protect_soul_poet
+4055     Guard Life                           0        0      guard_life_poet
+4056     Magic Shield                         0        0      magic_shield_poet
+4057     Remove Veil                          0        0      remove_veil_poet
+4058     Clear Darkness                       0        0      clear_darkness_poet
+4059     Restore Sight                        0        0      restore_sight_poet
+4060     Purge Darkness                       0        0      purge_darkness_poet
+4061     Endear                               0        0      endear_poet
+4062     Possess Soul                         0        0      possess_soul_poet
+4063     Charm Life                           0        0      charm_life_poet
+4064     Align Follower                       0        0      align_follower_poet
+4065     Cure paralysis                       0        0      cure_paralysis_poet
+4066     Release Binds                        0        0      release_binds_poet
+4067     Return Movement                      0        0      return_movement_poet
+4068     Free Movement                        0        0      free_movement_poet
+4069     Revitalize                           0        0      revitalize_poet
+4070     Ancestor's Embrace                   0        0      ancestors_embrace_poet
+4071     Life-Force                           0        0      lifeforce_poet
+4072     Lifespring                           0        0      lifespring_poet
+4073     Inspiration                          0        0      inspiration_poet
+4074     Draw Energy                          0        0      draw_energy_poet
+4075     Harness Power                        0        0      harness_power_poet
+4076     Combine Focus                        0        0      combine_focus_poet
+4077     Remedy                               0        0      remedy_poet
+4078     Brethren of Spirits                  0        0      brethren_of_spirits_poet
+4079     Gathering of the Flock               0        0      gathering_of_the_flock_poet
+4080     Gathering of Majesty                 0        0      gathering_of_majesty_poet
+4081     Atone                                0        0      atone_poet
+4082     Restore Will                         0        0      restore_will_poet
+4083     Raise Guard                          0        0      raise_guard_poet
+4084     Align Armor                          0        0      align_armor_poet
+4085     Fortify                              0        0      fortify_poet
+4086     Ancestor's Kiss                      0        0      ancestors_kiss_poet
+4087     Fertile Soil                         0        0      fertile_soil_poet
+4088     Waters of Purity                     0        0      waters_of_purity_poet
+4089     Second sight                         0        0      second_sight_poet
+4090     Hear Spirits                         0        0      hear_spirits_poet
+4091     Improve Sight                        0        0      improve_sight_poet
+4092     Show Hidden                          0        0      show_hidden_poet
+4093     Retribution                          0        0      retribution_poet
+4094     Spirit Puppet                        0        0      spirit_puppet_poet
+4095     Palm of Life                         0        0      palm_of_life_poet
+4096     Tornado                              0        0      tornado_poet
+4097     Barrier                              0        0      barrier_poet
+4098     Spirit Barrier                       0        0      spirit_barrier_poet
+4099     Life Barrier                         0        0      life_barrier_poet
+4100     Balance Barrier                      0        0      balance_barrier_poet
+4101     Inspire                              0        0      inspire_poet
+4102     Share Energy                         0        0      share_energy_poet
+4103     Bestow Power                         0        0      bestow_power_poet
+4104     Release Focus                        0        0      release_focus_poet
+4105     Scourge                              0        0      scourge_poet
+4106     Damage Will                          0        0      damage_will_poet
+4107     Drop Guard                           0        0      drop_guard_poet
+4108     Unalign Armor                        0        0      unalign_armor_poet
+4109     Earthquake                           0        0      earthquake_poet
+4110     Tossing the Bones                    0        0      tossing_the_bones_poet
+4111     Nature's Fury                        0        0      natures_fury_poet
+4112     Groundstrike                         0        0      groundstrike_poet
+4113     Blockade Human                       0        0      blockade_human_poet
+4114     Block Entry                          0        0      block_entry_poet
+4115     Distance Self                        0        0      distance_self_poet
+4116     Protect Sides                        0        0      protect_sides_poet
+4117     Heaven's Kiss                        0        0      heavens_kiss_poet
+4118     Clan of Souls                        0        0      clan_of_souls_poet
+4119     Healing Hand                         0        0      healing_hand_poet
+4120     Earth's Embrace                      0        0      earths_embrace_poet
+4121     Harden body                          0        0      harden_body_poet
+4122     Death's Guard                        0        0      deaths_guard_poet
+4123     Life's Protection                    0        0      lifes_protection_poet
+4124     Body of Alignment                    0        0      body_of_alignment_poet
+4125     Dispell                              0        0      dispell_poet
+4126     Remove Magic                         0        0      remove_magic_poet
+4127     Return Natural                       0        0      return_natural_poet
+4128     Restore Balance                      0        0      restore_balance_poet
+4129     Flare                                0        0      flare_poet
+4130     Dance of Death                       0        0      dance_of_death_poet
+4131     Breaking of the World                0        0      breaking_of_the_world_poet
+4132     Storm Crow                           0        0      storm_crow_poet
+4133     Water of life                        0        0      water_of_life_poet
+4134     Breath of Power                      0        0      breath_of_power_poet
+4135     Healing Breath                       0        0      healing_breath_poet
+4136     Breath of Life                       0        0      breath_of_life_poet
+4138     Resurrect                            0        0      resurrect_poet
+4139     Return Spirit                        0        0      return_spirit_poet
+4140     Ming-Ken Blessing                    0        0      mingken_blessing_poet
+4141     Death Undone                         0        0      death_undone_poet
+4142     Healer's Revenge                     0        1      healers_revenge_poet
+4143     Stream of life                       0        1      stream_of_life_poet
+4144     Purity of Spirit                     0        1      purity_of_spirit_poet
+4145     Nature's Abundance                   0        1      natures_abundance_poet
+4146     Forge of Life                        0        1      forge_of_life_poet
+4147     Bolster                              0        2      bolster_poet
+4148     Dark Armor                           0        2      dark_armor_poet
+4149     Life Armor                           0        2      life_armor_poet
+4150     Armor of Elements                    0        2      armor_of_elements_poet
+4151     Dishearten                           0        2      dishearten_poet
+4152     Dark Fear                            0        2      dark_fear_poet
+4153     Break Will                           0        2      break_will_poet
+4154     Harshen Attack                       0        2      harshen_attack_poet
+4155     Essence of life                      0        2      essence_of_life_poet
+4156     Essence of Spirit                    0        2      essence_of_spirit_poet
+4157     Life's Embrace                       0        2      lifes_embrace_poet
+4158     Earth's Cradle                       0        2      earths_cradle_poet
+4159     Hyun Moo Spite                       0        2      hyun_moo_spite_poet
+4701     Call of the Wild (Caterpillar)       0        0      cotw_caterpillar_poet
+4702     Call of the Wild (Fluffy Dog)        0        0      cotw_fluffy_dog_poet
+4703     Call of the Wild (Panda Bear)        0        0      cotw_panda_bear_poet
+4704     Call of the Wild (Wild Monkey)       0        0      cotw_wild_monkey_poet
+4705     Call of the Wild (Gorilla)           0        0      cotw_gorilla_poet
+4706     Companion of Kwi-Sin                 0        0      kwisin_companion_poet
+4707     Companion of Ming-Ken                0        0      mingken_companion_poet
+4708     Companion of Ohaeng                  0        0      ohaeng_companion_poet
+4709     Kwi-Sin Assistant                    0        0      kwisin_assistant_poet
+4710     Ming-Ken Assistant                   0        0      mingken_assistant_poet
+4711     Ohaeng Assistant                     0        0      ohaeng_assistant_poet
+4712     Kwi-Sin Protector                    0        0      kwisin_protector_poet
+4713     Ming-Ken Protector                   0        0      mingken_protector_poet
+4714     Ohaeng Protector                     0        0      ohaeng_protector_poet
+4715     Fighter of Kwi-Sin                   0        0      kwisin_fighter_poet
+4716     Fighter of Ming-Ken                  0        0      mingken_fighter_poet
+4717     Fighter of Ohaeng                    0        0      ohaeng_fighter_poet
+4718     Warrior of Kwi-Sin                   0        0      kwisin_warrior_poet
+4719     Ming-Ken Warrior                     0        0      mingken_warrior_poet
+4720     Warrior of Ohaeng                    0        0      ohaeng_warrior_poet
+4721     Kwi-Sin Champion                     0        1      kwisin_champion_poet
+4722     Ming-Ken Champion                    0        1      mingken_champion_poet
+4723     Ohaeng Champion                      0        1      ohaeng_champion_poet
+4724     Avatar of Kwi-Sin                    0        2      kwisin_avatar_poet
+4725     Ming-Ken Avatar                      0        2      mingken_avatar_poet
+4726     Avatar of Ohaeng                     0        2      ohaeng_avatar_poet
+4727     Wind dancer                          0        1      cotw_wind_dancer_poet
+4728     Wind warrior                         0        2      cotw_wind_warrior_poet
+4729     Magi's Bane                          0        0      magis_bane_poet
+4009     Recover                              9        0      recover_poet
+
+## Dreamweaver
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+12                                            0        0      
+100      ==COMMONSPELLS==                     0        0      ==COMMONSPELLS==
+414                                           0        0      
+415                                           0        0      
+416                                           0        0      
+417                                           0        0      
+418                                           0        0      
+419                                           0        0      
+420                                           0        0      
+500      ===TRAPS===                          0        0      ===TRAPS===
+1000     ==WARRIORSPELLS==                    0        0      ==WARRIORSPELLS==
+2000     ==ROGUESPELLS==                      0        0      ==ROGUESPELLS==
+2006     Kwi-Sin Cloak                        0        0      kwisin_cloak_rogue
+2007     Ming-Ken Cloak                       0        0      mingken_cloak_rogue
+2008     Ohaeng Cloak                         0        0      ohaeng_cloak_rogue
+2034     Kwi-Sin Disguise                     0        0      kwisin_disguise_rogue
+2035     Ming-Ken Disguise                    0        0      mingken_disguise_rogue
+2036     Ohaeng Disguise                      0        0      ohaeng_disguise_rogue
+2058     Kwi-Sin Chameleon                    0        0      kwisin_chameleon_rogue
+2059     Ming-Ken Chameleon                   0        0      mingken_chameleon_rogue
+2060     Ohaeng Chameleon                     0        0      ohaeng_chameleon_rogue
+2124     Dagger Uniform                       0        0      dagger_uniform
+2700     ==ROGUE TRAPS==                      0        0      ==ROGUE TRAPS==
+2714                                          0        0      
+3000     ==MAGESPELLS==                       0        0      ==MAGESPELLS==
+3097     Kwi-Sin Chameleon                    0        0      kwisin_chameleon_mage
+3098     Ming-Ken Chameleon                   0        0      mingken_chameleon_mage
+3099     Ohaeng Chameleon                     0        0      ohaeng_chameleon_mage
+4000     ==POETSPELLS==                       0        0      ==POETSPELLS==
+10000    ===GM SPELLS                         0        0      ===GM SPELLS===
+10001    Map Editor                           0        0      map_editor
+10002    Add script                           0        0      add_script
+10003    Delete espawn                        0        0      delete_spawn
+10004    Instance Ambush                      0        0      instance_ambush
+10500    Ninja disguise                       0        0      ninja_disguise
+10501    Ninja swap                           0        0      ninja_swap
+10502    Dnd                                  0        0      dnd
+11503    Blade crawl                          0        0      blade_crawl
+11995    Spawn Tool                           0        0      spawn_tool
+11996    Random Spawn Scrolls                 0        0      random_spawn_scrolls
+11997    kill mobs                            0        0      killmobs
+11998    Mass resurrect                       0        0      mass_res
+11999    GM Sage                              0        0      gm_sage
+12000    ===Editor Spells===                  0        0      ==Editor Spells===
+12001    editor exit                          0        0      editor_exit
+12002    tile next                            0        0      tile_next
+12003    tile prev                            0        0      tile_prev
+12004    toggle pass                          0        0      toggle_pass
+12005    obj next                             0        0      obj_next
+12006    obj prev                             0        0      obj_prev
+12007    tile copy                            0        0      tile_copy
+12008    tile paste                           0        0      tile_paste
+12009    obj copy                             0        0      obj_copy
+12010    obj paste                            0        0      obj_paste
+12011    tile check                           0        0      tile_check
+12012    tile find                            0        0      tile_find
+12013    obj check                            0        0      obj_check
+12014    obj find                             0        0      obj_find
+12017    Super Saiyan                         0        1      super_saiyan
+12022    Inspect Mob                          0        0      inspect_mob_gm
+12027                                         0        0      
+29500    ===DOG SPELLS===                     0        0      ===DOG SPELLS===
+30000    ===SUBPATH SPELLS===                 0        0      ===SUBPATH SPELLS===
+30222                                         0        0      
+30223                                         0        0      
+30224                                         0        0      
+30225                                         0        0      
+30410                                         0        0      
+30608                                         0        0      
+30609                                         0        0      
+30610                                         0        0      
+30708                                         0        0      
+30709                                         0        0      
+30710                                         0        0      
+30812                                         0        0      
+30813                                         0        0      
+30814                                         0        0      
+30815                                         0        0      
+31117                                         0        0      
+31204                                         0        0      
+31205                                         0        0      
+31206                                         0        0      
+31207                                         0        0      
+31208                                         0        0      
+31209                                         0        0      
+31210    Shaman's torment                     0        0      shamans_torment
+50000    ===NPC SPELLS===                     0        0      ===NPC SPELLS==
+
+## Chung ryong
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30100    ====Chung Ryong===                   0        0      ====Chung Ryong====
+30101    Chung ryong's rage                   0        0      chung_ryongs_rage
+
+## Baekho
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30500    ====Baekho====                       0        0      ====Baekho======
+30501    Baekho's cunning                     0        0      baekhos_cunning
+
+## Ju jak
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30900    ====Ju Jak====                       0        0      ====Ju Jak=====
+30901    Ju jak evocation                     0        0      ju_jak_evocation
+
+## Hyun moo
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+31300    ====Hyun Moo====                     0        0      ====Hyun Moo====
+31301    Hyun moo revival                     0        0      hyun_moo_revival
+
+## Barbarian
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30200    ====Barbarian====                    0        0      ====Barbarian=======
+30201    Sonhi rage                           0        0      sonhi_rage
+30202    Dash                                 0        0      dash_barbarian
+30203    Barbarian cry                        0        0      barbarian_cry
+30204    Mount                                0        0      mount
+30205    Wilderness guise                     0        0      wilderness_guise
+30206    Push                                 0        0      push
+30207    Envigorate                           0        0      envigorate
+30208    Insult                               0        0      insult
+30209    Rend                                 0        0      rend
+30210    Break jaw                            0        0      break_jaw
+30211    Tiger's might                        0        0      tigers_might
+30212    Barbarian rage                       0        0      barbarian_rage
+30213    Wilderness weapon                    0        1      wilderness_weapon
+30214    Nomadic blade                        0        2      nomadic_blade
+30215    Dishonor                             0        0      dishonor
+30216    Survival challenge                   0        0      survival_challenge
+
+## Merchant
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30600    ====Merchant===                      0        0      ====Merchant====
+30601    Skill up                             0        0      skill_up_merchant
+30602    Engrave                              0        0      engrave
+30603    Marketer guise                       0        0      marketer_guise
+30604    Pilfer                               0        0      pilfer
+30605    BekyunArrow                          0        0      bekyunarrow
+30606    Gambling                             0        0      gambling
+30607    Golden fist                          0        0      golden_fist
+
+## Diviner
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+31000    ====Diviner===                       0        0      ====Diviner===
+31001    Read karma                           0        0      read_karma_diviner
+31002    Hear footstep                        0        0      hear_footstep_diviner
+31003    Darken fate                          0        0      darken_fate
+31004    Divine time                          0        0      divine_time
+31005    Vanish                               0        0      vanish
+31006    Seal fate                            0        0      seal_fate
+31007    Voids vengeance                      0        0      voids_vengeance
+31008    Augury                               0        0      augury
+31009    Reveal fortune                       0        0      reveal_fortune
+31010    Witness of ritual                    0        0      witness_of_ritual
+31011    Reveal alignment                     0        0      reveal_alignment
+
+## Druid
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+31400    ====Druid=====                       0        0      ====Druid=====
+31401    Control flames                       0        0      control_flames
+31402    Druid's rodent                       0        0      druids_rodent
+31403    Steed                                0        0      steed
+31404    Lightning storm                      0        0      lightning_storm
+31405    Sea breeze                           0        0      sea_breeze
+31406    Nature's bloom                       0        0      natures_bloom
+31407    Earth strike                         0        0      earth_strike
+31408    Energy bloom                         0        1      energy_bloom
+31409    Nature's smite                       0        2      natures_smite
+31410    Efflorescence                        0        0      efflorescence
+
+## Chongun
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30300    ====Chongun===                       0        0      ====Chongun======
+30301    Evaluate opponent                    99       0      evaluate_opponent
+30302    Inspire valor                        99       0      inspire_valor
+30303    Art of war                           99       0      art_of_war
+30304    Invincibility                        99       0      invincibility
+30305    Protectors fury                      99       0      protectors_fury
+30306    Harden weapon                        99       1      harden_weapon
+30307    Charge weapon                        99       2      charge_weapon
+30308    Enhanced drink                       99       0      enhanced_drink
+30309    Chongun uniform                      99       0      chongun_uniform
+30310    Employ troop                         99       0      employ_troop
+30311    Recognize honorable act              99       0      recognize_honorable_act
+30312    Sharpen weapon                       99       0      sharpen_weapon
+30313    Title of nobility                    99       0      title_of_nobility
+30314    Spirit of war                        99       0      spirit_of_war
+
+## Ranger
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30700    ====Ranger====                       0        0      ====Ranger=====
+30701    Skill up                             0        0      skill_up_ranger
+30702    Forest cover                         0        0      forest_cover
+30703    Tree bark                            0        0      tree_bark
+30704    Pit trap                             0        0      set_pit_trap
+30705    Carve arrow                          0        0      carve_arrow
+30706    Call companion                       0        0      call_companion
+30707    Scouting trip                        0        0      scouting_trip
+
+## Geomancer
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+31100    ====Geomancer===                     0        0      ====Geomancer===
+31101    Reveal fate                          0        0      reveal_fate
+31102    Exhume                               0        0      exhume
+31103    Read karma                           0        0      read_karma_geomancer
+31104    GreenPotion                          0        0      create_green_potion
+31105    Elemental mastery                    0        0      elemental_mastery
+31106    Honor of the Three Sects             0        0      honor_of_the_three_sects
+31107    Balance recognition                  0        0      balance_recognition
+31108    Inner sect recognition               0        0      inner_sect_recognition
+31109    Neutrality recognition               0        0      neutrality_recognition
+31110    Elementalist's mark                  0        0      elementalists_mark
+31111    Goodearth                            0        0      good_earth
+31112    Hailstorm                            0        0      hailstorm
+31113    Soften skin                          0        0      soften_skin
+31114    Earths Spite                         0        1      earths_spite
+31115    Ice bombardment                      0        0      ice_bombardment
+31116    Stone Casing                         0        0      stone_casing
+
+## Monk
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+31500    ====Monk=====                        0        0      ====Monk========
+31501    Read karma                           0        0      read_karma_monk
+31502    Forgive                              0        0      forgive
+31503    Second life                          0        0      second_life
+31504    Bless food                           0        0      bless_food
+31505    Bless drink                          0        0      bless_drink
+31506    Awe                                  0        0      awe
+31507    Son-Kal                              0        0      son_kal
+31508    Faiths call                          0        0      faiths_call
+31509    Mass resurrect                       0        0      mass_resurrect
+
+## Do
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30400    ====Do======                         0        0      ====Do==========
+30401    Dash                                 0        0      dash_do
+30402    Spirit blade                         0        0      spirit_blade
+30403    Blend                                0        0      blend
+30404    Hear footstep                        0        0      hear_footstep_do
+30405    Assess opponent                      0        0      assess_opponent_do
+30406    Balance weapon                       0        1      balance_weapon
+30407    Master weapon                        0        2      master_weapon
+30408    Ki strike                            0        0      ki_strike
+30409    Crossing swords                      0        0      crossing_swords
+
+## Spy
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+30800    ====Spy======                        0        0      ====Spy======
+30801    Skill up                             0        0      skill_up_spy
+30802    Incognito                            0        0      incognito
+30803    Hear footstep                        0        0      hear_footstep_spy
+30804    Spy kit                              0        0      spy_kit
+30805    Mimic                                0        0      mimic_spy
+30806    Assassinate                          0        0      assassinate
+30807    Apply stealth                        0        0      apply_stealth
+30808    Assess opponent                      0        0      assess_opponent_spy
+30809    Dagger to throat                     0        0      dagger_to_throat
+30810    Apply stealth                        0        0      apply_stealth
+30811                                         0        0      
+
+## Shaman
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+31200    ====Shaman====                       0        0      ====Shaman====
+31201    Shaman's solace                      0        1      shamans_solace
+31202    Phoenix flames                       0        0      phoenix_flames
+31203    Reincarnate                          0        0      reincarnate
+
+## Muse
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+31600    ====Muse=====                        0        0      ====Muse========
+31601    Song of the Goddess                  0        0      song_of_the_goddess
+31602    Sacred verse                         0        1      sacred_verse
+31603    Tranquil symphony                    0        2      tranquil_symphony
+31604    Costume                              0        0      costume
+31605    WarMusic                             0        0      warmusic
+
+## Path 99
+ID       Name                                 Level    Mark   Identifier
+---------------------------------------------------------------------------
+1        ping                                 0        0      ping
+2        Wisdom star                          0        0      wisdom_star
+3        Duel request                         0        0      duel_request
+4        refresh                              0        0      refresh_spell
+5        Kawlana's guard                      0        0      kawlanas_guard
+6        Received fortune                     0        0      received_fortune
+7        PVP Balance                          0        0      pvp_balance
+8        Death save                           0        0      death_save
+9        Crafting bonus                       0        0      crafting_bonus
+10       Respawning in                        0        0      beach_war_respawn
+11       love ring delay                      0        0      love_ring_delay
+107      Tutor warp                           0        0      tutor_warp
+108      Fireworks                            0        0      fireworks
+109      Spin                                 0        0      spin
+110      Snake                                0        0      snake_spell
+401      Share Wisdom                         0        0      share_wisdom
+402      Mentor's Wisdom                      0        0      mentors_wisdom
+403      Apprentice's Wisdom                  0        0      apprentices_wisdom
+404      Adept's Wisdom                       0        0      adepts_wisdom
+405      Sage's Wisdom                        0        0      sages_wisdom
+406      Horse spawn                          0        0      horse_spawn
+407      Spot traps                           0        0      spot_traps
+409      Propose                              0        0      propose
+410      Blood oath                           0        0      blood_oath
+411      Dragon's form                        0        0      dragons_form
+412      Curse protection                     0        0      curse_protection
+413      Enthrall                             0        0      enthrall_charm
+501      Snare Trap                           0        0      snare_trap
+502      Poison Dart Trap                     0        0      poison_dart_trap
+503      Sleep Trap                           0        0      sleep_trap
+1058     Slash                                0        0      slash_warrior
+1063     Feral Berserk                        0        0      feral_berserk_warrior
+2116     Dagger's Remedy                      0        2      daggers_remedy_rogue
+2117     Kwi-Sin Dagger's Remedy              0        2      kwisin_daggers_remedy_rogue
+2118     Mingken Dagger's Remedy              0        2      mingken_daggers_remedy_rogue
+2119     Ohaeng Dagger's Remedy               0        2      ohaeng_daggers_remedy_rogue
+3167     Magi's Bane                          0        0      magis_bane
+4137     Restore                              0        0      restore_poet
+4700     Call of the Wild                     0        0      cotw_controller_poet
+10504    Loki's Favor                         0        0      lokis_favor
+11993    GM Dispell                           0        0      gm_dispell
+11994    GM Res                               0        0      gm_res
+12015    editor save                          0        0      editor_save
+12016    toggle highlight pass                0        0      toggle_highlight_pass
+12018    Healing totem                        0        0      healing_totem
+12019    Summon healing totem                 0        0      summon_healing_totem
+12020    Healing totem aura                   0        0      healing_totem_aura
+12021    Furious Charge                       0        0      furious_charge
+12023    Creative                             0        0      creative
+12024    Follow                               0        0      follow
+12025    Wind walk                            0        0      wind_walk
+12026    GM Push                              0        0      gm_push
+29501    Fissure                              0        0      fissure
+29502    Lava surge                           0        0      lava_surge
+29503    Serpent's Fury                       0        0      serpents_fury
+29504    Greater blessing                     0        0      greater_blessing
+29505    Spirit Fury                          0        0      spirit_fury
+29506    Fascinate                            0        0      fascinate
+29507    Survive                              0        0      survive
+30217    Wolf guise                           0        0      wolf_guise
+30218    Rabbit guise                         0        0      rabbit_guise
+30219    Deer guise                           0        0      deer_guise
+30220    Sheep guise                          0        0      sheep_guise
+30221    Thirsty ogre guise                   0        0      thirsty_ogre_guise
+30315    Protector's Bulwark                  0        0      protectors_bulwark
+50001    Sanctuary                            0        0      sanctuary
+50002    Blind                                0        0      blind
+50003    Snare                                0        0      snare
+50004    Venom                                0        0      venom
+50005    Rebirth                              0        0      rebirth
+50006    Stormstrike                          0        0      stormstrike
+50007    Peck                                 0        0      peck
+50008    Ambush                               0        0      ambush
+50009    Resurrect                            0        0      resurrect
+50010    Mass resurrect                       0        0      mass_resurrect
+50011    Scourge                              0        0      scourge
+50012    Thunder touch                        0        0      thunder_touch
+50013    Last stand                           0        0      last_stand
+50014    Call lightning                       0        0      call_lightning
+50015    Ion                                  0        0      ion
+50016    Vex                                  0        0      vex
+50017    Battle Preparation                   0        0      battle_preparation
+50018    Paralyze                             0        0      paralyze
+50019    Harden body                          0        0      harden_body
+50020    Purge                                0        0      purge
+50021    Chill                                0        0      chill
+50022    Taint                                0        0      taint
+50023    Curse                                0        0      curse
+50024    Corrupt                              0        0      corrupt
+50025    Kamikaze                             0        0      kamikaze
+50026    Mind control                         0        0      mind_control
+50027    Dispell                              0        0      dispell
+50028    Harden armor                         0        0      harden_armor
+50029    Valor                                0        0      valor
+50030    Invoke                               0        0      invoke
+50031    Dishearten                           0        0      dishearten
+50032    Assault                              0        0      assault
+50033    Stagger                              0        0      stagger
+50034    Endear                               0        0      endear
+50035    Freeze                               0        0      freeze
+50036    Chin-Baek-Ho-Ryung                   0        0      chin_baek_ho_ryung
+50037    Health shrine                        0        0      health_shrine_spell
+50038    Magic shrine                         0        0      magic_shrine_spell
+50039    Experience shrine                    0        0      experience_shrine_spell
+50040    Frozen                               0        0      boss296freeze
+50041    Favor of the Gods                    0        0      favor_of_the_gods
+50042    Bot Checker                          0        0      botchecker
+50043    Smoke screen                         0        0      smoke_screen
+50044    Toxic spray                          0        0      toxic_spray
+50045    Tripwire                             0        0      tripwire
+50046    Faded                                0        0      faded
+50047    Purple potion                        0        0      purple_potion
+50048    Poisoned Bracelet                    0        0      poisoned_bracelet_spell
+50049    hwan_spell                           0        0      hwan_spell
+102      Light                                1        0      light
