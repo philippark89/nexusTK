@@ -420,7 +420,7 @@ int command_shutdown(USER* sd, char* line, lua_State* state) {
 		}
 
 		if (t_time >= 60000) {
-			sprintf(msg, "RetroTK! Reset in %d minutes.", t_time / 60000);
+			sprintf(msg, "NexusTK! Reset in %d minutes.", t_time / 60000);
 			clif_broadcast("---------------------------------------------------", -1);
 			clif_broadcast(msg, -1);
 			clif_broadcast("---------------------------------------------------", -1);
@@ -428,7 +428,7 @@ int command_shutdown(USER* sd, char* line, lua_State* state) {
 			t_time = d * 60000;
 		}
 		else {
-			sprintf(msg, "RetroTK! Reset in %d seconds.", t_time / 1000);
+			sprintf(msg, "NexusTK! Reset in %d seconds.", t_time / 1000);
 			clif_broadcast("---------------------------------------------------", -1);
 			clif_broadcast(msg, -1);
 			clif_broadcast("---------------------------------------------------", -1);

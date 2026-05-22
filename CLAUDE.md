@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-nexusTK is a RetroTK MMO game server — a fork of [RTK-Server](https://github.com/unkmc/RTK-Server). It runs as three cooperating C servers (login, char, map) backed by MySQL, with Lua scripts driving game logic.
+nexusTK is a NexusTK MMO game server — a fork of [RTK-Server](https://github.com/unkmc/RTK-Server). It runs as three cooperating C servers (login, char, map) backed by MySQL, with Lua scripts driving game logic.
 
 ## Current Goal
 

@@ -484,7 +484,7 @@ int clif_parse(int fd) {
 
 		if (maintenance_mode()) {
 			if (maintenance_override(RFIFOP(fd, 6), RFIFOB(fd, 5)) == 0) {
-				clif_message(fd, 0x03, "Server is undergoing maintenance. Please visit www.RetroTK.com or the RetroTK facebook group for more details.");
+				clif_message(fd, 0x03, "Server is undergoing maintenance. Please visit nexustk.com or the NexusTK facebook group for more details.");
 				break;
 			}
 		}
@@ -497,7 +497,7 @@ int clif_parse(int fd) {
 				Log_Add("regreject", "<%02d:%02d> Character %s attempted to login from IP %s - unregistered character/login rejected.\n", getHour(), getMinute(), name, ip);
 				printf("Character %s attempted to login from IP %s - unregistered character/login rejected.\n", name, ip);
 
-				clif_message(fd, 0x03, "You must attach your character to an account to play.\n\nPlease visit www.RetroTK.com to attach your character to an account. If you have issues, please visit https://www.RetroTK.com/helpdesk or visit our Discord (link on website).");
+				clif_message(fd, 0x03, "You must attach your character to an account to play.\n\nPlease visit nexustk.com to attach your character to an account. If you have issues, please visit https://nexustk.com/helpdesk or visit our Discord (link on website).");
 				break;
 			}
 		}

@@ -232,9 +232,9 @@ static void display_title(void)
 {
 	printf("\033[2J"); // clear screen and go up/left (0, 0 position in text)
 
-	printf("RetroTK - Revision %s\n", get_svn_revision());
-#if RETROTK_RELEASE_FLAG
-	//printf("**RetroTK Develop version!\n");
+	printf("NexusTK - Revision %s\n", get_svn_revision());
+#if NEXUSTK_RELEASE_FLAG
+	//printf("**NexusTK Develop version!\n");
 #endif
 }
 /*void *timer_thread(void *nothing) {

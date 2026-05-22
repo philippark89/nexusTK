@@ -1693,7 +1693,7 @@ void do_term(void) {
 	//mobdb_term();
 	//sql_close();
 
-	printf("RetroTK Map Server Shutdown.\n");
+	printf("NexusTK Map Server Shutdown.\n");
 	add_log("Shutdown.\n");
 }
 
@@ -1852,7 +1852,7 @@ int do_init(int argc, char** argv) {
 	//gcFixPrematureFrees();
 	set_default_input(command_input);
 	add_log("");
-	add_log("RetroTK Map Server Started.\n");
+	add_log("NexusTK Map Server Started.\n");
 	sql_handle = Sql_Malloc();
 	if (sql_handle == NULL)
 	{
@@ -1915,7 +1915,7 @@ int do_init(int argc, char** argv) {
 	for (i = 0; i < MAX_GROUPS; i++) {
 		memset(groups[i], 0, sizeof(unsigned int) * MAX_GROUP_MEMBERS);
 	}
-	printf("RetroTK Map Server is \033[1;32mready\033[0m! Listening at %d.\n", map_port);
+	printf("NexusTK Map Server is \033[1;32mready\033[0m! Listening at %d.\n", map_port);
 
 	add_log("Server Ready! Listening at %d.\n", map_port);
 #ifdef LOGGING_ENABLED
@@ -2619,7 +2619,7 @@ int map_reset_timer(int v1, int v2) {
 
 	if (reset <= 60000) { //Less than a minute remaining(gonna mass spell everyone)
 		if (diff >= 10000) { // every 10 seconds
-			sprintf(msg, "RetroTK! Reset in %d seconds", reset / 1000);
+			sprintf(msg, "NexusTK! Reset in %d seconds", reset / 1000);
 			//clif_broadcast("---------------------------------------------------",-1);
 			clif_broadcast(msg, -1);
 			//clif_broadcast("---------------------------------------------------",-1);
@@ -2628,7 +2628,7 @@ int map_reset_timer(int v1, int v2) {
 	}
 	else if (reset <= 3600000) { // 60 mins
 		if (diff >= 300000) { // every 5 mins
-			sprintf(msg, "RetroTK! Reset in %d minutes", reset / 60000);
+			sprintf(msg, "NexusTK! Reset in %d minutes", reset / 60000);
 			//clif_broadcast("---------------------------------------------------",-1);
 			clif_broadcast(msg, -1);
 			//clif_broadcast("---------------------------------------------------",-1);
@@ -2637,7 +2637,7 @@ int map_reset_timer(int v1, int v2) {
 	}
 	else if (reset > 3600000) { // every hour
 		if (diff >= 3600000) { // once every hour
-			sprintf(msg, "RetroTK! Reset in %d hours", reset / 3600000);
+			sprintf(msg, "NexusTK! Reset in %d hours", reset / 3600000);
 			//clif_broadcast("---------------------------------------------------",-1);
 			clif_broadcast(msg, -1);
 			//clif_broadcast("---------------------------------------------------",-1);

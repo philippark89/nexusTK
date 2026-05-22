@@ -1,7 +1,7 @@
 #!/bin/bash
 dir=/home/RTK/database/history
 mkdir -p "$dir"
-file="$dir/$(date +%Y-%m-%d-%H-%M-%S)_RTK.sql"
+file="$dir/$(date +%Y-%m-%d-%H-%M-%S)_NexusTK.sql"
 
 mysqldump -h database -u rtk -pchangeMe --opt --add-drop-database --databases RTK > "$file" 2>/dev/null
 chmod 444 "$file"

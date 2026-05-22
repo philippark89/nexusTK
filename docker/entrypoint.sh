@@ -14,7 +14,7 @@ for script in /database/scripts/*.sql; do
 done
 echo "[entrypoint] Migrations done."
 
-echo "[entrypoint] Building RTK servers..."
+echo "[entrypoint] Building NexusTK servers..."
 cd /home/RTK/src && make clean && make all
 
 echo "[entrypoint] Starting servers via supervisord..."
