@@ -1,15 +1,10 @@
 on_spawn = function(mob)
-	local random = math.random(0, 1)
-	local multiplier = 1
+	local damRange = (mob.minDam + mob.maxDam) * 2
+	if damRange <= 0 then return end
 
-	if random == 1 then
-		multiplier = -1
-	end
-
-	local healthMod = math.random((mob.minDam + mob.maxDam) * 2) * multiplier
+	local multiplier = math.random(0, 1) == 1 and -1 or 1
+	local healthMod = math.random(damRange) * multiplier
 
 	mob.maxHealth = mob.maxHealth + healthMod
 	mob.health = mob.maxHealth
-
-	--mob:talk(0,""..mob.maxHealth)
 end

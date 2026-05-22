@@ -8803,6 +8803,7 @@ int clif_scriptmes(USER* sd, int id, char* msg, int previous, int next) {
 		WFIFOW(sd->fd, 1) = SWAP16(strlen(msg) + 25);
 	}
 	else if (type == 1) {
+		if (!nd) return 0;
 		WFIFOB(sd->fd, 11) = 1;
 		WFIFOW(sd->fd, 12) = SWAP16(nd->sex);
 		WFIFOB(sd->fd, 14) = nd->state;
