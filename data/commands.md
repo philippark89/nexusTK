@@ -50,7 +50,7 @@ docker exec nexustk-server-1 addr2line -e /home/RTK/src/map-server -f 0xABCDEF
 | `/givespell <id>` | Grant spell by ID (see `data/spells.txt`) |
 | `/heal` | Full heal |
 | `/immortality` | Toggle invincibility |
-| `/warp <mapid>` | Teleport to map by ID |
+| `/warp <mapid>` | Teleport to map by ID (see `data/maps.txt`) |
 | `/warp <mapid> <x> <y>` | Teleport to exact coordinates |
 | `/job <id>` | Change class/path |
 | `/bc <message>` | Broadcast message to all players |
@@ -61,7 +61,7 @@ docker exec nexustk-server-1 addr2line -e /home/RTK/src/map-server -f 0xABCDEF
 | `/metan` | Reload map metadata |
 
 **Note:** Item and spell names with spaces must use the numeric ID.
-Reference files: `data/items.txt` and `data/spells.txt`
+Reference files: `data/items.txt`, `data/spells.txt`, `data/maps.txt`
 
 ---
 

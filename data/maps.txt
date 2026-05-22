@@ -1,0 +1,234 @@
+Map IDs — NexusTK
+Usage: /warp <id>  or  /warp <id> <x> <y>
+Names are derived from warps.txt comments; a map may appear under multiple names.
+
+ID       Location(s)
+--------------------------------------------------------------------------------
+0        ATG, Baegi Shop, Baek Shop, Bamboo Tavern, Beard Smith, Cry Seams, Cuti Seams, Dae shore?, Hallowed Pass, Koguryo Valley, Kugnae, Kugnae gathering, KUGRogue Guild, KUGWarrior Guild, Red Cap Messenger, Sun Moon Clan, Suni Butcher, Tower Arena, Tutor Ironheart, Walsuk Tavern
+1        Tutorial 2, Welcome
+2        Kugnae, Walsuk Tavern
+3        Beard Smith, Kugnae
+5        Cuti Seams, Kugnae
+6        Kugnae, Suni Butcher
+7        Kugnae, Red Cap Messenger
+8        Cry Seams, Kugnae
+11       Kugnae, KUGWarrior, KUGWarrior Guild, Tebaek Sanctum
+12       KUGWarrior, Tebaek Sanctum
+15       Kugnae, KUGRogue, KUGRogue Guild, Maro Sanctum
+16       KUGRogue, Maro Sanctum
+17       Archon view, meeting Room
+18       Buya, Pepper Tavern
+28       Baek Shop, Kugnae
+29       Baegi Shop, Kugnae
+30       Baek Shop, Kugnae
+31       Kugnae, Tower Arena
+36       Kugnae, Tutor Ironheart
+38       Bamboo Tavern, Kugnae
+41       dog, dragon, horse, monkey, mythic, mythic vally, ox, pig, rabbit, rat, rooster, sheep, snake, tiger, Warp Peak
+42       Hamgyong Nam-Do, Home of Ugh
+52       Buya, Rat Race, Thousdand Legs
+54       Rat Race, Thousdand Legs
+99       Hamgyong Nam-Do, NHV, warp peak
+114      Five Rings, Hamgyong Nam-Do, Hamgyong River, Home of Ugh, Murky Divide, NHV, Slogs, The Flats
+115      Five Rings, Hamgyong Nam-Do
+141      Hamgyong Nam-Do, The Flats
+188      Archon view, Buya, Meeting Room
+270      Hamgyong Nam-do, Slogs, Sodden Corridor
+271      Slog's Vestibule & Final Refuge, Slogs, Sodden Corridor
+272      Slog's Chamber, Slog's Vestibule, Slog's Vestibule & Final Refuge, Sodden Corridor
+273      Slog's Vestibule & Final Refuge, Sodden Corridor
+274      Slog's Chamber, Slog's Vestibule
+275      Hamgyong Nam-Do, Hamgyong River
+284      Gates of Hamgyong, Hamgyong Nam-Do, Murky Divide
+288      Gates of Hamgyong, Murky Divide
+330      Arena, Armordude, Bagai Shop, BButcher, Buya, Buya Courtyard, Buya Gathering, Buya Inn, Buya smith, Buya Theater, Buya vally, Chaple, felis shaman, Fox cave, Haunted house, Heavens clan, Islets, Jadespear, key, Library, Mage Guild, Meeting Room, Oh san raid, Paryu Message, Pepper Tavern, Pitch Shop, Poet Guild, Rabbit cave, Rat Race, Rogue Guild, Salon, Shadow Dragon, Tailor, Warrior Guild, wilderness valley
+332      Buya, Buya Inn, Inn, Tutorial 6
+333      Buya, Buya smith
+334      BButcher, Buya
+335      Buya, Tailor
+336      Armordude, Buya
+337      Buya, Paryu Message
+338      Buya, felis shaman
+340      Buya, Chaple
+341      Buya, Warrior Guild, WS
+342      Buya, Mage Guild, MS
+343      Buya, Rogue Guild, RS
+344      Buya, Poet Guild, PS
+345      Buya, Shadow Dragon
+351      Buya, Jadespear
+356      Arena, Buya, Pyung, Sire Pit
+359      Arena, Pyung
+360      Arena, Sire Pit
+363      Bagai Shop, Buya
+364      Buya, Pitch Shop
+365      Buya, Salon
+390      Buya, Fox cave, fox cave2
+393      fox cave, fox cave2, fox cave3
+394      fox cave2, fox cave3
+400      Buya, Rabbit cave
+450      Buya, Haunted house, HH2
+451      Haunted house, HH2, HH3
+454      Haunted house, HH3
+486      Buya, Library
+487      Buya, Buya Theater
+1000     Koguryo Valley, Kugnae, Wilderness
+1001     Buya, Buya vally, Vale
+1002     BarbarianCircle, Koguryo Valley, Northern Pass, Wilderness, wilderness valley
+1003     Northern Pass, Wilderness
+1004     Dae shore?, Kugnae
+1005     Buya vally, mythic vally, Vale
+1008     Buya, Islets
+1009     Hallowed Pass, Kugnae
+1011     Kugnae, Kugnae gathering, Warp Peak
+1012     Buya, Buya Gathering, Warp Peak
+1015     Buya, Wilderness, wilderness valley
+1016     mythic, mythic vally, Vale
+2500     Nagnang, Warp peak
+2801     Assassin, Assassin2, Vortex
+2802     Assassin, Assassin2, Assassin3
+2803     Assassin2, Assassin3, Assassin4
+2804     Assassin3, Assassin4, Assassin5
+2805     Assassin4, Assassin5, Assassin6
+2806     Assassin5, Assassin6, Assassin7
+2807     Assassin6, Assassin7, Assassin8
+2808     Assassin7, Assassin8
+2811     Magus, Magus2, Vortex
+2812     Magus, Magus2, Magus3
+2813     Magus2, Magus3, Magus4
+2814     Magus3, Magus4, Magus5
+2815     Magus4, Magus5
+2821     hunter, hunter big, Hunter2, hunter3, hunter4, hunter5, hunter6, hunter7, Hunter9, Vortex
+2822     hunter, Hunter2, Hunter3
+2823     hunter, Hunter2, Hunter3, Hunter4
+2824     hunter, Hunter3, Hunter4, Hunter5
+2825     hunter, Hunter4, Hunter5, Hunter6
+2826     hunter, Hunter5, Hunter6, Hunter7
+2827     hunter, hunter big, Hunter6, Hunter7
+2828     hunter, hunter big, Hunter7, Hunter9
+2829     hunter, hunter big, Hunter9
+2831     hillman, hillman2, Vortex
+2832     hillman, hillman2, hillman3
+2833     hillman2, hillman3, hillman4
+2834     hillman3, hillman4, hillman5
+2835     hillman4, hillman5
+2841     anch, anch2, BLanch, Vortex
+2842     anch, anch2, anch3
+2843     anch2, anch3
+2849     BLanch, Bossroom
+2850     anch, BLanch, Bossroom
+2851     Vortex, wind, wind3
+2853     wind, wind3, wind4
+2854     wind3, wind4, wind5
+2855     wind4, wind5
+2861     Shadow, Shadow Big, Shadow2, Vortex
+2862     Shadow, Shadow2, Shadow3
+2864     Shadow, Shadow Big, shadowhold
+2867     Shadow2, Shadow3
+2869     shadow Big, shadowhold
+2871     Bandit, Bandit2, Vortex
+2872     Bandit, Bandit2, bandit3
+2873     Bandit2, Bandit3, Bandit4
+2874     Bandit3, Bandit4
+2881     dread, dread2, Vortex
+2882     dread, dread2, dread3
+2883     dread2, dread3, dread4
+2884     dread3, dread4
+2891     grey hand, grey hand2, grey hand6, Vortex
+2892     grey hand, grey hand2, grey hand3
+2893     grey hand2, grey hand3, grey hand4
+2894     grey hand3, grey hand4, grey hand5
+2895     grey hand4, grey hand5, grey hand6
+2896     grey hand, grey hand5, grey hand6
+2951     Vortex, water, water2
+2959     water2, water3
+2960     water, water2, water3
+2964     anch, Assassin, Bandit, dread, grey hand, hillman, hunter, Magus, Shadow, Vortex, warp peak, water, wind
+3151     mythic, rat
+3160     monkey, mythic
+3170     mythic, ox
+3181     mythic, pig
+3191     dog, mythic
+3201     Golden Warren, Hare Depression, mythic, Mythic Owsla, rabbit
+3202     Golden Warren, rabbit, Rabbit Leap
+3203     Forged Fields, Hare Summit, Rabbit Hole
+3204     Golden Warren, Hare Summit, Mythic Owsla, Rabbit Leap
+3205     Forged Fields, Rabbit Hole
+3206     Hare Depression, rabbit
+3207     Mythic Owsla, rabbit, Rabbit Leap
+3208     Hare Summit, Rabbit Hole, Rabbit Leap
+3214     mythic, rooster
+3231     mythic, snake
+3246     horse, mythic
+3257     dragon, mythic
+3470     mythic, sheep
+3510     BarbarianCircle, Wilderness
+3535     Buya Gathering, Gogoon, Kugnae gathering, mythic, Nagnang, NHV, Vortex, Warp Peak
+3910     Buya, Heavens clan, Heavens hall
+3911     bigroom, Crafting room, Heavens arena, Heavens clan, Heavens hall, Primogen, wut du heck, wut2
+3912     Heavens arena, Heavens hall
+3913     Heavens hall, wut du heck
+3914     Event room, Heavens hall, wut2, wut3
+3915     wut2, wut3
+3916     Heavens hall, Primogen
+3917     Event room, wut2
+3918     bigroom, Heavens hall
+3919     Crafting room, Heavens hall
+3920     Kugnae, SMCH, Sun Moon Clan
+3921     SMCH, Sun Moon Clan
+4100     mythic, tiger
+4604     Buya, Buya Courtyard
+4701     thezoo1, thezoo2, thezoo9
+4702     thezoo1, thezoo2, thezoo3
+4703     thezoo2, thezoo3, thezoo4
+4704     thezoo3, thezoo4, thezoo5
+4705     thezoo4, thezoo5, thezoo6
+4706     thezoo5, thezoo6, thezoo7
+4707     thezoo6, thezoo7, thezoo8
+4708     thezoo7, thezoo8, thezoo9
+4709     thezoo1, thezoo8, thezoo9
+4714     Tutorial 2, Tutorial 3, Welcome
+4715     Tutorial 2, Tutorial 3, Tutorial 4, Tutorial 5
+4716     Tutorial 3, Tutorial 4
+4717     Tutorial 3, Tutorial 5, Tutorial 6
+4718     Inn, Tutorial 5, Tutorial 6
+8400     Get shwifty, winter wonderland
+8401     Get shwifty, winter wonderland
+11000    gonjiam baekdu
+11001    gonjiam baekdu
+11002    gonjiam baekdu
+11003    gonjiam baekdu
+11004    gonjiam baekdu
+11005    gonjiam baekdu
+18000    ??, fuckifiknow, Gogoon, GTailor, Rhino, Smith, TD, Warp Peak
+18002    fuckifiknow, Gogoon
+18003    Gogoon, Smith
+18004    Gogoon, GTailor
+18011    Gogoon, Rhino, Rhino2
+18012    Rhino, Rhino2, Rhino3
+18013    Rhino2, Rhino3, Rhino4
+18014    Rhino3, Rhino4, Rhino5
+18015    Rhino4, Rhino5, Rhino6
+18016    Rhino5, Rhino6, Rhino7
+18017    Rhino6, Rhino7, Rhino8
+18018    Rhino7, Rhino8, Rhino9
+18019    Rhino8, Rhino9, RhinoLR
+18020    Rhino9, RhinoLR
+18180    ??, Gogoon
+18348    Gogoon, NG, TD
+18349    NG, TD, Yurtle
+18350    NG, Yurtle
+26072    Buya, First trial, Oh san raid, WonyP
+26073    First trial, Oh san raid, The awakening
+26074    First trial, Nuntis, The awakening
+26075    Nuntis, Sip san Grude, The awakening
+26076    Nuntis, Sip san Grude
+29102    Asmodi, Buya, key
+29118    Asmodi, key
+32103    ATG, Kugnae
+45000    cubbyhole, lunho's lair
+45001    cubbyhole, lunho's lair
+65102    Rogue Guild, RS
+65103    Warrior Guild, WS
+65104    Mage Guild, MS
+65105    Poet Guild, PS
+65106    Oh san raid, WonyP
