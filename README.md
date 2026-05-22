@@ -221,7 +221,7 @@ Useful GM commands (spoken in-game chat):
 - [x] Character creation and login working
 - [x] Player movement working
 - [x] Player self-targeting / character info panel (S key, click self)
-- [ ] Mob spawning and basic combat
+- [x] Mob spawning (static spawns visible, on_spawn health variance working)
 - [ ] Item system end-to-end (pickup, equip, use)
 - [ ] Quest system testing
 - [ ] Crafting system testing
